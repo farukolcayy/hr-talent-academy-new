@@ -1,0 +1,9 @@
+RewriteEngine on
+RewriteCond %{HTTPS} off
+RewriteCond %{HTTP:X-Forwarded-SSL} !on
+RewriteCond %{HTTP_HOST} ^hrtalent\.academy$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hrtalent\.academy$
+RewriteRule ^/?$ "https\:\/\/www\.hrtalent\.academy\/" [R=301,L]
+RewriteCond %{HTTP_HOST} ^hrtalent\.academy$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.hrtalent\.academy$
+

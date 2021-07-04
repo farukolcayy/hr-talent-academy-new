@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <title>HTA Live Stream Login</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--===============================================================================================-->
+    <link href="/assets/img/favicon_new.png" rel="icon">
+
+    <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="fonts/iconic/css/material-design-iconic-font.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="css/util.css?ver=2.8">
+    <link rel="stylesheet" type="text/css" href="css/main.css?ver=2.8">
+    <link rel="stylesheet" href="css/bootstrap.css" type="text/css" />
+    <link rel="stylesheet" href="css/dark.css?ver=2.8" type="text/css" />
+    <link rel="stylesheet" href="css/radio-checkbox.css" type="text/css" />
+    <link rel="stylesheet" href="css/font-icons.css" type="text/css" />
+    <link rel="stylesheet" href="css/et-line.css" type="text/css" />
+    <link rel="stylesheet" href="css/sweetalert2.min.css" />
+    <link rel="stylesheet" href="css/magnific-popup.css" />
+    <!--===============================================================================================-->
+</head>
+
+<body>
+    <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
+            <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
+            <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
+                stroke="#F96D00" />
+        </svg></div>
+
+    <!-- <div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-body">
+                <div class="modal-content" style="border: 2px solid red;">
+                    <button style="margin-left: auto;background-color:black;color:white;" type="button" class="close"
+                        data-dismiss="modal" aria-hidden="true">×</button>
+                    <div class="row" style="margin-left: 0px;margin-right: 0px;">
+                        <div class="col-md-12" style="padding-left: 0px; padding-right: 0px;text-align: center;">
+                            <img width="50%" src="/assets/img/logo_new.png" />
+                        </div>
+                    </div>
+                    <div class="row" style="margin-left: 0px;margin-right: 0px;">
+                        <div class="col-md-12" style="background: #000000;text-align: center;">
+                            <h4 class="text-uppercase ls1 popupText"
+                                style="padding: 0px 50px 0px 50px;margin-bottom: 0px;text-transform: capitalize !important;">
+
+                            </h4>
+                            <h4 class="text-uppercase ls1 popupText"
+                                style="padding: 0px 50px 50px 50px;margin-bottom: 0px;text-transform: capitalize !important;color: #d2d2d2;font-size: 1.3rem;">
+                                Canlı yayın sistemimiz sizlere daha kaliteli hizmet vermek amacıyla bakıma alınmıştır.
+                                24
+                                saat boyunca sisteme erişim yapamayabilirsiniz.</br>Anlayışınız için teşekkürler.
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+    <div class="limiter">
+        <div class="container-login100" style="background-image: url('images/bg-01.png');">
+            <div class="wrap-login100">
+                <form class="login100-form validate-form" id="loginForm">
+                    <span class="login100-form-logo">
+                        <img src="/assets/img/favicon_new.png" style="width:inherit;" />
+                    </span>
+                    <span class="login100-form-title p-b-34 p-t-27">
+                        HR Talent Academy
+                    </span>
+                    <div class="form-group" id="loginFormArea"
+                        style="max-width: 30rem;margin-left: auto;margin-right: auto;margin-top: 20px;">
+                        <div class="wrap-input100 validate-input" data-validate="E-mail Giriniz!">
+                            <input class="input100" type="text" name="username" placeholder="E-mail" id="emailAddress"
+                                required>
+                            <span class="focus-input100" data-placeholder="&#xf207;"></span>
+                        </div>
+
+                        <div class="wrap-input100 validate-input" data-validate="Şifrenizi Giriniz!">
+                            <input class="input100" type="password" name="pass" placeholder="Şifre" id="password"
+                                required>
+                            <span class="focus-input100" data-placeholder="&#xf191;"></span>
+                        </div>
+
+                        <div class="container-login100-form-btn">
+                            <button class="login100-form-btn" id="loginButton" type="submit">
+                                Giriş Yap
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+    <script src="js/plugins.min.js?ver=2.8"></script>
+    <script src="js/sweetalert2.min.js"></script>
+    <script src="js/md5.min.js?ver=2.8"></script>
+
+    <script>
+        $(document).ready(function () {
+
+            function readCookie(name) {
+                var nameEQ = name + "=";
+                var ca = document.cookie.split(';');
+                for (var i = 0; i < ca.length; i++) {
+                    var c = ca[i];
+                    while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+                    if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+                }
+                return null;
+            }
+
+            function MailKontrol(email) {
+                var kontrol = new RegExp(/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/i);
+                return kontrol.test(email);
+            };
+
+            var x2 = readCookie("token");
+            var x3 = readCookie("streamEmail");
+            var x4 = readCookie("streamName");
+
+            setTimeout(function () {
+                $('#ftco-loader').removeClass('show');
+            }, 2000);
+
+            $('#loginForm').submit(function (e) {
+
+                e.preventDefault();
+                var token = "";
+                var isLogin = 0;
+
+                var emailAddress = $('#emailAddress').val();
+                var password = $('#password').val();
+
+                if (MailKontrol(emailAddress) === false) {
+                    swal("Uyarı", "Uygun bir e-mail adresi giriniz!", "warning");
+                    return false;
+                }
+
+                if (password === null || password === "") {
+                    swal("Uyarı", "Şifrenizi kontrol edin!", "warning");
+                    return false;
+                } else {
+                    $.ajax({
+                        type: 'POST',
+                        dataType: "json",
+                        url: 'loginControl.php',
+                        data: {
+                            emailAddress: emailAddress,
+                            password: password
+                        }
+                    })
+
+                        .done(function (data) {
+                            if (data.result != '') {
+
+                                swal({
+                                    title: 'Giriş Başarılı!',
+                                    text: '3 sn içerisinde yönlendirilecekseniz...',
+                                    timer: 3000,
+                                    type: 'success',
+                                    onOpen: function () {
+                                        swal.showLoading()
+                                    }
+                                }).then(
+                                    function () { },
+                                    function (dismiss) {
+                                        if (dismiss === 'timer') {
+
+                                            var pass = data.result.Id + data.result.emailAddress + data.result.password + data.result.isLogin;
+                                            token = md5(pass);
+                                            emailAddress = data.result.emailAddress;
+                                            if (data.result.isLogin === "0") {
+                                                isLogin = 1;
+                                            } else {
+                                                isLogin = 0;
+                                            }
+                                            document.cookie = "token=" + token;
+                                            document.cookie = "streamEmail=" + data.result.emailAddress;
+                                            document.cookie = "streamName=" + data.result.nameSurname;
+
+                                            $.ajax({
+                                                type: 'POST',
+                                                url: 'setToken.php',
+                                                data: {
+                                                    emailAddress: emailAddress,
+                                                    token: token,
+                                                    isLogin: isLogin
+                                                }
+                                            })
+                                                .done(function (dataControl) { })
+                                                .fail(function (err) {
+                                                    console.log(err);
+                                                    return false;
+                                                });
+
+                                            window.location.href = 'https://www.hrtalent.academy/live-stream/live/';
+                                        }
+                                    }
+                                );
+
+                            } else {
+                                console.log(data);
+                                swal("Uyarı", "E-mail veya şifre hatalı!", "warning");
+                                return false;
+                            }
+                        })
+                        .fail(function (e) {
+                            console.log(e);
+                            swal("Hata", "Bağlantı Hatası! Lütfen tekrar deneyin", "error");
+                            return false;
+                        });
+                }
+
+            });
+
+            // setTimeout(function () {
+            //     $('#myModal3').modal('show');
+            // }, 3000);
+
+        });
+    </script>
+</body>
+
+</html>

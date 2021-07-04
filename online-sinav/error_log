@@ -1,0 +1,5 @@
+[16-Jun-2021 16:08:28 Europe/Istanbul] PHP Fatal error:  Call to a member function fetch_assoc() on boolean in /home/hrtalent/public_html/online-sinav/emailControl.php on line 28
+[16-Jun-2021 16:08:38 Europe/Istanbul] PHP Fatal error:  Call to a member function fetch_assoc() on boolean in /home/hrtalent/public_html/online-sinav/emailControl.php on line 28
+[16-Jun-2021 16:12:14 Europe/Istanbul] PHP Warning:  mysqli::mysqli(): (HY000/1044): Access denied for user 'hrtalent_live'@'localhost' to database 'hrtalent_live' in /home/hrtalent/public_html/online-sinav/emailControl.php on line 20
+[16-Jun-2021 16:12:16 Europe/Istanbul] PHP Warning:  mysqli::mysqli(): (HY000/1044): Access denied for user 'hrtalent_live'@'localhost' to database 'hrtalent_live' in /home/hrtalent/public_html/online-sinav/emailControl.php on line 20
+[16-Jun-2021 16:14:28 Europe/Istanbul] PHP Warning:  mysqli::mysqli(): (HY000/1044): Access denied for user 'hrtalent_live'@'localhost' to database 'hrtalent_live' in /home/hrtalent/public_html/online-sinav/emailControl.php on line 20

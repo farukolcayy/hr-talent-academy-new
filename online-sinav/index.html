@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>HTA - Online Sınav Giriş</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Titillium+Web:400,700'>
+    <link rel="stylesheet" href="./css/styleLogin.css?ver=2.1">
+    <link href="/assets/img/favicon_new.png" rel="icon">
+</head>
+
+<body>
+    <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
+            <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
+            <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
+                stroke="#F96D00" />
+        </svg></div>
+
+    <div class="login-page">
+        <div class="form">
+            <form class="login-form" id="loginForm">
+                <img style="max-width: 40%;" src="/assets/img/logo_new_2.png">
+                <h4>Online akademiye başvurduğunuz <br><span style="color: #d60000;">e-mail</span> adresini giriniz</h4>
+                <input type="email" name="emailAddress" id="emailAddress" required
+                    placeholder="E-mail adresinizi giriniz" />
+                <input type="text" name="securityCode" id="securityCode" required
+                    placeholder="E-mail adresinize gönderilen kodu girin" />
+                <button id="loginButton" type="submit">Giriş</button>
+                <div id="msg"
+                    style="font-weight: 500 !important;color:#d40015;text-align: center;font-size: large;padding-top: 20px;">
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery.customSelect/0.5.1/jquery.customSelect.min.js'></script>
+    <script src="./js/md5.min.js?ver=2.1"></script>
+
+    <script>
+        $(document).ready(function () {
+
+            setTimeout(function () {
+                $('#ftco-loader').removeClass('show');
+            }, 2000);
+
+            $('#loginForm').submit(function () {
+                $('#msg').html("Kontrol ediliyor..");
+                var emailAddress = $('#emailAddress').val();
+                var securityCode = md5($.trim($('#securityCode').val()).toLowerCase());
+                if (securityCode != "da475694a5e4998388716120c096dd6f") {
+                    $('#msg').html("Güvenlik kodunuz yanlış!");
+                    return false;
+                }
+
+                $("#loginButton").attr("disabled", true);
+
+                // Call ajax for pass data to other place
+                $.ajax({
+                    type: 'POST',
+                    dataType: "json",
+                    url: 'emailControl.php',
+                    data: { emailAddress: emailAddress } // getting filed value in serialize form
+                })
+                    .done(function (data) { // if getting done then call.
+                    console.log(data);
+                        if (data.result.countEmail != undefined && data.result.countEmail != '0') {
+                            $('#loginButton').attr("disabled", true);
+                            $('#msg').css({ 'color': '#01b610' });
+                            $('#msg').html("Giriş başarılı. Sınava yönlendiriliyorsunuz..");
+                            var pass = data.result.emailAddress;
+                            var hash = md5(pass);
+                            document.cookie = "applySessionHR=" + hash;
+                            document.cookie = "applyEmailHR=" + emailAddress;
+
+                            setTimeout(function () {
+                                $('#ftco-loader').addClass('show');
+                                window.location.href = './sinav';
+                            }, 2000);
+
+                        } else {
+                            $('#msg').html("Email bulunamadı veya daha önce sınava giriş yapılmış!");
+                        }
+
+                        $("#loginButton").attr("disabled", false);
+                    })
+                    .fail(function (e) { // if fail then getting message
+                    console.log(e);
+                        alert("Giriş başarısız! Lütfen tekrar deneyin.");
+                        $("#loginButton").attr("disabled", false);
+                    });
+
+                return false;
+            });
+        });
+    </script>
+</body>
+
+</html>

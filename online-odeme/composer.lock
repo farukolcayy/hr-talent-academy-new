@@ -1,0 +1,61 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "d821b5d245a3399e55a7e7a1d193e6fa",
+    "packages": [
+        {
+            "name": "netinternet/parasut-v4",
+            "version": "1.0.21",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/netinternet/parasut-v4.git",
+                "reference": "f04c43234665eb14f4e788aded4a781cbff3e76a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/netinternet/parasut-v4/zipball/f04c43234665eb14f4e788aded4a781cbff3e76a",
+                "reference": "f04c43234665eb14f4e788aded4a781cbff3e76a",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "php": ">=5.5.9"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Parasut\\": "src"
+                },
+                "files": []
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Barış Esen",
+                    "email": "barisesennn@gmail.com"
+                }
+            ],
+            "description": "Parsaut V4 Api client",
+            "support": {
+                "issues": "https://github.com/netinternet/parasut-v4/issues",
+                "source": "https://github.com/netinternet/parasut-v4/tree/master"
+            },
+            "time": "2020-08-27T06:19:32+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": [],
+    "plugin-api-version": "2.0.0"
+}

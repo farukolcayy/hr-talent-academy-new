@@ -1,0 +1,691 @@
+<html
+    class="js sizes customelements history pointerevents postmessage webgl websockets cssanimations csscolumns csscolumns-width csscolumns-span csscolumns-fill csscolumns-gap csscolumns-rule csscolumns-rulecolor csscolumns-rulestyle csscolumns-rulewidth csscolumns-breakbefore csscolumns-breakafter csscolumns-breakinside flexbox picture srcset webworkers"
+    lang="tr" style="">
+<!--Created by ogrencikariyeri.com-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>HTA-Live</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Favicon -->
+    <link href="/assets/img/favicon_new.png" rel="icon">
+
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <!-- CSS
+	============================================ -->
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/css/main.css?ver=2.4">
+    <link rel="stylesheet" href="assets/css/vendor/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/plugins/slick.css">
+    <link rel="stylesheet" href="assets/css/plugins/font-awesome.css">
+    <link rel="stylesheet" href="assets/css/plugins/plugins.css">
+    <link rel="stylesheet" href="assets/css/style.css?ver=2.4">
+    <link rel="stylesheet" href="../css/sweetalert2.min.css">
+    <!-- <script src="assets/js/contactform.js"></script> -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css">
+
+</head>
+
+
+
+<body cz-shortcut-listen="true" class="" style="">
+    <div id="ftco-loader" class="fullscreen"><svg class="circular" width="48px" height="48px">
+            <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"></circle>
+            <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
+                stroke="#F96D00"></circle>
+        </svg></div>
+
+    <div class="main-content">
+        <!-- Start Header -->
+        <header class="ax-header haeder-default light-logo-version axil-header-sticky sticky" style="background: #000;">
+            <div class="header-wrapper">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-lg-3 col-md-6 col-sm-6 col-8 header-left">
+                            <div class="logo">
+                                <a href="index.html">
+                                    <img style="width: 72%;" src="/assets/img/logo_new.png">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-lg-9 col-md-6 col-sm-6 col-4 header-right">
+                            <div class="mainmenu-wrapepr">
+                                <!-- Start Mainmanu Nav -->
+                                <nav class="mainmenu-nav d-none d-lg-block">
+                                    <ul class="mainmenu">
+                                        <li>
+                                            <div class="video__icon">
+                                                <div class="circle--outer"></div>
+                                                <div class="circle--inner"></div>
+                                            </div>
+                                        </li>
+                                        <li><a href="#" data-href="#live-stream">Canlı Yayın</a>
+                                        </li>
+                                        <li class="has-dropdown">
+                                            <a style="color: white;" class="user-name">Edip Gençler</a>
+                                            <ul class="axil-submenu">
+                                                <li><a class="logoutButton" href="">Çıkış</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </nav>
+                                <!-- End Mainmanu Nav -->
+                                <div class="axil-header-extra d-flex align-items-center">
+                                    <div class="ax-hamburger ml--40 ml_sm--10 d-none d-lg-block">
+                                        <a class="axil-menuToggle ax-hamburger-trigger" id="side-nav-toggler" href="#">
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                        </a>
+                                    </div>
+                                    <!-- End Hamburger -->
+                                    <!-- Start Menu Bar  -->
+                                    <div
+                                        class="ax-menubar popup-navigation-activation d-block d-lg-none ml_sm--20 ml_md--20">
+                                        <div>
+                                            <i></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Start Header -->
+        <!-- Start Popup Mobile Menu -->
+        <div class="popup-mobile-manu">
+            <div class="inner cc_cursor">
+                <div class="mobileheader">
+                    <div class="logo">
+                        <a href="index.html">
+                            <img style="width: 64%;" src="/assets/img/logo_new.png">
+                        </a>
+                    </div>
+                    <a class="close-menu" href="#"></a>
+                </div>
+                <div class="menu-item">
+                    <ul class="mainmenu-item">
+                        <li><a href="#" data-href="#live-stream">Canlı Yayın</a>
+                        </li>
+                        <li class="has-dropdown">
+                            <a style="color: white;" class="user-name">Edip Gençler</a>
+                            <ul class="axil-submenu">
+                                <li><a class="logoutButton" href="">Çıkış</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+        <!-- End Popup Mobile Menu -->
+        <!-- Start Sidebar Area  -->
+        <div class="side-nav">
+            <div class="side-nav-inner">
+                <!-- Start Side Content  -->
+                <div class="side-nav-content">
+                    <div class="row ">
+                        <!-- Start Left Bar  -->
+                        <div class="col-lg-6 col-xl-6 col-12">
+                            <ul class="main-navigation">
+                                <li><a href="#" data-href="#live-stream">Canlı Yayın</a>
+                                </li>
+                                <li class="has-dropdown">
+                                    <a style="color: white;" class="user-name">Edip Gençler</a>
+                                    <ul class="axil-submenu">
+                                        <li><a class="logoutButton" href="">Çıkış</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- End Left Bar  -->
+                    </div>
+                </div>
+                <!-- End Side Content  -->
+                <!-- End of .side-nav-inner -->
+                <div class="close-sidenav" id="close-sidenav">
+                    <button class="close-button"><i class="fal fa-times"></i></button>
+                </div>
+            </div>
+        </div>
+        <!-- End Sidebar Area  -->
+        <!-- Start Page Wrapper -->
+        <main class="page-wrapper ">
+
+            <div class="row">
+                <div class="col-md-12" style="text-align: center;background-color: #222222;padding:20px">
+                    <!-- <h3 class="title" style="color:#bf2231;">İnsan Kaynakları</h3> -->
+                    <h3 id="programSubject" class="title" style="color:#f2f2f2;">İK'da Gelecek Var mı?</h3>
+                </div>
+                <div class="col-md-12" style="text-align: center;justify-content: center;">
+
+                </div>
+                <div class="col-md-9 video" id="live-stream"><iframe src="https://player.vimeo.com/video/530237419"
+                        width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture"
+                        allowfullscreen=""></iframe></div>
+                <div class="col-md-3" id="live-question">
+                    <div class="row profile-responsive">
+                        <div class="profile-card">
+                            <div class="card-header">
+                                <div class="pic">
+                                    <img id="instructorPicture" src="assets/images/instructor/bilal_ramazanoglu.jpg"
+                                        alt="">
+                                </div>
+                                <div class="name" id="instructorName">Bilal Ramazanoğlu</div>
+                                <div class="desc" id="instructorTitle">Talent Management &amp; Organizational
+                                    Development Manager</div>
+                                <div class="sm">
+                                    <a target="_blank" id="instructorLinkedin"
+                                        href="https://tr.linkedin.com/in/bilal-ramazano%C4%9Flu-5220b234"
+                                        class="fab fa-linkedin-in "></a>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="row question-responsiv">
+                        <!-- Start Contact Form -->
+                        <div class="axil-contact-form contact-form-style-1">
+                            <h3 class="title text1">Eğitmene soru sor</h3>
+                            <form id="contact-form" name="contact-form">
+                                <div class="form-group">
+                                    <textarea name="question" id="question" placeholder="Sorunuz..."
+                                        required=""></textarea>
+                                    <span class="focus-border"></span>
+                                </div>
+                                <div class="form-group">
+                                    <button type="submit" class="axil-button btn-large btn-transparent w-100"
+                                        id="contactButton" name="contactButton">
+                                        <span class="button-text">Gönder</span><span class="button-icon"></span>
+                                    </button>
+                                    <span id="result"></span>
+                                </div>
+                                <div class="bounceInDown animated" data-animate="bounceInDown" id="msg"
+                                    style="font-weight: 700 !important;color:#bf2231;text-align: center;font-size: medium;">
+
+                                </div>
+                            </form>
+                        </div>
+                        <!-- End Contact Form -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- End Single Slide -->
+
+            <!-- End Slider Area -->
+        </main>
+    </div>
+    <!-- End Portfolio Area -->
+
+    <!-- End Page Wrapper -->
+    <!-- Start Footer Area -->
+    <footer class="axil-footer footer-default theme-gradient-2">
+        <div style="background: #222;">
+
+            <!-- Start Footer Top Area -->
+            <div class="footer-top ax-section-gap">
+                <div class="container">
+                    <div class="row" style="padding-top: 50px;">
+                        <!-- Start Single Widget -->
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                            <div class="footer-widget-item axil-border-right">
+                                <div class="logo">
+                                    <a class="logo-bot" href="index.html" style="
+    /* margin-top: 55px; */
+">
+                                        <img style="width: 63%;justify-content: center;padding-right: -12px;padding-left: 83px;"
+                                            src="/assets/img/logo_new.png">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End Single Widget -->
+
+                        <!-- Start Single Widget -->
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12 mt_lg--30 mt_md--30 mt_sm--30"
+                            style="padding-top: -19px;">
+                            <div class="footer-widget-item" style="text-align: center;">
+
+                                <br>
+                                <span style="font-size: 1.2rem;color: white;"><a href="mailto:merhaba@hrtalent.academy"
+                                        style="color: white;">merhaba@hrtalent.academy</a>
+                                </span><br>
+                                <h6 class="title" style="color: white;">HTA, <a style="color: #f29221;"
+                                        href="https://ogrencikariyeri.com" target="_blank">Öğrenci Kariyeri</a>
+                                    tarafından desteklenmektedir.
+                                </h6><span style="font-size: 1.6rem;color: white;"><a href="tel:850-888-2234"
+                                        style="color: white;font-size: 15px;">(850) 888 22 34</a></span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Single Widget -->
+                </div>
+            </div>
+        </div>
+        <!-- End Footer Top Area -->
+        <!-- Start Copyright -->
+        <div class="copyright copyright-default" style="background: #000;">
+            <div class="container">
+                <div class="row row--0 ptb--20">
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+                        <div class="inner text-center text-md-left">
+                            <p>© 2020. All rights reserved by <a style="color: #f29221;"
+                                    href="https://ogrencikariyeri.com" target="_blank">Öğrenci Kariyeri.</a></p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+                        <div class="quick-contact">
+                            <ul class="link-hover d-flex justify-content-center justify-content-md-end liststyle">
+                                <li><a data-hover="Privacy Policy" href="#">Gizlilik
+                                        Politikası</a>
+                                </li>
+                                <li><a href="#">Kullanım Şartları</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Copyright -->
+
+    </footer>
+    <!-- End Footer Area -->
+
+    <!-- Modernizer JS -->
+    <script src="assets/js/vendor/modernizr.min.js"></script>
+    <!-- jQuery JS -->
+    <script src="assets/js/vendor/jquery.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="assets/js/vendor/bootstrap.min.js"></script>
+    <script src="assets/js/waypoints.min.js"></script>
+    <script src="assets/js/wow.js"></script>
+    <script src="assets/js/counterup.js"></script>
+    <script src="assets/js/imagesloaded.js"></script>
+    <script src="assets/js/isotope.js"></script>
+    <script src="assets/js/tilt.js"></script>
+    <script src="assets/js/anime.js"></script>
+    <script src="assets/js/tweenmax.js"></script>
+    <script src="assets/js/slipting.js"></script>
+    <script src="assets/js/scrollmagic.js"></script>
+    <script src="assets/js/addindicators.js"></script>
+    <script src="assets/js/slick.js"></script>
+    <script src="assets/js/youtube.js"></script>
+    <script src="assets/js/countdown.js"></script>
+    <script src="assets/js/stickysidebar.js"></script>
+    <!-- <script src="assets/js/contactform.js"></script> -->
+    <!-- Plugins JS -->
+    <script src="assets/js/plugins/plugins.min.js"></script>
+    <!-- Main JS -->
+    <script src="assets/js/scrollup.js"></script>
+    <script src="assets/js/main.js?ver=2.3"></script>
+    <script src="../js/sweetalert2.min.js"></script>
+
+
+    <script>
+        function deleteAllCookies() {
+            var cookies = document.cookie.split(";");
+            for (var i = 0; i < cookies.length; i++) {
+                var cookie = cookies[i];
+                var eqPos = cookie.indexOf("=");
+                var name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
+                path = "/live-stream";
+                document.cookie = name + '=;expires=Thu, 01 Jan 1970 00:00:01 GMT;path=' + path + ";";
+            }
+        }
+
+        function readCookie(name) {
+            var nameEQ = name + "=";
+            var ca = document.cookie.split(';');
+            for (var i = 0; i < ca.length; i++) {
+                var c = ca[i];
+                while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+                if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+            }
+            return null;
+        }
+
+        $(document).ready(function () {
+
+            var rate1 = 0;
+            var rate2 = 0;
+            var rate3 = 0;
+            var instructorRating = "";
+            var programSubjectRating = "";
+            var programDate = new Date();;
+
+            var questionStatus = true;
+
+            $('.logoutButton').click(function () {
+                deleteAllCookies();
+                window.location.href = 'https://www.hrtalent.academy/live-stream/';
+            });
+
+            var token = readCookie("token");
+            var streamEmail = readCookie("streamEmail");
+
+            if (token === null || token === "" || streamEmail === null || streamEmail === "") {
+                deleteAllCookies();
+                setTimeout(function () {
+                    window.location.href = "https://www.hrtalent.academy/live-stream/";
+                }, 1000);
+                return false;
+            }
+
+            setTimeout(function () {
+                $('#ftco-loader').removeClass('show');
+            }, 2000);
+
+
+            setInterval(function () {
+
+                $.ajax({
+                    type: 'POST',
+                    dataType: "json",
+                    url: 'checkToken.php',
+                    async: false,
+                    data: {
+                        emailAddress: streamEmail,
+                        token: token
+                    }
+                })
+                    .done(function (data) {
+                        if (data.result != '') {
+                            if (data.result.token === token) {
+
+                            } else {
+                                deleteAllCookies();
+                                setTimeout(function () {
+                                    window.location.href = "https://www.hrtalent.academy/live-stream/";
+                                }, 1000);
+                                return false;
+                            }
+                        } else {
+                            deleteAllCookies();
+                            setTimeout(function () {
+                                window.location.href = "https://www.hrtalent.academy/live-stream/";
+                            }, 1000);
+                            return false;
+                        }
+                    })
+                    .fail(function (e) {
+                        console.log(e);
+                        // deleteAllCookies();
+                        // setTimeout(function () {
+                        //     window.location.href = "https://youngexecutiveacademy.com/live-stream/";
+                        // }, 1000);
+                        return false;
+                    });
+            }, 5000);
+
+            function setQuestionTime() {
+                setTimeout(function () {
+                    questionStatus = true;
+                }, 30000);
+            }
+
+            $("input[name ='star1']").change(function () {
+                rate1 = $(this).val();
+            });
+
+            $("input[name ='star2']").change(function () {
+                rate2 = $(this).val();
+            });
+
+            $("input[name ='star3']").change(function () {
+                rate3 = $(this).val();
+            });
+
+            $('#buttonRating').click(function (e) {
+
+                e.preventDefault();
+
+                $("#buttonRating").attr("disabled", true);
+                var ratingComment = $.trim($("#ratingComment").val());
+
+                if (rate1 > 0 && rate1 < 6 && rate2 > 0 && rate2 < 6 && rate3 > 0 && rate3 < 6) {
+                    $.ajax({
+                        type: 'POST',
+                        url: 'insertRating.php',
+                        data: {
+                            liveName: "Hr Talent Academy",
+                            emailAddress: streamEmail,
+                            programSubjectRating: programSubjectRating,
+                            instructorRating: instructorRating,
+                            ratingScore: (rate1 + "-" + rate2 + "-" + rate3),
+                            ratingComment: ratingComment
+                        }
+                    })
+                        .done(function (data) {
+                            if ($.trim(data) === "Geri Bildiriminiz Kaydedildi") {
+                                swal("Başarılı", data, "success");
+                                localStorage.setItem("ratingHtaDate", new Date());
+                                localStorage.setItem("isRatingHta", "1");
+                                $.modal.close();
+                            } else {
+                                swal("Uyarı", data, "warning");
+                                $("#buttonRating").attr("disabled", false);
+                            }
+                        })
+                        .fail(function () {
+                            swal("Hata", "Geri Bildiriminiz İletilemedi! Lütfen tekrar deneyin.", "error");
+                            $("#buttonRating").attr("disabled", false);
+                        });
+
+                } else {
+                    swal("Uyarı", "Değerlendirme eksik!", "warning");
+                    $("#buttonRating").attr("disabled", false);
+                    return false;
+                }
+
+                return false;
+            });
+
+            $('#contact-form').submit(function (e) {
+                e.preventDefault();
+
+                if (questionStatus === false) {
+                    swal("Uyarı", "Yeni soru için 30 sn beklemelisiniz!", "warning");
+                    return false;
+                } else {
+                    var values = $(this).serialize();
+                    values += "&streamId=canli_yayin_sorular";
+                    values += "&nameSurname=" + readCookie("streamName");
+
+                    $.ajax({
+                        type: 'POST',
+                        url: 'insertQuestion.php',
+                        data: values
+                    })
+                        .done(function (data) {
+                            if ($.trim(data) === "Sorunuz iletildi") {
+                                swal("Başarılı", data, "success");
+                                questionStatus = false;
+                                setQuestionTime();
+                            } else {
+                                swal("Uyarı", data, "warning");
+                                return false;
+                            }
+                        })
+                        .fail(function () {
+                            swal("Hata", "Sorunuz iletilemedi! Lütfen tekrar deneyin.", "error");
+                        });
+                }
+                return false;
+            });
+
+            $.ajax({
+                type: 'POST',
+                dataType: "json",
+                async: false,
+                url: 'getStreamInfo.php',
+                data: {
+                    liveId: 1
+                }
+            })
+                .done(function (data) {
+                    if (data.result != '') {
+                        $("#programSubject").html(data.result.programSubject);
+                        $("#live-stream").html(data.result.streamLink);
+                        $("#instructorName").html(data.result.instructorName);
+                        $("#instructorTitle").html(data.result.instructorTitle);
+                        $("#instructorLinkedin").attr("href", data.result.instructorLinkedin);
+                        $("#instructorPicture").attr("src", "assets/images/instructor/" + data.result.instructorPicture);
+                        $(".user-name").html(readCookie("streamName"));
+                        instructorRating = data.result.instructorName;
+                        programSubjectRating = data.result.programSubject;
+                        var _programDate = data.result.programDate.replace('-', '').replace('-', '').replace(' ', '').replace(':', '').replace(':', '');
+                        var _yyyy = _programDate.substr(0, 4);
+                        var _mm = _programDate.substr(4, 2);
+                        var _dd = _programDate.substr(6, 2);
+                        var _hh = _programDate.substr(8, 2);
+                        var _mmm = _programDate.substr(10, 2);
+                        var _ss = _programDate.substr(12, 2);
+                        programDate = new Date(_yyyy, _mm - 1, _dd, _hh, _mmm, _ss);
+
+                    } else {
+                        console.log(data);
+                        return false;
+                    }
+                })
+                .fail(function (e) {
+                    console.log(e);
+                    return false;
+                });
+
+            /*User Rating Control - Start*/
+            var _nowRating = new Date();
+            var _ratingDate = localStorage.getItem("ratingHtaDate");
+            if (_ratingDate != null && _ratingDate != "") {
+                _nowRating = new Date(_ratingDate);
+            }
+            var isRating = localStorage.getItem("isRatingHta");
+
+            if (isRating === "1") {
+                if (_nowRating < programDate) {
+                    localStorage.setItem("isRatingHta", "0");
+                    isRating = "0";
+                }
+            }
+
+            if (isRating != "1") {
+                setTimeout(function () {
+                    $('#ex8').modal({
+                        fadeDuration: 1000,
+                        fadeDelay: 0.50,
+                        closeText: 'Kapat',
+                        escapeClose: true
+                    });
+                }, 1000 * 60 * 30);
+            }
+            /*User Rating Control - End*/
+
+        });
+    </script>
+
+    <div id="ex8" class="modal" style="opacity: 1; display: none;">
+        <!--Rating Modal Content Start-->
+        <div id="cont-responsive" class="cont container">
+            <form id="rating-form">
+                <div class="title" id="title-border">
+                    <p>Fikirlerin Bizim İçin Önemli 😊</p>
+                </div>
+                <div class="row">
+                    <div class="cont col-md-12">
+                        <div class="title-rating-question">
+                            Eğitimi Genel Olarak Değerlendirin.
+                        </div>
+                        <div class="stars">
+                            <input class="star star-5" id="star-5" type="radio" name="star1" value="5">
+                            <label class="star star-5" for="star-5"></label>
+                            <input class="star star-4" id="star-4" type="radio" name="star1" value="4">
+                            <label class="star star-4" for="star-4"></label>
+                            <input class="star star-3" id="star-3" type="radio" name="star1" value="3">
+                            <label class="star star-3" for="star-3"></label>
+                            <input class="star star-2" id="star-2" type="radio" name="star1" value="2">
+                            <label class="star star-2" for="star-2"></label>
+                            <input class="star star-1" id="star-1" type="radio" name="star1" value="1">
+                            <label class="star star-1" for="star-1"></label>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="cont col-md-12">
+                        <div class="title-rating-question">
+                            Sunum Kalitesini Değerlendirin.
+                        </div>
+                        <div class="stars">
+                            <input class="star star-5" id="star-10" type="radio" name="star2" value="5">
+                            <label class="star star-5" for="star-10"></label>
+                            <input class="star star-4" id="star-9" type="radio" name="star2" value="4">
+                            <label class="star star-4" for="star-9"></label>
+                            <input class="star star-3" id="star-8" type="radio" name="star2" value="3">
+                            <label class="star star-3" for="star-8"></label>
+                            <input class="star star-2" id="star-7" type="radio" name="star2" value="2">
+                            <label class="star star-2" for="star-7"></label>
+                            <input class="star star-1" id="star-6" type="radio" name="star2" value="1">
+                            <label class="star star-1" for="star-6"></label>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="cont col-md-12">
+                        <div class="title-rating-question">
+                            Eğitmenin Konuya Hakimiyetini Değerlendirin.
+                        </div>
+                        <div class="stars">
+                            <input class="star star-5" id="star-15" type="radio" name="star3" value="5">
+                            <label class="star star-5" for="star-15"></label>
+                            <input class="star star-4" id="star-14" type="radio" name="star3" value="4">
+                            <label class="star star-4" for="star-14"></label>
+                            <input class="star star-3" id="star-13" type="radio" name="star3" value="3">
+                            <label class="star star-3" for="star-13"></label>
+                            <input class="star star-2" id="star-12" type="radio" name="star3" value="2">
+                            <label class="star star-2" for="star-12"></label>
+                            <input class="star star-1" id="star-11" type="radio" name="star3" value="1">
+                            <label class="star star-1" for="star-11"></label>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="cont col-md-12">
+                        <div class="title-rating-question">
+                            Genel Yorumunuzu Yazınız.
+                        </div>
+                        <textarea style="margin-top: 15px;" rows="5" id="ratingComment"
+                            placeholder="Diğer düşünceleriniz..."></textarea>
+                    </div>
+                </div>
+                <div class="row" style="justify-content: center;margin-top: 20px;">
+                    <button class="button-rating" id="buttonRating" type="button">
+                        <span class="circle" aria-hidden="true">
+                            <span class="icon arrow"></span>
+                        </span>
+                        <span class="button-text">Gönder</span>
+                    </button>
+                </div>
+            </form>
+        </div>
+        <!--Rating Modal Content End-->
+    </div>
+</body>
+
+</html>
