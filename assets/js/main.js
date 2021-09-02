@@ -207,4 +207,13 @@
     aos_init();
   });
 
+  var $slickElement = $('.slideshow');
+
+	$slickElement.slick({
+	  autoplay: true,
+	  dots: false,
+	});
+
 })(jQuery);
+
+
