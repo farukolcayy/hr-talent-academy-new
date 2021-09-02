@@ -596,6 +596,9 @@ body.mobile-nav-active #mobile-nav-toggle {
     #speakers .container {
         max-width: 1560px;
     }
+    #team .container {
+        max-width: 1560px;
+    }
 }
 
 @media (max-width: 991px) {
@@ -619,7 +622,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 #intro h1 {
     color: #fff;
     font-family: "Raleway", sans-serif;
-    font-size: 35px;
+    font-size: 30px;
     font-weight: 600;
     text-transform: uppercase;
 }
@@ -839,6 +842,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 #speakers {
     padding: 60px 0 30px 0;
 }
+
 
 #speakers .speaker {
     position: relative;
@@ -2219,6 +2223,305 @@ body.mobile-nav-active #mobile-nav-toggle {
     opacity: 1;
   }
 
+
+/******************Slider için gerekli********************/
+*{
+    outline:none;
+  }
+  /* spacer */
+  .spacer{
+    height:150px;
+    width:100%;
+  }
+  .spacer2{
+    height:20px;
+    width:100%;
+  }
+  /* spacer ends */
+  
+  /* slider styles */
+  .sd_master_wrapper{
+      position: relative;	
+      max-width:900px;
+      margin:0 auto;
+      padding:0;
+      border-radius:10px;
+      z-index:9999;
+  }
+  .sdtestBg3{
+      height: 100%;
+      width: 80%;
+      background: #fff;
+      position: absolute;
+      bottom: -40px;
+      left: 10%;
+      border-radius: 20px;
+      box-shadow: 0px 18px 52.8537px rgb(215 228 249 / 50%);
+      z-index:1;
+  }
+  .sdtestBg2{
+      height: 100%;
+      width: 90%;
+      background: #fff;
+      position: absolute;
+      bottom: -22px;
+      left: 5%;
+      border-radius: 20px;
+      box-shadow: 0px 18px 52.8537px rgb(215 228 249 / 50%);
+      z-index:2;
+  }
+  
+  .sd_scroll {
+      height: auto;
+      max-height: 180px;
+      overflow: auto;
+  }
+      
+  .slideshow {
+      position: relative;
+      min-height: 300px;
+      height: auto;
+      background: #fff;
+      box-shadow: 0px 18px 52.8537px rgba(215, 228, 249, 0.5);
+      border-radius: 20px;
+      background-image: url(https://farsighttechnologies.com/wp-content/uploads/2021/03/quote1.png), url(https://farsighttechnologies.com/wp-content/uploads/2021/03/quote.png);
+      background-position: top 15px left 15px, bottom 40% right 15px;
+      background-repeat: no-repeat;
+      background-size: 180px, 180px;
+      z-index:3;
+  }
+  button.slick-prev.slick-arrow {
+      position: absolute;
+      z-index: 9999;
+      bottom: -80px;
+      right: 160px;
+      background: transparent;
+      color: transparent;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      height: 15px;
+      width: 30px;
+      padding: 0;
+      background-image: url(https://farsighttechnologies.com/wp-content/uploads/2021/03/left-icon.png);
+      background-size: 100% 100%;
+  }
+  button.slick-next.slick-arrow {
+      position: absolute;
+      bottom: -82px;
+      right: 105px;
+      background: transparent;
+      color: transparent;
+      border: none;
+      padding: 0;
+      cursor: pointer;
+      outline: none;
+      height: 18px;
+      width: 40px;
+      background-image: url(https://farsighttechnologies.com/wp-content/uploads/2021/03/right-icon.png);
+      background-size: 100% 100%;
+  }
+  .pagingInfo {
+      position: absolute;
+      bottom: 0;
+      z-index: 999;
+  }
+  .sdCustomSliderHeadig {
+      color: #94A2B3;
+      font-family: "Poppins", Sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 1.6em;
+      text-align: center;
+  }
+  .sdCustomSliderBtn{
+      display: inline-block;
+      text-decoration: none;
+      font-family: montserrat;
+      background: #E31C3A;
+      color: #fff;
+      padding: 12px 25px;
+      margin-top: 30px;
+      border-radius: 4px;
+      outline: none;
+      font-size: 14px;
+      font-weight: 500;
+  }
+  .sdAllContent{
+      width:75%;
+      margin:auto;
+  }
+  .thumbnail img {
+      height: 55px;
+      width: 55px;
+      border-radius: 50%;
+      margin: auto;
+      margin-top: 15px;
+  }
+  .content{
+      display:block !important;
+      padding: 5px;
+  }
+  .SdClientName {
+      text-align: center;
+      color: #272D4E;
+      font-family: "Poppins", Sans-serif;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 1.4em;
+      margin-top: 15px;
+  }
+  .SdClientDesc {
+      text-align: center;
+      color: #7854F7;
+      font-family: "Poppins", Sans-serif;
+      font-size: 14px;
+      line-height: 1.4em;
+      margin-bottom: 10px;
+  }
+  
+  
+  /* style for moblile */
+  @media (max-width:576px){
+  .sd_scroll {
+      height: auto;
+      overflow: auto;
+      max-height:240px;
+  }
+  
+  .thumbnail, .btnNtxt{
+      width: 100% !important;
+      display: block !important;
+  }
+  
+  }
+  /* scroll bar */
+  /* total width */
+  .sd_scroll::-webkit-scrollbar {
+      background-color:transparent;
+      width:6px;
+  }
+  
+  /* background of the scrollbar except button or resizer */
+  .sd_scroll::-webkit-scrollbar-track {
+      background-color:transparent;
+  }
+  .sd_scroll::-webkit-scrollbar-track:hover {
+      background-color:transparent;
+  }
+  
+  /* scrollbar itself */
+  .sd_scroll::-webkit-scrollbar-thumb {
+      background-color:#babac0;
+      border-radius:16px;
+      
+  }
+  .sd_scroll::-webkit-scrollbar-thumb:hover {
+      background-color:#a0a0a5;
+  }
+
+  #team {
+    padding: 60px 0 30px 0;
+}
+
+
+#team .speaker {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+#team .speaker .details {
+    background: rgba(6, 12, 34, 0.76);
+    position: absolute;
+    left: 0;
+    bottom: -30px;
+    right: 0;
+    text-align: center;
+    padding-top: 10px;
+    transition: all 300ms cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+#team .speaker .details h3 {
+    color: #fff;
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+#team .speaker .details p {
+    color: #fff;
+    font-size: 15px;
+    margin-bottom: 10px;
+    font-style: italic;
+}
+
+#team .speaker .details .social {
+    height: 30px;
+}
+
+#team .speaker .details a {
+    color: #fff;
+}
+
+#team .speaker .details a:hover {
+    color: #f82249;
+}
+
+#team .speaker:hover .details {
+    bottom: 0;
+}
+
+#team-details {
+    padding: 60px 0;
+}
+
+#team-details .details h2 {
+    color: #112363;
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+#team-details .details .social {
+    margin-bottom: 15px;
+}
+
+#team-details .details .social a {
+    background: #e9edfb;
+    color: #112363;
+    line-height: 1;
+    display: inline-block;
+    text-align: center;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    padding-top: 9px;
+}
+
+#team-details .details .social a:hover {
+    background: #f82249;
+    color: #fff;
+}
+
+#team-details .details .social a i {
+    font-size: 18px;
+}
+
+#team-details .details p {
+    color: #112363;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+#team_responsive{
+    padding: 60px 0 30px 0;
+}
+#team_responsive .speaker {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
  
 
 
