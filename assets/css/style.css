@@ -94,6 +94,9 @@ h6 {
     .video-iframe iframe{
         height: 400px;
     }
+    .sd_master_wrapper{
+        max-width: 720px !important;
+    }
 }
 
 .back-to-top:focus {
@@ -622,7 +625,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 #intro h1 {
     color: #fff;
     font-family: "Raleway", sans-serif;
-    font-size: 30px;
+    font-size: 26px;
     font-weight: 600;
     text-transform: uppercase;
 }
@@ -996,6 +999,9 @@ body.mobile-nav-active #mobile-nav-toggle {
     }
     .video-iframe iframe{
         height: 300px;
+    }
+    #intro h1{
+        font-size: 28px;
     }
 }
 
@@ -1464,6 +1470,9 @@ body.mobile-nav-active #mobile-nav-toggle {
     #schedule .schedule-item .speaker{
         margin: 0 10px 136px 0;
     }
+    .sd_master_wrapper{
+        max-width: 365px !important;
+    }
 }
 
 
@@ -1598,6 +1607,7 @@ body.mobile-nav-active #mobile-nav-toggle {
     #contact .contact-email {
         padding: 20px 0;
     }
+    
 }
 
 @media (min-width: 768px) {
