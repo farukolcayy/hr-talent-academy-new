@@ -2189,7 +2189,7 @@ body.mobile-nav-active #mobile-nav-toggle {
     left: 0;
     background: #fff;
     width: 100%;
-    height: 120px;
+    height: 147px;
     z-index: 1;
     padding: 10px;
   }
@@ -2440,7 +2440,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 #team .speaker {
     position: relative;
     overflow: hidden;
-    margin-bottom: 30px;
+    /* margin-bottom: 30px; */
 }
 
 #team .speaker .details {
