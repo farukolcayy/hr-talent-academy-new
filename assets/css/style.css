@@ -538,7 +538,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 #intro {
     width: 100%;
     height: 100vh;
-    background: url(../img/intro-bg.jpg) top center;
+    background: url(../img/intro-bg-2.jpg) top center;
     background-size: cover;
     overflow: hidden;
     position: relative;
@@ -2189,7 +2189,7 @@ body.mobile-nav-active #mobile-nav-toggle {
     left: 0;
     background: #fff;
     width: 100%;
-    height: 147px;
+    height: 96px;
     z-index: 1;
     padding: 10px;
   }
@@ -2533,6 +2533,13 @@ body.mobile-nav-active #mobile-nav-toggle {
     position: relative;
     overflow: hidden;
     margin-bottom: 30px;
+}
+.fa{
+    color: #0A66C2;
+}
+
+.back-to-top i {
+    color: #fff !important;
 }
  
 
