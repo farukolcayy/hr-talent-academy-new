@@ -93,7 +93,7 @@
                                 exit;
                             }
 
-                            if (!mysql_select_db('hrtalent_basvuru', $link)) {
+                            if (!mysql_select_db('hrtalent_basvuru_2021', $link)) {
                                 echo 'Veritabanı seçilemedi';
                                 exit;
                             }
@@ -151,7 +151,7 @@
                                 exit;
                             }
 
-                            if (!mysql_select_db('hrtalent_basvuru', $link)) {
+                            if (!mysql_select_db('hrtalent_basvuru_2021', $link)) {
                                 echo 'Veritabanı seçilemedi';
                                 exit;
                             }
@@ -210,8 +210,8 @@
 
             $("#exportButton").click(function() {
                 $("#datatable2").table2excel({
-                    name: "basvurular",
-                    filename: "YEA Basvurular", //do not include extension
+                    name: "basvurular_2021",
+                    filename: "HR Basvurular", //do not include extension
                     fileext: ".xls" // file extension
                 });
             });

@@ -1,7 +1,7 @@
 
  <?php
  /* Bağlantıyı Başlat */
- $mysqli = new mysqli("localhost","hrtalent_basvuru","!hrt!2021!","hrtalent_basvuru");/* Bağlantıyı Kontrol Et */
+ $mysqli = new mysqli("localhost","hrtalent_basvuru","!hrt!2021!","hrtalent_basvuru_2021");/* Bağlantıyı Kontrol Et */
  if ($mysqli->connect_error){
      /* Bağlantı Başarısız İse */
      echo "Bağlantı Başarısız. Hata: " . $mysqli->connect_error;
@@ -18,7 +18,7 @@
    
 
 
-  if(!empty($name) && !empty($surname) && !empty($email) && !empty($tel) && !empty($school_name) && !empty($school_department) && !empty($className) && $className!="Sınıf Seçiniz..."  ){
+  if(!empty($name) && !empty($surname) && !empty($email) && !empty($tel) && !empty($school_name) && $school_name!="Üniversite Seçiniz..." && !empty($school_department) && !empty($className) && $className!="Sınıf Seçiniz..."  ){
       $sql= "INSERT INTO basvuru (name,surname,emailAddress,phoneNumber,university,department,class) VALUES ('$name','$surname','$email','$tel','$school_name','$school_department','$className')";
      
     
