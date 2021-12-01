@@ -277,6 +277,38 @@ jQuery(window).on('pluginTabsReady', function () {
                     case "d41d8cd98f00b204e9800998ecf8427e":
                         discountCode = 0;
                         break;
+                    case "56aacfc8396138bb8acedde68ac0418a":
+                    case "2c5047b7d2ebc78db082ce25d6ae8711":
+                    case "0fad3e48d1b8fabd4500e8cc21749868":
+                    case "3800999bc69d54681735f77cb4d08a63":
+                    case "4c4f3e158985ad0bfd3e2a63d8113a15":
+                    case "6a65921ea7c8554f9fcf604d0c7c0a3e":
+                    case "921facd961734391b1e6a67a2dd8ff2b":
+                    case "b274c9f3bdf7b3c34c7c3a6f6debfb1e":
+                    case "b220d8603323bb2df6db85d5456cd159":
+                    case "1c9bab86c3e89213a9366b1fb47a6240":
+                    case "80c21f68636b17ca781e39897e5cd09d":
+                    case "a9b87e7567175cda065cc57194785601":
+                    case "78bdd8d7f52a3800a8e2b42ece33ec2c":
+                    case "6dbce9c3252fac8c467124db09705928":
+                    case "bbfceb59f4680932ff13109753aaa76e":
+                    case "f61a6274255a73dce7c52c315e6549af":
+                    case "1c322cccf862414247a241a16b2ef0c5":
+                    case "e35dcae784faa725693a23a41bc119c1":
+                    case "f3e9f9f1a7ad73f3c7752f07b7e2a53e":
+                    case "b6a228a2f75ff3decde02ce783882f18":
+                    case "7df4e65ae1ee5df71ba8d4d1134108b8":
+                    case "a945a63947c1124049c15134ff8190fd":
+                    case "bd21538e82ea848df2a1139d96a33e3b":
+                    case "c1499a08f1bb7e6ebca1652308e7b67a":
+                    case "92b91ce874d726cf18a99818eafbdd0d":
+                    case "df374839242b86a000f037596dfa734e":
+                    case "974b8c608d741c3736f21cbe98143d26":
+                    case "5d9e648842496e05982128a75a8dbb72":
+                    case "b244f2f1248d3d29953ac27786e688a1":
+                    case "8e0fa8773e7d5977dd19afe7737d0d40":
+                        discountCode = 70;
+                        break;
                     case "39f3ea0e2ab06a70a9fd93c7421df8eb":
                         discountCode = 60;
                         break;
@@ -301,13 +333,13 @@ jQuery(window).on('pluginTabsReady', function () {
                 tabRel++;
 
                 var amountOrder = [649];
-                totalAmountPrice=parseInt(649-(((649)*discountCode)/100));
+                totalAmountPrice = parseInt(649 - (((649) * discountCode) / 100));
 
                 if (discountCode != 0) {
-                    var discountTotal = parseInt((649 *discountCode)/100) +".99 ₺";
+                    var discountTotal = parseInt((649 * discountCode) / 100) + ".99 ₺";
                     $("#totalDiscountMessage").text(discountTotal);
 
-                    var totalAmount = parseInt(649-(((649)*discountCode)/100))+".99₺";
+                    var totalAmount = parseInt(649 - (((649) * discountCode) / 100)) + ".99₺";
                     $("#totalAmountMessage").text(totalAmount);
                 }
 
@@ -335,7 +367,7 @@ jQuery(window).on('pluginTabsReady', function () {
             if (discountCode == 0) {
                 $("span[id=privacyDiscountTotal]").html(0);
             } else {
-                $("span[id=privacyDiscountTotal]").html(ttAmount-totalAmountPrice);
+                $("span[id=privacyDiscountTotal]").html(ttAmount - totalAmountPrice);
             }
 
             var currentdate = new Date();
