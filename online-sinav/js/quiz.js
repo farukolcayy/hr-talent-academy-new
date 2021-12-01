@@ -143,7 +143,7 @@ function startQuiz() {
 
     // $('#hms_timer').countdowntimer({
     //     displayFormat: "MS",
-    //     borderColor: "#bf2231",
+    //     borderColor: "#f82249",
     //     fontColor: "#FFFFFF",
     //     backgroundColor: "#212121",
     //     labelsFormat: true,

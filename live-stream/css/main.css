@@ -39,14 +39,14 @@
 /* Handle */
 
 ::-webkit-scrollbar-thumb {
-    background: #bf2231;
+    background: #f82249;
     border-radius: 10px;
 }
 
 /* Handle on hover */
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #bf2231;
+    background: #f82249;
 }
 
 * {

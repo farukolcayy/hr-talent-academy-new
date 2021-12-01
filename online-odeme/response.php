@@ -5,15 +5,6 @@
 
 	use Parasut\Client;
 
-	## 2. ADIM için örnek kodlar ##
-
-	## ÖNEMLİ UYARILAR ##
-	## 1) Bu sayfaya oturum (SESSION) ile veri taşıyamazsınız. Çünkü bu sayfa müşterilerin yönlendirildiği bir sayfa değildir.
-	## 2) Entegrasyonun 1. ADIM'ında gönderdiğniz merchant_oid değeri bu sayfaya POST ile gelir. Bu değeri kullanarak
-	## veri tabanınızdan ilgili siparişi tespit edip onaylamalı veya iptal etmelisiniz.
-	## 3) Aynı sipariş için birden fazla bildirim ulaşabilir (Ağ bağlantı sorunları vb. nedeniyle). Bu nedenle öncelikle
-	## siparişin durumunu veri tabanınızdan kontrol edin, eğer onaylandıysa tekrar işlem yapmayın. Örneği aşağıda bulunmaktadır.
-
 	$post = $_POST;
 
 	####################### DÜZENLEMESİ ZORUNLU ALANLAR #######################
@@ -23,34 +14,14 @@
 	$merchant_salt	= 'zFWTJFxETm9336sK';
 	###########################################################################
 
-	####### Bu kısımda herhangi bir değişiklik yapmanıza gerek yoktur. #######
-	#
-	## POST değerleri ile hash oluştur.
 	$hash = base64_encode(hash_hmac('sha256', $post['merchant_oid'] . $merchant_salt . $post['status'] . $post['total_amount'], $merchant_key, true));
-	#
-	## Oluşturulan hash'i, paytr'dan gelen post içindeki hash ile karşılaştır (isteğin paytr'dan geldiğine ve değişmediğine emin olmak için)
-	## Bu işlemi yapmazsanız maddi zarara uğramanız olasıdır.
 
-	// foreach ($post as $key => $value) {
-	// 	echo "$key is at $value";
-	// }
 
 	if ($hash != $post['hash']) {
 		die('PAYTR notification failed: bad hash');
 	}
 	###########################################################################
 
-	## BURADA YAPILMASI GEREKENLER
-	## 1) Siparişin durumunu $post['merchant_oid'] değerini kullanarak veri tabanınızdan sorgulayın.
-	## 2) Eğer sipariş zaten daha önceden onaylandıysa veya iptal edildiyse  echo "OK"; exit; yaparak sonlandırın.
-
-	/* Sipariş durum sorgulama örnek
- 	   $durum = SQL
-	   if($durum == "onay" || $durum == "iptal"){
-			echo "OK";
-			exit;
-		}
-	 */
 	$siparisno = $post['merchant_oid'];
 	$toplamtutar = $post['total_amount'];
 
@@ -63,8 +34,7 @@
 		$userEmail = "";
 		$userPhone = "";
 		$userAddress = "";
-		$totalAmountPrice = ($totalAmountFormat / 1.08);
-		// $totalAmountPrice = "1.99";
+		$totalAmountPrice = ($totalAmountFormat / 1.18);
 		$selectProgramLabel = "";
 		$userCity = "";
 		$userDistrict = "";
@@ -72,33 +42,28 @@
 		$paymentType = "";
 		$yeaOldVideos = "";
 		$discount = "";
+		$discountValue = "";
 
+		$conn = new PDO('mysql:host=localhost;dbname=hrtalent_basvuru_2021;charset=utf8;port=3306', 'hrtalent_basvuru', '!hrt!2021!');
 
-		$link22 = mysqli_connect("localhost", "hrtalent_odeme", "!hrt!2021!", "hrtalent_odeme");
+		$query = $conn->prepare("SELECT * FROM odeme_ilk_adim where siparisNo=? GROUP by siparisNo");
+		$query->execute(array($siparisno));
 
-		if ($link22 != false) {
-			$sql22 = "SELECT * FROM odeme_ilk_adim WHERE siparisNo='$siparisno' GROUP BY siparisNo";
-			mysqli_set_charset($link22, "utf8");
-			if ($res22 = mysqli_query($link22, $sql22)) {
-				if (mysqli_num_rows($res22) > 0) {
-					while ($row22 = mysqli_fetch_array($res22)) {
-						$userIdentificationNumber = $row22["userIdentificationNumber"];
-						$userName = $row22["userName"];
-						$userEmail = $row22["userEmail"];
-						$userPhone = $row22["userPhone"];
-						$userAddress = $row22["userAddress"];
-						$userCity = $row22["userCity"];
-						$userDistrict = $row22["userDistrict"];
-						$basketContent = $row22["basketContent"];
-						$paymentType = $row22["paymentType"];
-						$discount = $row22["discount"];
-					}
-				}
+		if ($query->rowCount()) {
+			foreach ($query as $row) {
+				$userIdentificationNumber = $row["userIdentificationNumber"];
+				$userName = $row["userName"];
+				$userEmail = $row["userEmail"];
+				$userPhone = $row["userPhone"];
+				$userAddress = $row["userAddress"];
+				$userCity = $row["userCity"];
+				$userDistrict = $row["userDistrict"];
+				$basketContent = $row["basketContent"];
+				$paymentType = $row["paymentType"];
+				$discount = $row["discount"];
+				$discountValue = $row["discountValue"];
 			}
 		}
-
-		mysqli_close($link22);
-
 
 		//MParaşüt Token Alma
 		$client = new Client([
@@ -146,10 +111,10 @@
 				'type' => 'sales_invoices', // Required
 				'attributes' => array(
 					'item_type' => 'invoice', // Required
-					'description' => 'HR Talent Eğitim Ücreti',
+					'description' => 'HR Talent Academy Eğitim Ücreti',
 					'issue_date' => date("Y-m-d"), // Required
 					'due_date' => date("Y-m-d"),
-					'invoice_series' => 'Sertifika',
+					'invoice_series' => 'Bilet',
 					// 'invoice_id' => 15454656,
 					'currency' => 'TRL'
 				),
@@ -161,13 +126,13 @@
 								'attributes' => array(
 									'quantity' => 1,
 									'unit_price' => $totalAmountPrice,
-									'vat_rate' => 8,
+									'vat_rate' => 18,
 									'description' => $basketContent
 								),
 								"relationships" => array(
 									"product" => array(
 										"data" => array(
-											"id" => 43822111,
+											"id" => 60984601,
 											"type" => "products"
 										)
 									)
@@ -183,7 +148,7 @@
 					),
 					'category' => array(
 						'data' => array(
-							'id' => 5708003,
+							'id' => 6697531,
 							'type' => 'item_categories'
 						)
 					)
@@ -255,18 +220,21 @@
 
 
 		##ödemeyi veritabanına kaydetme kısmı
-		$link = mysqli_connect("localhost", "hrtalent_odeme", "!hrt!2021!", "hrtalent_odeme");
-		$sql = "INSERT INTO odeme_krediKarti (siparisNo,totalAmount,discount,userIdentificationNumber,userName,userEmail,userPhone,userAddress,userCity,userDistrict,basketContent,paymentType) VALUES ('$siparisno','$totalAmountFormat','$discount','$userIdentificationNumber','$userName','$userEmail','$userPhone','$userAddress','$userCity','$userDistrict','$basketContent','$paymentType')";
+		$conn = new PDO('mysql:host=localhost;dbname=hrtalent_basvuru_2021;charset=utf8;port=3306', 'hrtalent_basvuru', '!hrt!2021!');
+		$query = $conn->prepare("INSERT INTO odeme_krediKarti SET
+			siparisNo= ?,totalAmount= ?,discount= ?,discountValue= ?,userIdentificationNumber= ?,userName= ?,userEmail= ?,userPhone= ?,
+			userAddress= ?,userCity= ?,userDistrict= ?,basketContent= ?,paymentType= ?"
+			);
+	
+		$insert = $query->execute(array(
+			$siparisno,$totalAmountFormat,$discount,$discountValue,$userIdentificationNumber,$userName,
+			$userEmail,$userPhone,$userAddress,$userCity,$userDistrict,$basketContent,$paymentType
+		));
 
-		mysqli_set_charset($link, "utf8");
-		if (mysqli_query($link, $sql)) {
-		} else {
-		}
-		mysqli_close($link);
 		##endregion
 
 		##mesaj gönderme kısmı
-		$message = urlencode('Ödemeniz başarılı bir şekilde gerçekleşmiştir. Akademi bilgileriniz tarafınıza gönderilecektir. 08508882234');
+		$message = urlencode('Ödemeniz başarılı bir şekilde gerçekleşmiştir. Akademi bilgileriniz en geç 1 hafta içerisinde tarafınıza gönderilecektir. 08508882234');
 		// $message = str_replace(' ', '%20', $sss);
 
 		$postUrl = "http://panel.1sms.com.tr:8080/api/smsget/v1?username=bw&password=9bcd9b9d53b99ea8d54e7b2d5e006626&header=BadiWorks&gsm=" . substr($userPhone, 1) . "&message=" . $message;

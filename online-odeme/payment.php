@@ -19,6 +19,7 @@
 	$userIdentificationNumber = $_REQUEST['userIdentificationNumber'];
 	$userCity = $_REQUEST['userCity'];
 	$userDistrict = $_REQUEST['userDistrict'];
+	$discountCodeValue = $_REQUEST['discountCodeValue'];
 
 	$email = $emailRequest;/*Müşteri email*/
 	$payment_amount	= $totalAmountPrice;
@@ -98,15 +99,19 @@
 		$token = $result['token'];
 
 		##ödemeyi veritabanına kaydetme kısmı
-		$link = mysqli_connect("localhost", "hrtalent_odeme", "!hrt!2021!", "hrtalent_odeme");
-		$siparisno = $post['merchant_oid'];
-		$sql = "INSERT INTO odeme_ilk_adim (siparisNo,totalAmount,discount,userIdentificationNumber,userName,userEmail,userPhone,userAddress,userCity,userDistrict,basketContent,paymentType) VALUES ('$merchant_oid','$totalAmountPrice','$discountCode','$userIdentificationNumber','$userName','$email','$userPhone','$userAddress','$userCity','$userDistrict','$basketContent','Credit Card')";
 
-		mysqli_set_charset($link, "utf8");
-		if (mysqli_query($link, $sql)) {
-		} else {
-		}
-		mysqli_close($link);
+		$conn = new PDO('mysql:host=localhost;dbname=hrtalent_basvuru_2021;charset=utf8;port=3306', 'hrtalent_basvuru', '!hrt!2021!');
+		$query = $conn->prepare(
+			"INSERT INTO odeme_ilk_adim SET
+				siparisNo= ?,totalAmount= ?,discount= ?,discountValue= ?,userIdentificationNumber= ?,userName= ?,userEmail= ?,
+				userPhone= ?,userAddress= ?,userCity= ?,userDistrict= ?,basketContent= ?,paymentType=?"
+		);
+
+		$insert = $query->execute(array(
+			$merchant_oid, $totalAmountPrice, $discountCode, $discountCodeValue, $userIdentificationNumber,
+			$userName, $email, $userPhone, $userAddress, $userCity, $userDistrict, $basketContent, 'Credit Card'
+		));
+
 		##endregion
 	} else
 		die("PAYTR IFRAME failed. reason:" . $result['reason']);

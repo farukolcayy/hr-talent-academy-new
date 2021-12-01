@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html dir="ltr" lang="tr-TR">
+<html dir="ltr" lang="en-TR">
 
 <head>
 
@@ -7,71 +7,26 @@
 	<meta name="author" content="SemiColonWeb" />
 
 	<!-- Stylesheets
-			============================================= -->
+	============================================= -->
 	<link
 		href="https://fonts.googleapis.com/css?family=Lato:300,400,400i,700|Poppins:300,400,500,600,700|PT+Serif:400,400i&display=swap"
 		rel="stylesheet" type="text/css" />
-	<link rel="stylesheet" href="css/bootstrap.css" type="text/css" />
-	<link rel="stylesheet" href="css/style.css?ver=2.8" type="text/css" />
-	<link rel="stylesheet" href="css/dark.css" type="text/css" />
-	<link rel="stylesheet" href="css/font-icons.css" type="text/css" />
-	<link rel="stylesheet" href="css/animate.css" type="text/css" />
-	<link rel="stylesheet" href="css/magnific-popup.css" type="text/css" />
-	<link rel="stylesheet" href="css/toastr.min.css" />
-	<link rel="stylesheet" href="css/custom.css" type="text/css" />
+	<link rel="stylesheet" href="/online-odeme/css/bootstrap.css" type="text/css" />
+	<link rel="stylesheet" href="/online-odeme/css/style.css?v=1.3" type="text/css" />
+	<link rel="stylesheet" href="/online-odeme/css/dark.css" type="text/css" />
+	<link rel="stylesheet" href="/online-odeme/css/font-icons.css" type="text/css" />
+	<link rel="stylesheet" href="/online-odeme/css/animate.css" type="text/css" />
+	<link rel="stylesheet" href="/online-odeme/css/magnific-popup.css" type="text/css" />
+	<link rel="stylesheet" href="/online-odeme/css/toastr.min.css" />
+	<link rel="stylesheet" href="/online-odeme/css/custom.css?v=1.2" type="text/css" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<link rel="stylesheet" href="css/components/radio-checkbox.css" type="text/css" />
+	<link rel="stylesheet" href="/online-odeme/css/components/radio-checkbox.css" type="text/css" />
 	<link rel="shortcut icon" type="image/png" href="/assets/img/favicon_new.png" />
 	<!-- Document Title
 	============================================= -->
-	<title>Ödeme - HTA</title>
+	<title>Online Ödeme | HR Talent Academy</title>
 
 </head>
-
-<style>
-	#ptab1 .table span {
-		font-weight: 700;
-		font-size: 1.2rem;
-	}
-
-	#totalAmount {
-		border-radius: 7px;
-		background-color: #ff3e3e;
-		color: white;
-		padding: 8px;
-		font-weight: 700;
-		font-size: 1rem;
-	}
-
-	#totalDiscount {
-		border-radius: 7px;
-		background-color: #18bf18;
-		color: white;
-		padding: 8px;
-		font-weight: 700;
-		font-size: 1rem;
-	}
-
-	#totalReelAmount {
-		border-radius: 7px;
-		background-color: #f17d7d;
-		color: white;
-		padding: 8px;
-		font-weight: 700;
-		font-size: 1rem;
-	}
-
-	.table {
-		box-shadow: 2px 10px 21px 1px rgb(0 0 0 / 60%);
-		background-color: #F9F9F9;
-		border-bottom: 3px solid #EEE;
-		display: none;
-	}
-
-	.table td {
-		padding: 0.8rem !important;
-	}
-</style>
 
 <body class="stretched">
 	<div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
@@ -82,1356 +37,1302 @@
 	<!-- Document Wrapper
 	============================================= -->
 	<div id="wrapper" class="clearfix">
-
-		<header id="header" class="full-header">
-			<div id="header-wrap">
-				<div class="container">
-					<div class="header-row" style="justify-content: center;">
-						<div class="col-md-6">
-							<div id="logo" style="margin-right:0px !important;margin-left: 0px !important;">
-								<a href="/" class="standard-logo" data-sticky-logo="/assets/img/logo_new_2.png"
-									data-mobile-logo="/assets/img/logo_new_2.png"><img src="/assets/img/logo_new.png"
-										alt="Öğrenci Kariyeri Logo"></a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="header-wrap-clone"></div>
-		</header>
-
-		<!-- Content
+		<!-- Page Title
 		============================================= -->
-		<section id="content" style="background-color:#E8E8E8;min-height: 803px;">
-			<div class="content-wrap" style="padding: 20px 0;">
-				<div class="container">
+		<section id="page-title" style="background-color: #040919;">
+			<div class="container clearfix" style="text-align: center;">
+				<img src="/assets/img/logo_new.png" style="width: 20%;">
+			</div>
+	</div>
+	</section><!-- #page-title end -->
 
-					<div id="processTabs" data-plugin="tabs" class="customjs">
-						<ul id="processStepsMain" class="process-steps row col-mb-30">
-							<li class="col-sm-6 col-lg-3">
-								<a href="#ptab1" class="i-circled i-bordered i-alt mx-auto">1</a>
-								<h5>Seçim</h5>
-							</li>
-							<li class="col-sm-6 col-lg-3">
-								<a href="#ptab2" class="i-circled i-bordered i-alt mx-auto">2</a>
-								<h5>Fatura Bilgileri</h5>
-							</li>
-							<li class="col-sm-6 col-lg-3">
-								<a href="#ptab3" class="i-circled i-bordered i-alt mx-auto">3</a>
-								<h5>Ödeme</h5>
-							</li>
-						</ul>
-						<div>
-							<div id="ptab1">
+	<!-- Content
+		============================================= -->
+	<section id="content" style="background-color: #171e30;min-height: 803px;">
+		<div class="content-wrap">
+			<div class="container">
 
-								<div class="portfolio-container">
+				<div id="processTabs" data-plugin="tabs" class="customjs">
+					<ul id="processStepsMain" class="process-steps row col-mb-30" style="justify-content: center;">
+						<li class="col-sm-6 col-lg-3">
+							<a href="#ptab1" class="i-circled i-bordered i-alt mx-auto">1</a>
+							<h5>İndirim Kodu</h5>
+						</li>
+						<li class="col-sm-6 col-lg-3">
+							<a href="#ptab2" class="i-circled i-bordered i-alt mx-auto">2</a>
+							<h5>Paket Seçimi</h5>
+						</li>
+						<li class="col-sm-6 col-lg-3">
+							<a href="#ptab3" class="i-circled i-bordered i-alt mx-auto">3</a>
+							<h5>Fatura Bilgileri</h5>
+						</li>
+						<li class="col-sm-6 col-lg-3">
+							<a href="#ptab4" class="i-circled i-bordered i-alt mx-auto">4</a>
+							<h5>Ödeme</h5>
+						</li>
+					</ul>
+					<div>
+						<div id="ptab1">
+							<div class="form-group" style="max-width: 35rem;margin-left: auto;margin-right: auto;">
+								<div style="margin-bottom: 20px;">
+									<span class="info-span" style="font-family: 'Poppins';color: white;">İndirim kodu
+										ve
+										e-mail adresiniz ile
+										ödeme işlemine
+										geçebilirsiniz</span>
+								</div>
+								<br />
+								<!-- <span style="font-family: 'Poppins';color:#dc3545;">Kullanıcı giriş
+									bilgileri</span> -->
+								<input type="email" class="form-control" id="userEmail" aria-describedby="emailHelp"
+									placeholder="Akademiye kaydolduğunuz e-mail adresini giriniz"
+									style="margin-bottom: 10px;">
+								<input type="text" class="form-control" id="discountCode"
+									placeholder="Size verilen indirim kodunu bu alana giriniz">
+								<small id="discountCode" class="form-text text-muted">*İndirim kodunuz yok ise devam
+									edebilirsiniz!</small>
+							</div>
+							<a href="#" class="button button-3d m-0 float-right tab-linker" rel="2">Sonraki Adım
+								&rArr;</a>
 
-									<!-- Portfolio Items
-																		============================================= -->
-									<div id="portfolio" class="portfolio row gutter-20">
+						</div>
+						<div id="ptab2">
+							<!-- <span style="font-family: 'Poppins';color: white;">*İndirim oranınız sınav sonucunuza göre
+								oluşturulmuştur. 2 Aylık fiyat gösterilmiştir. Akademi</span><span
+								style="font-family: 'Poppins';color: #dc3545;"> 2 ay sürecektir.</span> -->
+							<div class="row pricing col-mb-30 mb-4 no-gutters"
+								style="background-color:#040919;border-radius:40px;overflow: hidden;">
 
-									</div><!-- #portfolio end -->
+								<div class="col-12 col-md-6 col-lg-6" id="hr-main-image">
+								</div>
 
-									<!-- <div class="pagination-container topmargin mb-0">
-										<ul class="pagination m-0"></ul>
-									</div> -->
+								<div class="col-12 col-md-6 col-lg-6">
+
+									<div class="pricing-box text-center" data-select="1">
+										<p style="text-align: justify;padding:15%;margin-bottom: 0px;">
+											Yeni mezun veya İnsan Kaynakları alanında kariyer yapmak isteyen öğrencilere
+											özel olarak hazırlanmış ve iş görüşmeleri, mülakat, online simülasyon gibi
+											alanlarda potansiyellerini performansa dönüştüren uygulamalı online bir
+											etkinliktir.</br><br>
+											12 Oturum süren program ile farklı sektörlerdeki öncü şirketlerden gelen
+											İnsan Kaynakları profesyonellerinin tecrübelerini dinleyerek onlarla tanışma
+											fırsatı yakala!
+										</p>
+										<!-- <div class="line line-sm mb-4"></div> -->
+									</div>
 
 								</div>
 
-								<div class="row" style="padding-right: 30px;padding-left: 30px;">
-									<table id="amountInfoTable"
-										class="table table-bordered table-striped fadeInUp animated"
-										data-animate="fadeInUp" data-delay="400">
-										<tbody>
+								<div class="col-12 col-md-6 col-lg-6" style="margin-top: auto;margin-bottom: auto;">
+									<div class="row">
+										<div class="col-6 col-md-6 col-lg-6"
+											style="margin-top: auto;margin-bottom: auto;text-align: end;">
+											<span style="font-size: larger;">Paket Ücreti (2 Ay): </span>
+										</div>
+										<div class="col-6 col-md-6 col-lg-6"
+											style="margin-top: auto;margin-bottom: auto;text-align: start;">
+											<div class="pricing-price" style="text-decoration: blink;">
+												<span class="price-unit">&#8378;</span><span
+													class="realAmount">649</span>
+													<!-- <span style="font-size:20px">/2 ay</span> -->
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="col-12 col-md-6 col-lg-6">
+									<table id="totalPaymentTable" style="width: 100%;" border="1" cellpadding="4">
+										<tbody style="background-color: #040919;">
 											<tr>
-												<td>
-													Normal Akademi Tutarı
-												</td>
-												<td>
-													<span id="totalReelAmount"></span>
+												<td style="color: white;text-align: end;">Normal Tutar : </td>
+												<td style="text-align: end;">
+													<span id="totalNormalMessage"
+														style="color:white ; font-size: 22px;">649.99 ₺</span>
 												</td>
 											</tr>
 											<tr>
-												<td>
-													Toplam İndirim
+												<td style="color: white;text-align: end;">Toplam İndirim Tutarı :
 												</td>
-												<td>
-													<span id="totalDiscount"></span>
+												<td style="text-align: end;">
+													<span id="totalDiscountMessage"
+														style="color:#19b13a ; font-size: 22px;">0</span>
 												</td>
 											</tr>
 											<tr>
-												<td>
-													Toplam Ödenecek Tutar
-												</td>
-												<td>
-													<div class="row">
-														<div class="col-md-3">
-															<span id="totalAmount"></span>
-														</div>
-														<div class="col-md-9" style="text-align: end;">
-															<a data-payment-id="1"
-																style="background-color: rgb(255, 62, 62); color: white;"
-																class="button button-3d button-black m-0"
-																name="active-button">Satın Al</a>
-														</div>
-													</div>
+												<td style="color: white;text-align: end;">Ödenecek Toplam Tutar : </td>
+												<td style="text-align: end;">
+													<span id="totalAmountMessage"
+														style="color:white ; font-size: 22px;font-weight: bold;">0</span>
 												</td>
 											</tr>
 										</tbody>
 									</table>
 								</div>
-
-							</div>
-							<div id="ptab2">
-
-								<div id="card-option-form" class="form-group"
-									style="max-width: 30rem;margin-left: auto;margin-right: auto;margin-top: 20px;">
-									<span style="font-family: 'Poppins';color: #dc3545;">Kişisel bilgiler</span>
-									<input style="margin-top: 10px;" type="text" class="form-control"
-										id="userIdentificationNumber"
-										placeholder="TC Kimlik Numarası(Faturanız için gereklidir)" maxlength="11"
-										minlength="11">
-									<input style="margin-top: 10px;" type="text" class="form-control" id="userName"
-										placeholder="Ad Soyad">
-									<input style="margin-top: 10px;" type="email" class="form-control" id="userEmail"
-										placeholder="E-mail" required>
-									<input style="margin-top: 10px;margin-bottom: 10px;" type="text"
-										class="form-control" id="userPhone"
-										placeholder="Telefon (Başında 0 olmadan giriniz)">
-									<span style="font-family: 'Poppins';color: #dc3545;">Adres
-										bilgisi</span>
-									<textarea style="margin-top: 10px;" rows="4" class="form-control" id="userAddress"
-										placeholder="Adres"></textarea>
-									<select style="margin-top: 10px;" name="userCity" id="userCity"
-										class="form-control">
-										<option value="">İl Seçiniz...</option>
-									</select>
-									<select style="margin-top: 10px;" name="userDistrict" id="userDistrict"
-										class="form-control" disabled="disabled">
-										<option value="">İlçe Seçiniz...</option>
-									</select>
-									<small id="discountCode" class="form-text text-muted">*Verdiğiniz bilgiler faturanız
-										için
-										kullanılacaktır.</small>
-								</div>
-								<div style="max-width: 30rem;margin-left: auto;margin-right: auto;">
-									<div class="row">
-										<div class="col-md-12 col-xs-12">
-											<div style="margin-top: 30px;">
-												<input id="checkbox-1" class="checkbox-style" name="checkbox-1"
-													type="checkbox">
-												<label for="checkbox-1" style="text-transform: inherit;"
-													class="checkbox-style-1-label checkbox-small"><a href="#myModal1"
-														data-lightbox="inline">Ön
-														bilgilendirme </a>metnini okudum, kabul
-													ediyorum.</label>
-											</div>
-										</div>
-									</div>
-									<div class="row">
-										<div class="col-md-12 col-xs-12">
-											<div>
-												<input id="checkbox-2" class="checkbox-style" name="checkbox-2"
-													type="checkbox">
-												<label for="checkbox-2" style="text-transform: inherit;"
-													class="checkbox-style-1-label checkbox-small"><a href="#myModal2"
-														data-lightbox="inline">Mesafeli
-														satış sözleşmesi</a> metnini okudum,
-													kabul
-													ediyorum.</label>
-											</div>
-										</div>
-									</div>
-									<div class="row">
-										<div class="col-md-12 col-xs-12">
-											<div>
-												<input id="checkbox-3" class="checkbox-style" name="checkbox-3"
-													type="checkbox">
-												<label for="checkbox-3" style="text-transform: inherit;"
-													class="checkbox-style-1-label checkbox-small"><a href="#myModal3"
-														data-lightbox="inline">Kişisel
-														verilerin korunması</a> metnini
-													okudum, kabul
-													ediyorum.</label>
-											</div>
-										</div>
-									</div>
-
-									<div class="modal1 mfp-hide" id="myModal1">
-										<div class="block mx-auto" style="background-color: #FFF; max-width: 700px;">
-											<div class="container">
-												<div class="row">
-													<div class="col-md-12 col-sx-12">
-														<p>
-														<h1>Ön Bilgilendirme Formu</h1>
-														</p>
-
-													</div>
-													<div class="col-md-12 col-xs-12">
-
-														<p>
-														<h4>SATICI:</h4>
-														<p><strong>ÜNVANI:</strong> BadiWorks Reklam ve Pazarlama Tic.
-															Ltd.
-															Şti. </p>
-
-														<p><strong>ADRESİ:</strong> GÜMÜŞSUYU MAH. HARİCİYE KONAĞI SK.
-															OZAN
-															HAN 9 1 BEYOĞLU/ İSTANBUL</p>
-
-														<p><strong>TELEFON:</strong> 0850 888 22 34</p>
-
-														<p><strong>İNTERNET SİTESİ:</strong> odeme.ogrencikariyeri.com
-														</p>
-
-														<p><strong>E-POSTA:</strong> iletisim@ogrencikariyeri.com</p>
-
-														<p><strong>Mersis Numarası:</strong> 0129071799800001</p>
-
-														</p>
-
-													</div>
-												</div>
-
-												<div class="row">
-													<div class="col-md-12 col-sx-12">
-														<h3>ÖN BİLGİLENDİRME FORMU</h3>
-														<p><strong>1)</strong>Sözleşme konusu mal veya hizmetin adı,
-															adeti,
-															KDV dahil satış fiyatı, ödeme şekli ve
-															temel nitelikleri;</p>
-
-														<p>
-														<p><strong>Ödeme Şekli: Kredi Kartı ile İşlem</strong></p>
-														<ul>
-															<li>Sipariş özeti sayfasında sipariş toplamının kaç taksitle
-																ödeneceği bilgisi bulunmaktadır.</li>
-															<li>Bankanız kampanyalar düzenleyerek sizin seçtiğiniz
-																taksit
-																adedinin daha üstünde bir taksit adedi
-																uygulayabilir, taksit öteleme gibi hizmetler
-																sunulabilir. Bu
-																tür kampanyalar bankanızın
-																inisiyatifindedir ve şirketimizin bilgisi dâhilinde
-																olması
-																durumunda sayfalarımızda kampanyalar
-																hakkında bilgi verilmektedir.</li>
-															<li>Kredi kartınızın hesap kesim tarihinden itibaren sipariş
-																toplamı taksit adedine bölünerek kredi
-																kartı özetinize bankanız tarafından yansıtılacaktır.
-																Banka
-																taksit tutarlarını küsurat farklarını
-																dikkate alarak aylara eşit olarak dağıtmayabilir.
-																Detaylı
-																ödeme planınızın oluşturulması bankanız
-																inisiyatifindedir.</li>
-														</ul>
-														<table style="width: 100%;" border="1" cellpadding="8">
-															<tbody style="background-color: #e4e4e4;">
-																<tr>
-																	<td>Ürün/Hizmet Adı ve Temel Nitelikleri</td>
-																	<td>Adet</td>
-																	<td>Satış Bedeli(KDV dahil toplam Türk Lirası)
-																	</td>
-																</tr>
-																<tr>
-																	<td>Toplam</td>
-																	<td>1</td>
-																	<td><span id="privacyRealAmount"></span>-TL</td>
-																</tr>
-																<tr>
-																	<td>İndirim</td>
-																	<td><span id="privacyDiscount"></span>0%</td>
-																	<td><span id="privacyDiscountTotal"></span>0-TL</td>
-																</tr>
-																<tr>
-																	<td>Ödenecek Tutar</td>
-																	<td>1</td>
-																	<td><span id="privacyTotalAmount"></span>-TL</td>
-																</tr>
-															</tbody>
-														</table>
-														<p><strong>2)</strong>Paketleme, kargo ve teslim masrafları
-															ALICI
-															tarafından karşılanmaktadır. Kargo ücreti
-															0,00 -TL olup, kargo fiyatı sipariş toplam tutarına
-															eklenmektedir. Ürün/Hizmet bedeline dahil değildir.
-															Teslimat , anlaşmalı kargo şirketi aracılığı ile, ALICI'nın
-															yukarıda belirtilen adresinde elden teslim
-															edilecektir. Teslim anında ALICI'nın adresinde bulunmaması
-															durumunda dahi Firmamız edimini tam ve
-															eksiksiz olarak yerine getirmiş olarak kabul edilecektir. Bu
-															nedenle, ALICI'nın Ürün/Hizmetü geç teslim
-															almasından ve/veya hiç teslim almamasından kaynaklanan
-															zararlardan ve giderlerden SATICI sorumlu
-															değildir. SATICI, sözleşme konusu Ürün/Hizmetün sağlam,
-															eksiksiz, siparişte belirtilen niteliklere uygun
-															ve varsa garanti belgeleri ve kullanım kılavuzları ile
-															teslim
-															edilmesinden sorumludur. Bu maddede
-															bahsedilen ürün, alınan dijital eğitim içerik hizmeti
-															sonunda,
-															hak edilmesi durumunda kargolanacak
-															sertifikayı/belgeyi kapsamaktadır. ALICI 180 gün boyunca
-															online
-															dijital içeriklere program dahilinde
-															erişebilecektir. </p>
-
-														<p><strong>3)</strong>Ürün/Hizmet sözleşme tarihinden itibaren
-															en
-															geç 30 gün içerisinde teslim edilecektir.
-															Ürün/Hizmetin teslim edilmesi anına kadar tüm sorumluluk
-															SATICI’ya aittir. </p>
-
-														<p>
-														<p><strong>4)</strong>Tüketici (ALICI), 14 (ondört) gün içinde
-															herhangi bir gerekçe göstermeksizin ve cezai
-															şart ödemeksizin işbu Mesafeli Satış Sözleşmesin’den cayma
-															hakkına sahiptir. Cayma hakkı süresi, hizmet
-															ifasına ilişkin sözleşmelerde sözleşmenin kurulduğu gün; mal
-															teslimine ilişkin sözleşmelerde ise
-															tüketicinin veya tüketici tarafından belirlenen üçüncü
-															kişinin
-															malı teslim aldığı gün başlar. Ancak
-															tüketici, sözleşmenin kurulmasından malın teslimine kadar
-															olan
-															süre içinde de cayma hakkını
-															kullanabilir. Cayma hakkı süresinin belirlenmesinde; </p>
-
-														<p><strong>a)</strong>Tek sipariş konusu olup ayrı ayrı teslim
-															edilen mallarda, tüketicinin veya tüketici
-															tarafından belirlenen üçüncü kişinin son malı teslim aldığı
-															gün,
-														</p>
-
-														<p><strong>b)</strong> Birden fazla parçadan oluşan mallarda,
-															tüketicinin veya tüketici tarafından
-															belirlenen üçüncü kişinin son parçayı teslim aldığı gün,</p>
-
-														<p><strong>c)</strong> Belirli bir süre boyunca malın düzenli
-															tesliminin yapıldığı sözleşmelerde,
-															tüketicinin veya tüketici tarafından belirlenen üçüncü
-															kişinin
-															ilk malı teslim aldığı gün esas alınır.
-														</p>
-
-														<p><strong>Tüketici aşağıdaki sözleşmelerde cayma hakkını
-																kullanamaz:</strong></p>
-
-														<p><strong>a)</strong> Fiyatı finansal piyasalardaki
-															dalgalanmalara
-															bağlı olarak değişen ve SATICI veya
-															sağlayıcının kontrolünde olmayan mal veya hizmetlere ilişkin
-															sözleşmeler.</p>
-
-														<p><strong>b)</strong>Tüketicinin istekleri veya kişisel
-															ihtiyaçları
-															doğrultusunda hazırlanan mallara
-															ilişkin sözleşmeler.</p>
-
-														<p><strong>c)</strong> Çabuk bozulabilen veya son kullanma
-															tarihi
-															geçebilecek malların teslimine ilişkin
-															sözleşmeler.</p>
-
-
-
-														<p><strong>ç)</strong> Tesliminden sonra ambalaj, bant, mühür,
-															paket
-															gibi koruyucu unsurları açılmış olan
-															mallardan; iadesi sağlık ve hijyen açısından uygun
-															olmayanların
-															teslimine ilişkin sözleşmeler.</p>
-
-														<p><strong>d)</strong> Tesliminden sonra başka Ürün/Hizmetlerle
-															karışan ve doğası gereği ayrıştırılması
-															mümkün olmayan mallara ilişkin sözleşmeler.</p>
-
-														<p><strong>e)</strong>Malın tesliminden sonra ambalaj, bant,
-															mühür,
-															paket gibi koruyucu unsurları açılmış
-															olması halinde maddi ortamda sunulan kitap, dijital içerik
-															ve
-															bilgisayar sarf malzemelerine ilişkin
-															sözleşmeler.</p>
-
-														<p><strong>f)</strong> Abonelik sözleşmesi kapsamında
-															sağlananlar
-															dışında, gazete ve dergi gibi süreli
-															yayınların teslimine ilişkin sözleşmeler.</p>
-
-														<p><strong>g)</strong> Belirli bir tarihte veya dönemde
-															yapılması
-															gereken, konaklama, eşya taşıma, araba
-															kiralama, yiyecek-içecek tedariki ve eğlence veya dinlenme
-															amacıyla yapılan boş zamanın
-															değerlendirilmesine ilişkin sözleşmeler.</p>
-
-														<p><strong>ğ)</strong> Elektronik ortamda anında ifa edilen
-															hizmetler veya tüketiciye anında teslim edilen
-															gayrimaddi mallara ilişkin sözleşmeler.</p>
-
-														<p><strong>h)</strong> Cayma hakkı süresi sona ermeden önce,
-															tüketicinin onayı ile ifasına başlanan
-															hizmetlere ilişkin sözleşmeler.</p>
-
-														</p>
-
-														</p>
-														<p><strong>5)</strong>Tüketicinin herhangi bir dijital içerik
-															satın
-															alması halinde dijital içeriklerin
-															işlevselliğini etkileyecek teknik koruma önlemleri ve
-															SATICI’nın
-															bildiği ya da makul olarak bilmesinin
-															beklendiği, dijital içeriğin hangi donanım ya da yazılımla
-															birlikte çalışabileceğine ilişkin bilgiler
-															satın alınan Ürün/Hizmetin www.youngexecutiveacademy.com ‘da
-															satışa sunulduğu sayfadaki tanıtım
-															içeriğinde yer almaktadır.</p>
-
-														<p><strong>6)</strong>) Tüketicilerin şikayet ve itirazları:
-															Siparişinize ve/veya siparişinize konu
-															Ürün/Hizmete ve/veya şiparişinizle ilgili herhangi bir
-															konuda
-															şikayetinizin olması halinde
-															şikayetlerinizi yukarıda belirtilen iletişim bilgileri veya
-															www.youngexecutiveacademy.com internet
-															sitesinde belirtilen iletişim bilgileri vasıtasıyla
-															SATICI’ya
-															iletebilirsiniz. İletmiş olduğunuz şikayet
-															başvurularınız derhal kayıtlara alınacak, yetkili birimler
-															tarafından değerlendirilerek çözümlenmeye
-															çalışılacak ve en kısa sürede size geri dönüş sağlanacaktır.
-															İşbu sözleşme ile ilgili çıkacak
-															ihtilaflarda; Türk Mahkemeleri yetkili olup; uygulanacak
-															hukuk
-															Türk Hukuku’dur.
-														<p>
-															Türkiye Cumhuriyeti sınırları içerisinde geçerli olmak üzere
-															İş
-															bu Sözleşme ile ilgili çıkacak
-															ihtilaflarda; her yıl Gümrük ve Ticaret Bakanlığı tarafından
-															ilan edilen değere kadar olan ihtilaflar
-															için TÜKETİCİ işleminin yapıldığı veya TÜKETİCİ
-															ikametgahının
-															bulunduğu yerdeki İl veya İlçe Tüketici
-															Hakem Heyetleri söz konusu değerin üzerindeki ihtilaflarda
-															ise
-															TÜKETİCİ işleminin yapıldığı veya
-															TÜKETİCİ ikametgahının bulunduğu yerdeki Tüketici
-															Mahkemeleri
-															yetkili olacaktır.</p>
-														</p>
-
-
-													</div>
-
-												</div>
-
-												<div class="row">
-													<div class="col-md-12 col-sx-12">
-														<p>
-														<h1>Ön Bilgilendirme Formu</h1>
-														</p>
-
-													</div>
-													<div class="col-md-12 col-xs-12">
-
-														<p>
-														<h4>SATICI:</h4>
-														<p><strong>ÜNVANI:</strong> BadiWorks Reklam ve Pazarlama Tic.
-															Ltd.
-															Şti. </p>
-
-														<p><strong>ADRESİ:</strong> GÜMÜŞSUYU MAH. HARİCİYE KONAĞI SK.
-															OZAN
-															HAN 9 1 BEYOĞLU/ İSTANBUL</p>
-
-														<p><strong>TELEFON:</strong> 0850 888 22 34</p>
-
-														<p><strong>İNTERNET SİTESİ:</strong> odeme.ogrencikariyeri.com
-														</p>
-
-														<p><strong>E-POSTA:</strong> iletisim@ogrencikariyeri.com</p>
-
-														<p><strong>Mersis Numarası:</strong> 0129071799800001</p>
-
-														</p>
-
-														<p>
-														<h4>ALICI</h4>
-														<p>
-														<p style="background-color: #e4e4e4;">
-															<strong>Adı/Soyadı/Ünvanı:</strong><span
-																id="privacyNameSurname"></span>
-														</p>
-														<p style="background-color: #e4e4e4;"> <strong>Alıcının mail
-																adresi:</strong><span id="privacyMail"></span></p>
-
-
-														<p style="background-color: #e4e4e4;">
-															<strong>Telefon:</strong><span
-																id="privacyPhoneNumber"></span>
-														</p>
-														<p style="background-color: #e4e4e4;">
-															<strong>Adresi:</strong><span id="privacyAddress"></span>
-														</p>
-														</p>
-														<p style="background-color: #e4e4e4;"><strong>Tarih :
-															</strong><span id="privacyDate"></span></p>
-
-														</p>
-
-														</p>
-
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-
-									<div class="modal1 mfp-hide" id="myModal2">
-										<div class="block mx-auto" style="background-color: #FFF; max-width: 700px;">
-											<div class="container">
-												<div class="row">
-													<div class="col-md-12 col-sx-12" style="text-align: center;">
-														<p>
-														<h1>Mesafeli Satış Sözleşmesi</h1>
-														</p>
-
-													</div>
-													<div class="col-md-12 col-xs-12">
-														<p>
-														<h2>MADDE 1- TARAFLAR</h2>
-														</p><br>
-														<p>
-														<h4>SATICI:</h4>
-														<p><strong>ÜNVANI:</strong> BadiWorks Reklam ve Pazarlama Tic.
-															Ltd.
-															Şti. </p>
-
-														<p><strong>ADRESİ:</strong> GÜMÜŞSUYU MAH. HARİCİYE KONAĞI SK.
-															OZAN
-															HAN 9 1 BEYOĞLU/ İSTANBUL</p>
-
-														<p><strong>TELEFON:</strong> 0850 888 22 34</p>
-
-
-														<p><strong>İNTERNET SİTESİ:</strong> odeme.ogrencikariyeri.com
-														</p>
-														<p><strong>E-POSTA:</strong> iletisim@ogrencikariyeri.com</p>
-														<p><strong>Mersis Numarası:</strong> 0129071799800001</p>
-														</p>
-														<p>
-														<h4>1.2. ALICI("TÜKETİCİ"):</h4>
-
-														<p style="background-color: #e4e4e4;">
-															<strong>Adı/Soyadı/Ünvanı:</strong><span
-																id="privacyNameSurname"></span>
-														</p>
-														<p style="background-color: #e4e4e4;"> <strong>Alıcının mail
-																adresi:</strong><span id="privacyMail"></span></p>
-														<p style="background-color: #e4e4e4;">
-															<strong>Telefon:</strong><span
-																id="privacyPhoneNumber"></span>
-														</p>
-														<p style="background-color: #e4e4e4;">
-															<strong>Adresi:</strong><span id="privacyAddress"></span>
-														</p>
-														</p>
-														<p style="background-color: #e4e4e4;"><strong>Tarih :
-															</strong><span id="privacyDate"></span></p>
-														</p>
-
-														<br><br>
-													</div>
-												</div>
-
-												<div class="row">
-													<div class="col-md-12 col-xs-12">
-														<p>
-														<h2>MADDE 2- KONU</h2>
-														</p>
-														<p>İşbu sözleşmenin konusu, TÜKETİCİ'nin
-															www.youngexecutiveacademy.com internet sitesinden elektronik
-															ortamda siparişini yaptığı aşağıda nitelikleri ve satış
-															fiyatı
-															belirtilen ürünün satışı ve teslimi ile
-															ilgili olarak 6502 sayılı Tüketicinin Korunması Hakkındaki
-															Kanun
-															hükümleri gereğince tarafların hak ve
-															yükümlülüklerinin saptanmasıdır.</p>
-
-
-													</div>
-												</div>
-												<div class="row">
-													<div class="col-md-12 col-xs-12">
-														<p>
-														<h2>MADDE 3- SÖZLEŞME KONUSU ÜRÜN, ÖDEME VE TESLİMATA İLİŞKİN
-															BİLGİLER</h2>
-														</p>
-														<p><strong>3.1-</strong>Sözleşme konusu mal veya hizmetin adı,
-															adeti, KDV dahil satış fiyatı, ödeme şekli ve
-															temel nitelikleri</p>
-														<table style="width: 100%;" border="1" cellpadding="8">
-															<tbody style="background-color: #e4e4e4;">
-																<tr>
-																	<td>Ürün/Hizmet Adı ve Temel Nitelikleri</td>
-																	<td>Adet</td>
-																	<td>Satış Bedeli(KDV dahil toplam Türk Lirası)
-																	</td>
-																</tr>
-																<tr>
-																	<td>Toplam</td>
-																	<td>1</td>
-																	<td><span id="privacyRealAmount"></span>-TL</td>
-																</tr>
-																<tr>
-																	<td>İndirim</td>
-																	<td><span id="privacyDiscount"></span>0%</td>
-																	<td><span id="privacyDiscountTotal"></span>0-TL</td>
-																</tr>
-																<tr>
-																	<td>Ödenecek Tutar</td>
-																	<td>1</td>
-																	<td><span id="privacyTotalAmount"></span>-TL</td>
-																</tr>
-															</tbody>
-														</table>
-														<p>
-														<p>
-														<ul><strong>3.2-</strong> Ödeme Şekli: Kredi Kartı ile İşlem
-
-															<li>Sipariş özeti sayfasında sipariş toplamının kaç taksitle
-																ödeneceği bilgisi bulunmaktadır.</li>
-
-															<li>Bankanız kampanyalar düzenleyerek sizin seçtiğiniz
-																taksit
-																adedinin daha üstünde bir taksit adedi
-																uygulayabilir, taksit öteleme gibi hizmetler
-																sunulabilir. Bu
-																tür kampanyalar bankanızın
-																inisiyatifindedir ve şirketimizin bilgisi dâhilinde
-																olması
-																durumunda sayfalarımızda kampanyalar
-																hakkında bilgi verilmektedir</li>
-
-															<li>Kredi kartınızın hesap kesim tarihinden itibaren sipariş
-																toplamı taksit adedine bölünerek kredi
-																kartı özetinize bankanız tarafından yansıtılacaktır.
-																Banka
-																taksit tutarlarını küsurat farklarını
-																dikkate alarak aylara eşit olarak dağıtmayabilir.
-																Detaylı
-																ödeme planınızın oluşturulması bankanız
-																inisiyatifindedir.</li>
-
-														</ul>
-														</p>
-														<p><strong>3.3-</strong>Diğer yandan vadeli satışların sadece
-															Bankalara ait kredi kartları ile yapılması
-															nedeniyle, TÜKETİCİ, ilgili faiz oranlarını ve temerrüt
-															faizi
-															ile ilgili bilgileri bankasından ayrıca
-															teyit edeceğini, yürürlükte bulunan mevzuat hükümleri
-															gereğince
-															faiz ve temerrüt faizi ile ilgili
-															hükümlerin Banka ve TÜKETİCİ arasındaki kredi kartı
-															sözleşmesi
-															kapsamında uygulanacağını kabul, beyan ve
-															taahhüt eder.</p>
-
-														<p><strong>3.4-</strong>İade Prosedürü:
-														<p>TÜKETİCİ'nin cayma hakkını kullandığı durumlarda ya da
-															siparişe
-															konu olan ürünün çeşitli sebeplerle
-															tedarik edilememesi veya hakem heyeti kararları ile
-															TÜKETİCİ'ye
-															bedel iadesine karar verilen durumlarda,
-															ödeme seçeneklerine ilişkin iade prosedürü aşağıda
-															belirtilmiştir:</p>
-														</p>
-
-
-
-														<p><strong>a) </strong>Kredi Kartı ile Ödeme Seçeneklerinde İade
-															Prosedürü
-														<p>
-															Alışveriş kredi kartı ile ve taksitli olarak yapılmışsa,
-															TÜKETİCİ ürünü kaç taksit ile aldıysa Banka
-															TÜKETİCİ'ye geri ödemesini taksitle yapmaktadır. SATICI
-															bankaya
-															ürün bedelinin tamamını tek seferde
-															ödedikten sonra, Banka poslarından yapılan taksitli
-															harcamaların
-															TÜKETİCİ'nin kredi kartına iadesi
-															durumunda, konuya müdahil tarafların mağdur duruma düşmemesi
-															için talep edilen iade tutarları, yine
-															taksitli olarak hamil taraf hesaplarına Banka tarafından
-															aktarılır. TÜKETİCİ'nin satış iptaline kadar
-															ödemiş olduğu taksit tutarları, eğer iade tarihi ile kartın
-															hesap kesim tarihleri çakışmazsa her ay
-															karta 1 (bir) iade yansıyacak ve TÜKETİCİ iade öncesinde
-															ödemiş
-															olduğu taksitleri satışın taksitleri
-															bittikten sonra, iade öncesinde ödemiş olduğu taksitleri
-															sayısı
-															kadar ay daha alacak ve mevcut
-															borçlarından düşmüş olacaktır.
-															Kart ile alınmış mal ve hizmetin iadesi durumunda SATICI,
-															Banka
-															ile yapmış olduğu sözleşme gereği
-															TÜKETİCİ'ye nakit para ile ödeme yapamaz. SATICI, bir iade
-															işlemi söz konusu olduğunda ilgili yazılım
-															aracılığı ile iadesini yapacak olup, SATICI ilgili tutarı
-															Banka'ya nakden veya mahsuben ödemekle yükümlü
-															olduğundan yukarıda anlatmış olduğumuz prosedür gereğince
-															TÜKETİCİ'ye nakit olarak ödeme
-															yapılamamaktadır. Kredi kartına iade, SATICI'nın Banka'ya
-															bedeli
-															tek seferde ödemesinden sonra, Banka
-															tarafından yukarıdaki prosedür gereğince yapılacaktır.
-															TÜKETİCİ, bu prosedürü okuduğunu ve kabul ettiğini kabul ve
-															taahhüt eder.
-														</p>
-														</p>
-														<p><strong>b) </strong>Havale/EFT Ödeme Seçeneklerinde İade
-															Prosedürü
-														<p>İade, TÜKETİCİ'den banka hesap bilgileri istenerek,
-															TÜKETİCİ'nin
-															belirttiği hesaba (hesabın fatura
-															adresindeki kişinin adına veya kullanıcı üyenin adına olması
-															şarttır) havale ve EFT şeklinde
-															yapılacaktır.
-															SATICI bankaya ürün bedelinin tamamını tek seferde geri
-															öder.
-															Havale/EFT yoluyla alınmış mal ve hizmetin iadesi durumunda
-															SATICI, Banka ile yapmış olduğu sözleşme
-															gereği TÜKETİCİ'ye nakit para ile ödeme yapamaz. SATICI, bir
-															iade işlemi söz konusu olduğunda ilgili
-															yazılım aracılığı ile iadesini yapacak olup, SATICI ilgili
-															tutarı Banka'ya nakden veya mahsuben ödemekle
-															yükümlü olduğundan yukarıda anlatmış olduğumuz prosedür
-															gereğince TÜKETİCİ'ye nakit olarak ödeme
-															yapılamamaktadır.
-															TÜKETİCİ, bu prosedürü okuduğunu ve kabul ettiğini kabul ve
-															taahhüt eder.
-
-														</p>
-														</p>
-														<p><strong>3.5- </strong>Teslimat Şekli ve Adresi :
-														<p>Sözleşmeye konu hizmet dijital içerik hizmeti olduğu için,
-															TÜKETİCİ satın alım işlemini yaptığı an
-															hizmetten faydalanmaya başlayabilir. Dijital Eğitim
-															İçeriğini
-															başarıyla tamamladığı takdirde sertifikası
-															mail adresine iletilecek olup basılı sertifika talebi
-															durumunda
-															TÜKETİCİNİN sistem üzerinden girdiği
-															adrese kargo gönderimi yapılacak ve aşağıdaki ilgili adres
-															alanları güncellenerek sözleşmenin yeni bir
-															versiyonu oluşturulacaktır.
-														<ul>
-															<li style="background-color: #e4e4e4;"><strong>Teslimat
-																	Adresi
-																	:</strong><span id="privacyAddress"></span></li>
-															<li style="background-color: #e4e4e4;"><strong>Teslim
-																	Edilecek
-																	Kişi:</strong><span id="privacyNameSurname"></span>
-															</li>
-															<li style="background-color: #e4e4e4;"><strong>Fatura Adresi
-																	:</strong><span id="privacyAddress"></span></li>
-														</ul>
-														Paketleme, kargo ve teslim masrafları TÜKETİCİ tarafından
-														karşılanmaktadır. Kargo ücreti 0 -TL olup, kargo
-														fiyatı sipariş toplam tutarına eklenmektedir. Ürün bedeline
-														dahil
-														değildir. Teslimat, anlaşmalı kargo
-														şirketi aracılığı ile, TÜKETİCİ'nin yukarıda belirtilen
-														adresinde
-														elden teslim edilecektir. Teslim anında
-														TÜKETİCİ'nin adresinde bulunmaması durumunda dahi Firmamız
-														edimini
-														tam ve eksiksiz olarak yerine getirmiş
-														olarak kabul edilecektir. Bu nedenle, TÜKETİCİ'nin ürünü geç
-														teslim
-														almasından ve/veya hiç teslim
-														almamasından kaynaklanan zararlardan ve giderlerden SATICI
-														sorumlu
-														değildir. SATICI, sözleşme konusu ürünün
-														sağlam, eksiksiz, siparişte belirtilen niteliklere uygun ve
-														varsa
-														garanti belgeleri ve kullanım kılavuzları
-														ile teslim edilmesinden sorumludur.
-
-														</p>
-														</p>
-														<p><strong>3.6-</strong>Sözleşmeye konu ürün, alınan dijital
-															eğitim
-															içerik hizmeti sonunda, hak edilmesi
-															durumunda kargolanacak sertifikayı/belgeyi kapsamaktadır.
-															ALICI
-															90 gün boyunca dijital içeriklere
-															erişebilecek ve sınavlı eğitimler için 3 kez sınava girme
-															hakkına sahip olacaktır. Dijital içerik
-															hizmeti yukarıdaki tabloda belirtildiği üzere 90 gün boyunca
-															ALICI'nın erişimine açık kalacaktır.
-															Yapılan ödeme, 90 günlük erişimi ve eğitimin başarıyla
-															tamamlanması durumunda hak edilecek
-															sertifika/belgeyi kapsar. </p>
-
-
-													</div>
-												</div>
-												<div class="row">
-													<div class="col-md-12 col-xs-12">
-														<p>
-														<h2>MADDE 4- CAYMA HAKKI</h2>
-														</p>
-														<p>TÜKETİCİ , SATICI ile imzaladığı işbu Mesafeli Satış
-															Sözleşmesi'nden 14 (ondört) gün içinde herhangi bir
-															gerekçe göstermeksizin ve cezai şart ödemeksizin cayma
-															hakkına
-															sahiptir. Cayma hakkı süresi, hizmet
-															ifasına ilişkin sözleşmelerde sözleşmenin kurulduğu gün; mal
-															teslimine ilişkin sözleşmelerde ise
-															TÜKETİCİ'nin veya TÜKETİCİ tarafından belirlenen üçüncü
-															kişinin
-															malı teslim aldığı gün başlar. Ancak
-															TÜKETİCİ, sözleşmenin kurulmasından malın teslimine kadar
-															olan
-															süre içinde de cayma hakkını
-															kullanabilir. Cayma hakkı süresinin belirlenmesinde;</p>
-
-														<p><strong>a)</strong>Tek sipariş konusu olup ayrı ayrı teslim
-															edilen mallarda, TÜKETİCİ'nin veya TÜKETİCİ
-															tarafından belirlenen üçüncü kişinin son malı teslim aldığı
-															gün,
-														</p>
-														<p><strong>b)</strong>Birden fazla parçadan oluşan mallarda,
-															TÜKETİCİ'nin veya TÜKETİCİ tarafından
-															belirlenen üçüncü kişinin son parçayı teslim aldığı gün,</p>
-														<p><strong>c)</strong>Belirli bir süre boyunca malın düzenli
-															tesliminin yapıldığı sözleşmelerde,
-															TÜKETİCİ'nin veya TÜKETİCİ tarafından belirlenen üçüncü
-															kişinin
-															ilk malı teslim aldığı gün esas alınır.
-															Cayma bildiriminizi cayma hakkı süresi dolmadan
-															www.youngexecutiveacademy.com 'da yer alan kişisel
-															üyelik sayfanızdaki kolay iade seçeneği üzerinden
-															gerçekleştirebilirsiniz. Cayma hakkınız kapsamında
-															öngörülen taşıyıcı sipariş edilen ürünün tarafınıza teslim
-															edildiği kargo firması olup,
-															www.youngexecutiveacademy.com 'da yer alan kişisel üyelik
-															sayfanızdaki kolay iade seçeneğinde geri
-															gönderime ilişkin detaylar açıklanmıştır.</p>
-
-														<p><strong>Tüketici aşağıdaki sözleşmelerde cayma hakkını
-																kullanamaz:</strong></p>
-
-														<p><strong>a)</strong>Fiyatı finansal piyasalardaki
-															dalgalanmalara
-															bağlı olarak değişen ve SATICI veya
-															sağlayıcının kontrolünde olmayan mal veya hizmetlere ilişkin
-															sözleşmeler.</p>
-
-														<p><strong>b)</strong>Tüketicinin istekleri veya kişisel
-															ihtiyaçları
-															doğrultusunda hazırlanan mallara
-															ilişkin sözleşmeler.</p>
-
-														<p><strong>c)</strong>Tüketicinin istekleri veya kişisel
-															ihtiyaçları
-															doğrultusunda hazırlanan mallara
-															ilişkin sözleşmeler.</p>
-
-														<p><strong>ç)</strong>Tesliminden sonra ambalaj, bant, mühür,
-															paket
-															gibi koruyucu unsurları açılmış olan
-															mallardan; iadesi sağlık ve hijyen açısından uygun
-															olmayanların
-															teslimine ilişkin sözleşmeler.</p>
-
-														<p><strong>d)</strong>Tesliminden sonra ambalaj, bant, mühür,
-															paket
-															gibi koruyucu unsurları açılmış olan
-															mallardan; iadesi sağlık ve hijyen açısından uygun
-															olmayanların
-															teslimine ilişkin sözleşmeler.</p>
-
-														<p><strong>e)</strong>Tesliminden sonra ambalaj, bant, mühür,
-															paket
-															gibi koruyucu unsurları açılmış olan
-															mallardan; iadesi sağlık ve hijyen açısından uygun
-															olmayanların
-															teslimine ilişkin sözleşmeler.</p>
-
-														<p><strong>f)</strong>Abonelik sözleşmesi kapsamında sağlananlar
-															dışında, gazete ve dergi gibi süreli
-															yayınların teslimine ilişkin sözleşmeler.</p>
-
-														<p><strong>g)</strong>Belirli bir tarihte veya dönemde yapılması
-															gereken, konaklama, eşya taşıma, araba
-															kiralama, yiyecek-içecek tedariki ve eğlence veya dinlenme
-															amacıyla yapılan boş zamanın
-															değerlendirilmesine ilişkin sözleşmeler.</p>
-
-														<p><strong>ğ)</strong>Elektronik ortamda anında ifa edilen
-															hizmetler
-															veya TÜKETİCİ'ye anında teslim edilen
-															gayrimaddi mallara ilişkin sözleşmeler.</p>
-
-														<p><strong>h)</strong>Elektronik ortamda anında ifa edilen
-															hizmetler
-															veya TÜKETİCİ'ye anında teslim edilen
-															gayrimaddi mallara ilişkin sözleşmeler.</p>
-
-
-													</div>
-												</div>
-												<div class="row">
-													<div class="col-md-12 col-xs-12">
-														<p>
-														<h2>MADDE 5- GENEL HÜKÜMLER</h2>
-														</p>
-
-														<p><strong>5.1- </strong>TÜKETİCİ, www.youngexecutiveacademy.com
-															internet sitesinde sözleşme konusu ürüne
-															ilişkin ön bilgileri okuyup bilgi sahibi olduğunu ve
-															elektronik
-															ortamda gerekli teyidi verdiğini beyan
-															eder.</p>
-
-														<p><strong>5.2- </strong>Ürün sözleşme tarihinden itibaren en
-															geç 30
-															gün içerisinde teslim edilecektir.
-															Ürününün teslim edilmesi anına kadar tüm sorumluluk
-															SATICI'ya
-															aittir.</p>
-
-														<p><strong>5.3- </strong>Sözleşme konusu ürün, TÜKETİCİ'dan
-															başka
-															bir kişi/kuruluşa teslim edilecek ise,
-															teslim edilecek kişi/kuruluşun teslimatı kabul etmemesinden
-															SATICI sorumlu tutulamaz.</p>
-
-														<p><strong>5.4- </strong>SATICI, sözleşme konusu ürünün sağlam,
-															eksiksiz, siparişte belirtilen niteliklere
-															uygun ve varsa garanti belgeleri ve kullanım kılavuzları ile
-															teslim edilmesinden sorumludur.</p>
-
-														<p><strong>5.5- </strong>Sözleşme konusu ürünün teslimatı için
-															işbu
-															sözleşmenin bedelinin TÜKETİCİ'nin
-															tercih ettiği ödeme şekli ile ödenmiş olması şarttır.
-															Herhangi
-															bir nedenle ürün bedeli ödenmez veya
-															banka kayıtlarında iptal edilir ise, SATICI ürünün teslimi
-															yükümlülüğünden kurtulmuş kabul edilir.</p>
-														<p><strong>5.6- </strong>Ürünün tesliminden sonra TÜKETİCİ'ya
-															ait
-															kredi kartının TÜKETİCİ'nin kusurundan
-															kaynaklanmayan bir şekilde yetkisiz kişilerce haksız veya
-															hukuka
-															aykırı olarak kullanılması nedeni ile
-															ilgili banka veya finans kuruluşun ürün bedelini SATICI'ya
-															ödememesi halinde, TÜKETİCİ'nin kendisine
-															teslim edilmiş olması kaydıyla ürünün SATICI'ya gönderilmesi
-															zorunludur.</p>
-
-
-														<p><strong>5.7- </strong>- Garanti belgesi ile satılan
-															ürünlerden
-															olan veya olmayan ürünlerin ayıplı
-															(arızalı, bozuk vb.) halinde veya garanti kapsamında ve
-															şartları
-															dahilinde arızalanması veya bozulması
-															halinde gerekli onarımın yetkili servise yaptırılması için
-															söz
-															konusu ürünler SATICI'ya gönderilebilir,
-															bu takdirde kargo giderleri SATICI tarafından
-															karşılanacaktır.
-														</p>
-
-														<p><strong>5.8- </strong>385 sayılı vergi usul kanunu genel
-															tebliği
-															uyarınca iade işlemlerinin yapılabilmesi
-															için tarafınıza göndermiş olduğumuz iade bölümü bulunan
-															faturada
-															ilgili bölümlerin eksiksiz olarak
-															doldurulması ve imzalandıktan sonra tarafımıza ürün ile
-															birlikte
-															geri gönderilmesi gerekmektedir.</p>
-
-
-													</div>
-												</div>
-
-												<div class="row">
-													<div class="col-md-12 col-xs-12">
-														<p>
-														<h2>6- UYUŞMAZLIK VE YETKİLİ MAHKEME</h2>
-														</p>
-														<p>İşbu sözleşme ile ilgili çıkacak ihtilaflarda; Türk
-															Mahkemeleri
-															yetkili olup; uygulanacak hukuk Türk
-															Hukuku'dur.
-															Türkiye Cumhuriyeti sınırları içerisinde geçerli olmak üzere
-															her
-															yıl Gümrük ve ticaret Bakanlığı
-															tarafından ilan edilen değere kadar olan ihtilaflar için
-															TÜKETİCİ işleminin yapıldığı veya TÜKETİCİ
-															ikametgahının bulunduğu yerdeki İl veya İlçe Tüketici Hakem
-															Heyetleri söz konusu değerin üzerindeki
-															ihtilaflarda ise TÜKETİCİ işleminin yapıldığı veya TÜKETİCİ
-															ikametgahının bulunduğu yerdeki Tüketici
-															Mahkemeleri Yetkili olacaktır. </p>
-
-
-
-													</div>
-												</div>
-												<div class="row">
-													<div class="col-md-12 col-xs-12">
-														<p>
-														<h2>MADDE 7- BİLDİRİMLER ve DELİL SÖZLEŞMESİ</h2>
-														</p>
-														<p>İşbu Sözleşme tahtında Taraflar arasında yapılacak her türlü
-															yazışma, mevzuatta sayılan zorunlu haller
-															dışında, e-mail aracılığıyla yapılacaktır. Alıcı, işbu
-															Sözleşme'den doğabilecek ihtilaflarda Satıcı'nın
-															resmi defter ve ticari kayıtlarıyla, kendi veritabanında,
-															sunucularında tuttuğu elektronik bilgilerin ve
-															bilgisayar kayıtlarının, bağlayıcı, kesin ve münhasır delil
-															teşkil edeceğini, bu maddenin Hukuk
-															Muhakemeleri Kanunu'nun 193. maddesi anlamında delil
-															sözleşmesi
-															niteliğinde olduğunu kabul, beyan ve
-															taahhüt eder.
-															Siparişin gerçekleşmesi durumunda TÜKETİCİ işbu sözleşmenin
-															tüm
-															koşullarını kabul etmiş sayılır. </p>
-
-														<p><strong>SATICI : </strong>BadiWorks Reklam ve Pazarlama Tic.
-															Ltd.
-															Şti. </p>
-
-														<p style="background-color: #e4e4e4;"><strong>ALICI("TÜKETİCİ")
-																:
-															</strong><span id="privacyNameSurname"></span></p>
-
-														<p style="background-color: #e4e4e4;"><strong>Tarih :
-															</strong><span id="privacyDate"></span></p>
-
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-
-									<div class="modal1 mfp-hide" id="myModal3">
-										<div class="block mx-auto" style="background-color: #FFF; max-width: 700px;">
-											<div class="container">
-												<div class="row">
-													<div class="col-md-12 col-xs-12">
-														<p>
-														<h2>1. Aydınlatma Metni’nin Amacı ve Şirketimizin Veri Sorumlusu
-															Konumu:</h2>
-														</p>
-														<p>Şirketimiz BadiWorks Reklam ve Pazarlama Ticaret Limited
-															Şirketi
-															(“BadiWorks” ve/veya “Şirket”),
-															müşterilere ilişkin kişisel veriler bakımından 6698 sayılı
-															Kişisel Verilerin Korunması Kanunu (“Kanun”)
-															kapsamında “veri sorumlusu” sıfatına sahip olup işbu
-															Aydınlatma
-															Metni ile söz konusu Kanun uyarınca
-															müşterilerin BadiWorks tarafından gerçekleştirilen kişisel
-															veri
-															işleme faaliyetleri hakkında
-															aydınlatılması hedeflenmektedir.</p>
-													</div>
-												</div>
-
-												<div class="row">
-													<div class="col-md-12 col-xs-12">
-														<p>
-														<h2>2. Müşterilere Ait Kişisel Verilerin İşlenme Amacı:</h2>
-														</p>
-														<p>Müşterilere ait kişisel veriler, BadiWorks tarafından sunulan
-															ürün ve hizmetlerden ilgili kişileri
-															faydalandırmak için gerekli çalışmaların iş birimleri
-															tarafından
-															yapılması ve ilgili iş süreçlerinin
-															yürütülmesi, BadiWorks tarafından yürütülen ticari
-															faaliyetlerin
-															gerçekleştirilmesi için ilgili iş
-															birimleri tarafından gerekli çalışmaların yapılması ve buna
-															bağlı iş süreçlerinin yürütülmesi,
-															BadiWorks’ün ticari ve/veya iş stratejilerinin planlanması
-															ve
-															icrası, BadiWorks’nın ve BadiWorks ile iş
-															ilişkisi içerisinde olan ilgili kişilerin hukuki, teknik ve
-															ticari iş güvenliğinin temini de dahil olmak
-															üzere Kanun’un 5. ve 6. maddelerinde belirtilen kişisel veri
-															işleme şartları ve amaçları çerçevesinde
-															işlenmektedir.</p>
-													</div>
-												</div>
-												<div class="row">
-													<div class="col-md-12 col-xs-12">
-														<p>
-														<h2>3. Müşterilerin Açık Rızası Doğrultusunda İşlenecek Kişisel
-															Veriler ve İşleme Amaçları:</h2>
-														</p>
-														<p>Açık rıza doğrultusunda işlenecek kişisel veriler ve işleme
-															amaçları Rıza Metni’nde belirtilmiştir.</p>
-													</div>
-												</div>
-
-												<div class="row">
-													<div class="col-md-12 col-xs-12">
-														<p>
-														<h2>4. Müşterilere Ait Kişisel Verilerin Aktarımı:</h2>
-														</p>
-														<p>Müşterilere ait kişisel veriler, BadiWorks tarafından sunulan
-															ürün ve hizmetlerden ilgili kişileri
-															faydalandırmak için gerekli çalışmaların iş birimleri
-															tarafından
-															yapılması ve ilgili iş süreçlerinin
-															yürütülmesi, BadiWorks tarafından yürütülen ticari
-															faaliyetlerin
-															gerçekleştirilmesi için ilgili iş
-															birimleri tarafından gerekli çalışmaların yapılması ve buna
-															bağlı iş süreçlerinin yürütülmesi,
-															BadiWorks’ün ticari ve/veya iş stratejilerinin planlanması
-															ve
-															icrası, BadiWorks’ün ve BadiWorks ile iş
-															ilişkisi içerisinde olan ilgili kişilerin hukuki, teknik ve
-															ticari iş güvenliğinin temini için gerekli
-															olan aktivitelerin planlanması ve icrası da dahil olmak
-															üzere
-															Kanun’un 8. ve 9. maddelerinde belirtilen
-															kişisel veri işleme şartları ve amaçları çerçevesinde
-															BadiWorks
-															Reklam ve Pazarlama Ticaret Limited
-															Şirketi, Şirket yetkilileri, iştiraklerimiz, iş
-															ortaklarımız,
-															tedarikçilerimiz, hissedarlarımız, kanunen
-															yetkili kamu kurum ve kuruluşları ile özel kurumlar ile
-															paylaşılabilecektir.</p>
-													</div>
-												</div>
-
-												<div class="row">
-													<div class="col-md-12 col-xs-12">
-														<p>
-														<h2>5. Kişisel Verilerin Toplanma Yöntemi ve Hukuki Sebebi:</h2>
-														</p>
-														<p>Kişisel veriler, müşterilerden elektronik ortamda
-															toplanmaktadır.
-															Yukarıda belirtilen hukuki sebeplerle
-															toplanan kişisel veriler Kanun’un 5. ve 6. maddelerinde ve
-															bu
-															Aydınlatma Metni ve açık rıza gerekli
-															olduğu hallerde Rıza Metni’nde belirtilen amaçlarla
-															işlenebilmekte ve aktarılabilmektedir.</p>
-													</div>
-												</div>
-
-												<div class="row">
-													<div class="col-md-12 col-xs-12">
-														<p>
-														<h2>6. Kişisel Veri Sahibi Olarak Müşterilerin Hakları:</h2>
-														</p>
-														<p>Kanun’un 11. maddesi uyarınca veri sahipleri; (i) kendileri
-															ile
-															ilgili kişisel veri işlenip işlenmediğini
-															öğrenme, (ii) kişisel verileri işlenmişse buna ilişkin bilgi
-															talep etme, (iii) kişisel verilerin işlenme
-															amacını ve bunların amacına uygun kullanılıp
-															kullanılmadığını
-															öğrenme, (iv) yurt içinde veya yurt
-															dışında kişisel verilerin aktarıldığı üçüncü kişileri bilme,
-															(v)
-															kişisel verilerin eksik veya yanlış
-															işlenmiş olması hâlinde bunların düzeltilmesini isteme ve bu
-															kapsamda yapılan işlemin kişisel verilerin
-															aktarıldığı üçüncü kişilere bildirilmesini isteme, (vi)
-															Kanun ve
-															ilgili diğer kanun hükümlerine uygun
-															olarak işlenmiş olmasına rağmen, işlenmesini gerektiren
-															sebeplerin ortadan kalkması hâlinde kişisel
-															verilerin silinmesini veya yok edilmesini isteme ve bu
-															kapsamda
-															yapılan işlemin kişisel verilerin
-															aktarıldığı üçüncü kişilere bildirilmesini isteme, (vii)
-															işlenen
-															verilerin münhasıran otomatik sistemler
-															vasıtasıyla analiz edilmesi suretiyle kişinin kendisi
-															aleyhine
-															bir sonucun ortaya çıkmasına itiraz etme
-															ve (viii) kişisel verilerin kanuna aykırı olarak işlenmesi
-															sebebiyle zarara uğraması hâlinde zararın
-															giderilmesini talep etme haklarına sahiptir.
-															Söz konusu hakların kullanımına ilişkin talepler, kişisel
-															veri
-															sahipleri tarafından usule uygun
-															yöntemlerle iletilebilecektir. BadiWorks, söz konusu
-															talepleri
-															değerlendirerek 30 gün içerisinde
-															sonuçlandıracaktır. BadiWorks’ün taleplere ilişkin olarak
-															Kişisel Verileri Koruma Kurulu tarafından
-															belirlenen (varsa) ücret tarifesi üzerinden ücret talep etme
-															hakkı saklıdır.
-														</p>
-													</div>
-												</div>
-
-												<div class="row">
-													<div class="col-md-12 col-xs-12">
-														<p>
-														<h2>KİŞİSEL VERİLERİN İŞLENMESİNE İLİŞKİN RIZA METNİ</h2>
-														</p>
-														<p>Şirketimiz BadiWorks Reklam ve Pazarlama Ticaret Limited
-															Şirketi
-															(“BadiWorks” ve/veya “Şirket”),
-															müşterilere ilişkin kişisel veriler bakımından 6698 sayılı
-															Kişisel Verilerin Korunması Kanunu (“Kanun”)
-															kapsamında “veri sorumlusu” sıfatına sahip olup işbu Rıza
-															Metni
-															ile söz konusu Kanun uyarınca
-															müşterilerin BadiWorks tarafından gerçekleştirilen ve
-															aşağıda
-															belirtilen kişisel veri işleme
-															faaliyetlerine ilişkin açık rızalarının temini
-															hedeflenmektedir.
-															Kanun’un 5/2 ile 6/3 maddesinde yer alan kişisel veri işleme
-															şartlarının karşılanamadığı aşağıdaki
-															durumlar için BadiWorks tarafından kişisel verilerin
-															işlenebilmesi için müşterilerin açık rızasının
-															alınması gerekmektedir. Açık rıza gerektirmeyen süreçlere
-															ilişkin olarak Aydınlatma Metni kapsamında
-															veri işleme faaliyetleri sürdürülmekte olup açık rıza
-															gerektiren
-															süreçlerde de Aydınlatma Metni’nde
-															belirtilen temel prensiplere uygun veri işlenmektedir.
-															Bu kapsamda müşterilerin kişisel verileri usule uygun olarak
-															işlenmektedir. Buna göre kişisel veriler;
-															müşterilere yönelik kampanyaların oluşturulması, BadiWorks
-															iş
-															ortakları tarafından BadiWorks
-															müşterilerine BadiWorks’da kullanabilecekleri özel
-															fırsatların
-															sunulması, çapraz satış yapılması, hedef
-															kitle belirlenmesi, Müşteri hareketlerinin takip edilerek
-															kullanıcı deneyimini arttırıcı faaliyetlerin
-															yürütülmesi, BadiWorks’ya ait internet sitesi ile mobil
-															uygulamanın işleyişinin geliştirilmesi ve
-															Müşteri ihtiyaçlarına göre kişiselleştirilmesi, doğrudan ve
-															doğrudan olmayan pazarlama, kişiye özel
-															pazarlama ve yeniden pazarlama faaliyetlerinin yürütülmesi,
-															kişiye özel segmentasyon, hedefleme, analiz
-															ve şirket içi raporlama faaliyetlerinin yürütülmesi, pazar
-															araştırmaları, müşteri memnuniyeti
-															aktivitelerinin planlanması ve icrası, BadiWorks’ün sunduğu
-															ürün
-															ve hizmetlerin ilgili kişilerin beğeni,
-															kullanım alışkanlıkları ve ihtiyaçlarına göre
-															özelleştirilerek
-															ilgili kişilere önerilmesi ve tanıtılması
-															ile müşteri ilişkileri yönetimi süreçlerinin planlanması ve
-															icrası amaçları da dahil olmak üzere genel
-															anlamda BadiWorks’ün ürün ve/veya hizmetlerinin satış ve
-															pazarlama süreçlerinin planlanması ve icrası,
-															BadiWorks’ün sunduğu ürün ve/veya hizmetlere bağlılık
-															oluşturulması ve/veya arttırılması süreçlerinin
-															planlanması ve icrası kapsamında Müşteri’nin vereceği onayı
-															doğrultusunda işlenebilecek ve bu amaçlara
-															yönelik olarak Aydınlatma Metni’nde belirtilen taraflarla
-															paylaşılabilecektir.
-
-														</p>
-													</div>
-												</div>
-
-											</div>
-										</div>
-									</div>
-								</div>
-								<a href="#" class="button button-3d m-0 tab-linker-previous" rel="1">Önceki Adım</a>
-								<a href="#" class="button button-3d m-0 float-right tab-linker" rel="2">Sonraki Adım</a>
-							</div>
-							<div id="ptab3">
-								<div id="ptab4Content">
-
+								<div class="col-12">
+									<a style="margin: 0px 30px 30px 0px !important;" href="#"
+										class="button button-3d m-0 float-right tab-linker" rel="3">Sonraki
+										Adım</a>
 								</div>
 							</div>
 						</div>
-					</div>
+						<div id="ptab3">
+							<div class="form-group"
+								style="max-width: 30rem;margin-left: auto;margin-right: auto;margin-top: 20px;">
+								<div class="row" style="margin-bottom: 40px;">
+									<div class="col-md-6" style="float: left;">
+										<input id="radio-4" class="radio-style" name="radio-group-1" type="radio"
+											value="kredi-karti" checked>
+										<label style="text-transform: capitalize !important;color: white;" for="radio-4"
+											class="radio-style-1-label">Kredi Kartı İle
+											ödeme</label>
+									</div>
+									<div class="col-md-6" style="float: right;">
+										<input id="radio-5" class="radio-style" name="radio-group-1" type="radio"
+											value="havale-eft">
+										<label style="text-transform: capitalize !important;color: white;" for="radio-5"
+											class="radio-style-1-label">Havale/EFT İle
+											Ödeme</label>
+									</div>
+								</div>
+							</div>
+							<div id="card-option-form" class="form-group"
+								style="max-width: 30rem;margin-left: auto;margin-right: auto;margin-top: 20px;">
+								<span style="font-family: 'Poppins';color: #dc3545;">Kişisel bilgiler</span>
+								<input style="margin-top: 10px;" type="text" class="form-control"
+									id="userIdentificationNumber"
+									placeholder="TC Kimlik Numarası(Faturanız için gereklidir)" maxlength="11"
+									minlength="11">
+								<input style="margin-top: 10px;" type="text" class="form-control" id="userName"
+									placeholder="Ad Soyad">
+								<input style="margin-top: 10px;margin-bottom: 10px;" type="text" class="form-control"
+									id="userPhone" placeholder="Telefon">
+								<span style="font-family: 'Poppins';color: #dc3545;">Adres
+									bilgisi</span>
+								<textarea style="margin-top: 10px;" rows="4" class="form-control" id="userAddress"
+									placeholder="Adres"></textarea>
+								<select style="margin-top: 10px;" name="userCity" id="userCity" class="form-control">
+									<option value="">İl Seçiniz...</option>
+								</select>
+								<select style="margin-top: 10px;" name="userDistrict" id="userDistrict"
+									class="form-control" disabled="disabled">
+									<option value="">İlçe Seçiniz...</option>
+								</select>
+								<small id="discountCode" class="form-text text-muted">*Verdiğiniz bilgiler faturanız
+									için
+									kullanılacaktır.</small>
+							</div>
+							<div style="max-width: 30rem;margin-left: auto;margin-right: auto;">
+								<div class="row">
+									<div class="col-md-12 col-xs-12">
+										<div style="margin-top: 30px;">
+											<input id="checkbox-1" class="checkbox-style" name="checkbox-1"
+												type="checkbox">
+											<label for="checkbox-1" style="text-transform: inherit;color: white;"
+												class="checkbox-style-1-label checkbox-small"><a href="#myModal1"
+													data-lightbox="inline">Ön
+													bilgilendirme </a>metnini okudum, kabul
+												ediyorum.</label>
+										</div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-md-12 col-xs-12">
+										<div>
+											<input id="checkbox-2" class="checkbox-style" name="checkbox-2"
+												type="checkbox">
+											<label for="checkbox-2" style="text-transform: inherit;color: white;"
+												class="checkbox-style-1-label checkbox-small"><a href="#myModal2"
+													data-lightbox="inline">Mesafeli satış sözleşmesi</a> metnini okudum,
+												kabul
+												ediyorum.</label>
+										</div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-md-12 col-xs-12">
+										<div>
+											<input id="checkbox-3" class="checkbox-style" name="checkbox-3"
+												type="checkbox">
+											<label for="checkbox-3" style="text-transform: inherit;color: white;"
+												class="checkbox-style-1-label checkbox-small"><a href="#myModal3"
+													data-lightbox="inline">Kişisel verilerin korunması</a> metnini
+												okudum, kabul
+												ediyorum.</label>
+										</div>
+									</div>
+								</div>
 
+								<div class="modal1 mfp-hide" id="myModal1">
+									<div class="block mx-auto" style="background-color: #FFF; max-width: 700px;">
+										<div class="container">
+											<div class="row">
+												<div class="col-md-12 col-sx-12">
+													<p>
+													<h1>Ön Bilgilendirme Formu</h1>
+													</p>
+
+												</div>
+												<div class="col-md-12 col-xs-12">
+
+													<p>
+													<h4>SATICI:</h4>
+													<p><strong>ÜNVANI:</strong> BadiWorks Reklam ve Pazarlama Tic. Ltd.
+														Şti. </p>
+
+													<p><strong>ADRESİ:</strong> GÜMÜŞSUYU MAH. HARİCİYE KONAĞI SK. OZAN
+														HAN 9 1 BEYOĞLU/ İSTANBUL</p>
+
+													<p><strong>TELEFON:</strong> 0850 888 22 34</p>
+
+													<p><strong>İNTERNET SİTESİ:</strong> hrtalent.academy
+													</p>
+
+													<p><strong>E-POSTA:</strong> merhaba@hrtalentacademy.com</p>
+
+													<p><strong>Mersis Numarası:</strong> 0129071799800001</p>
+
+													</p>
+
+												</div>
+											</div>
+
+											<div class="row">
+												<div class="col-md-12 col-sx-12">
+													<h3>ÖN BİLGİLENDİRME FORMU</h3>
+													<p><strong>1)</strong>Sözleşme konusu mal veya hizmetin adı, adeti,
+														KDV dahil satış fiyatı, ödeme şekli ve
+														temel nitelikleri;</p>
+
+													<p>
+													<p><strong>Ödeme Şekli: Kredi Kartı ile İşlem</strong></p>
+													<ul>
+														<li>Sipariş özeti sayfasında sipariş toplamının kaç taksitle
+															ödeneceği bilgisi bulunmaktadır.</li>
+														<li>Bankanız kampanyalar düzenleyerek sizin seçtiğiniz taksit
+															adedinin daha üstünde bir taksit adedi
+															uygulayabilir, taksit öteleme gibi hizmetler sunulabilir. Bu
+															tür kampanyalar bankanızın
+															inisiyatifindedir ve şirketimizin bilgisi dâhilinde olması
+															durumunda sayfalarımızda kampanyalar
+															hakkında bilgi verilmektedir.</li>
+														<li>Kredi kartınızın hesap kesim tarihinden itibaren sipariş
+															toplamı taksit adedine bölünerek kredi
+															kartı özetinize bankanız tarafından yansıtılacaktır. Banka
+															taksit tutarlarını küsurat farklarını
+															dikkate alarak aylara eşit olarak dağıtmayabilir. Detaylı
+															ödeme planınızın oluşturulması bankanız
+															inisiyatifindedir.</li>
+													</ul>
+													<table style="width: 100%;" border="1" cellpadding="8">
+														<tbody style="background-color: yellow;">
+															<tr>
+																<td>Ürün/Hizmet Adı ve Temel Nitelikleri</td>
+																<td>Adet</td>
+																<td>Satış Bedeli(KDV dahil toplam Türk Lirası)
+																</td>
+															</tr>
+															<tr>
+																<td>Toplam</td>
+																<td>1</td>
+																<td><span id="privacyRealAmount"></span>-TL</td>
+															</tr>
+															<tr>
+																<td>İndirim</td>
+																<td><span id="privacyDiscount"></span></td>
+																<td><span id="privacyDiscountTotal"></span>-TL</td>
+															</tr>
+															<tr>
+																<td>Ödenecek Tutar</td>
+																<td>&nbsp;</td>
+																<td><span id="privacyTotalAmount"></span>-TL</td>
+															</tr>
+														</tbody>
+													</table>
+													<p><strong>2)</strong>Paketleme, kargo ve teslim masrafları ALICI
+														tarafından karşılanmaktadır. Kargo ücreti
+														0,00 -TL olup, kargo fiyatı sipariş toplam tutarına
+														eklenmektedir. Ürün/Hizmet bedeline dahil değildir.
+														Teslimat , anlaşmalı kargo şirketi aracılığı ile, ALICI'nın
+														yukarıda belirtilen adresinde elden teslim
+														edilecektir. Teslim anında ALICI'nın adresinde bulunmaması
+														durumunda dahi Firmamız edimini tam ve
+														eksiksiz olarak yerine getirmiş olarak kabul edilecektir. Bu
+														nedenle, ALICI'nın Ürün/Hizmetü geç teslim
+														almasından ve/veya hiç teslim almamasından kaynaklanan
+														zararlardan ve giderlerden SATICI sorumlu
+														değildir. SATICI, sözleşme konusu Ürün/Hizmetün sağlam,
+														eksiksiz, siparişte belirtilen niteliklere uygun
+														ve varsa garanti belgeleri ve kullanım kılavuzları ile teslim
+														edilmesinden sorumludur. Bu maddede
+														bahsedilen ürün, alınan dijital eğitim içerik hizmeti sonunda,
+														hak edilmesi durumunda kargolanacak
+														sertifikayı/belgeyi kapsamaktadır. ALICI 180 gün boyunca online
+														dijital içeriklere program dahilinde
+														erişebilecektir. </p>
+
+													<p><strong>3)</strong>Ürün/Hizmet sözleşme tarihinden itibaren en
+														geç 30 gün içerisinde teslim edilecektir.
+														Ürün/Hizmetin teslim edilmesi anına kadar tüm sorumluluk
+														SATICI’ya aittir. </p>
+
+													<p>
+													<p><strong>4)</strong>Tüketici (ALICI), 14 (ondört) gün içinde
+														herhangi bir gerekçe göstermeksizin ve cezai
+														şart ödemeksizin işbu Mesafeli Satış Sözleşmesin’den cayma
+														hakkına sahiptir. Cayma hakkı süresi, hizmet
+														ifasına ilişkin sözleşmelerde sözleşmenin kurulduğu gün; mal
+														teslimine ilişkin sözleşmelerde ise
+														tüketicinin veya tüketici tarafından belirlenen üçüncü kişinin
+														malı teslim aldığı gün başlar. Ancak
+														tüketici, sözleşmenin kurulmasından malın teslimine kadar olan
+														süre içinde de cayma hakkını
+														kullanabilir. Cayma hakkı süresinin belirlenmesinde; </p>
+
+													<p><strong>a)</strong>Tek sipariş konusu olup ayrı ayrı teslim
+														edilen mallarda, tüketicinin veya tüketici
+														tarafından belirlenen üçüncü kişinin son malı teslim aldığı gün,
+													</p>
+
+													<p><strong>b)</strong> Birden fazla parçadan oluşan mallarda,
+														tüketicinin veya tüketici tarafından
+														belirlenen üçüncü kişinin son parçayı teslim aldığı gün,</p>
+
+													<p><strong>c)</strong> Belirli bir süre boyunca malın düzenli
+														tesliminin yapıldığı sözleşmelerde,
+														tüketicinin veya tüketici tarafından belirlenen üçüncü kişinin
+														ilk malı teslim aldığı gün esas alınır.
+													</p>
+
+													<p><strong>Tüketici aşağıdaki sözleşmelerde cayma hakkını
+															kullanamaz:</strong></p>
+
+													<p><strong>a)</strong> Fiyatı finansal piyasalardaki dalgalanmalara
+														bağlı olarak değişen ve SATICI veya
+														sağlayıcının kontrolünde olmayan mal veya hizmetlere ilişkin
+														sözleşmeler.</p>
+
+													<p><strong>b)</strong>Tüketicinin istekleri veya kişisel ihtiyaçları
+														doğrultusunda hazırlanan mallara
+														ilişkin sözleşmeler.</p>
+
+													<p><strong>c)</strong> Çabuk bozulabilen veya son kullanma tarihi
+														geçebilecek malların teslimine ilişkin
+														sözleşmeler.</p>
+
+
+
+													<p><strong>ç)</strong> Tesliminden sonra ambalaj, bant, mühür, paket
+														gibi koruyucu unsurları açılmış olan
+														mallardan; iadesi sağlık ve hijyen açısından uygun olmayanların
+														teslimine ilişkin sözleşmeler.</p>
+
+													<p><strong>d)</strong> Tesliminden sonra başka Ürün/Hizmetlerle
+														karışan ve doğası gereği ayrıştırılması
+														mümkün olmayan mallara ilişkin sözleşmeler.</p>
+
+													<p><strong>e)</strong>Malın tesliminden sonra ambalaj, bant, mühür,
+														paket gibi koruyucu unsurları açılmış
+														olması halinde maddi ortamda sunulan kitap, dijital içerik ve
+														bilgisayar sarf malzemelerine ilişkin
+														sözleşmeler.</p>
+
+													<p><strong>f)</strong> Abonelik sözleşmesi kapsamında sağlananlar
+														dışında, gazete ve dergi gibi süreli
+														yayınların teslimine ilişkin sözleşmeler.</p>
+
+													<p><strong>g)</strong> Belirli bir tarihte veya dönemde yapılması
+														gereken, konaklama, eşya taşıma, araba
+														kiralama, yiyecek-içecek tedariki ve eğlence veya dinlenme
+														amacıyla yapılan boş zamanın
+														değerlendirilmesine ilişkin sözleşmeler.</p>
+
+													<p><strong>ğ)</strong> Elektronik ortamda anında ifa edilen
+														hizmetler veya tüketiciye anında teslim edilen
+														gayrimaddi mallara ilişkin sözleşmeler.</p>
+
+													<p><strong>h)</strong> Cayma hakkı süresi sona ermeden önce,
+														tüketicinin onayı ile ifasına başlanan
+														hizmetlere ilişkin sözleşmeler.</p>
+
+													</p>
+
+													</p>
+													<p><strong>5)</strong>Tüketicinin herhangi bir dijital içerik satın
+														alması halinde dijital içeriklerin
+														işlevselliğini etkileyecek teknik koruma önlemleri ve SATICI’nın
+														bildiği ya da makul olarak bilmesinin
+														beklendiği, dijital içeriğin hangi donanım ya da yazılımla
+														birlikte çalışabileceğine ilişkin bilgiler
+														satın alınan Ürün/Hizmetin www.hrtalent.academy ‘da
+														satışa sunulduğu sayfadaki tanıtım
+														içeriğinde yer almaktadır.</p>
+
+													<p><strong>6)</strong>) Tüketicilerin şikayet ve itirazları:
+														Siparişinize ve/veya siparişinize konu
+														Ürün/Hizmete ve/veya şiparişinizle ilgili herhangi bir konuda
+														şikayetinizin olması halinde
+														şikayetlerinizi yukarıda belirtilen iletişim bilgileri veya
+														www.hrtalent.academy internet
+														sitesinde belirtilen iletişim bilgileri vasıtasıyla SATICI’ya
+														iletebilirsiniz. İletmiş olduğunuz şikayet
+														başvurularınız derhal kayıtlara alınacak, yetkili birimler
+														tarafından değerlendirilerek çözümlenmeye
+														çalışılacak ve en kısa sürede size geri dönüş sağlanacaktır.
+														İşbu sözleşme ile ilgili çıkacak
+														ihtilaflarda; Türk Mahkemeleri yetkili olup; uygulanacak hukuk
+														Türk Hukuku’dur.
+													<p>
+														Türkiye Cumhuriyeti sınırları içerisinde geçerli olmak üzere İş
+														bu Sözleşme ile ilgili çıkacak
+														ihtilaflarda; her yıl Gümrük ve Ticaret Bakanlığı tarafından
+														ilan edilen değere kadar olan ihtilaflar
+														için TÜKETİCİ işleminin yapıldığı veya TÜKETİCİ ikametgahının
+														bulunduğu yerdeki İl veya İlçe Tüketici
+														Hakem Heyetleri söz konusu değerin üzerindeki ihtilaflarda ise
+														TÜKETİCİ işleminin yapıldığı veya
+														TÜKETİCİ ikametgahının bulunduğu yerdeki Tüketici Mahkemeleri
+														yetkili olacaktır.</p>
+													</p>
+
+
+												</div>
+
+											</div>
+
+											<div class="row">
+												<div class="col-md-12 col-sx-12">
+													<p>
+													<h1>Ön Bilgilendirme Formu</h1>
+													</p>
+
+												</div>
+												<div class="col-md-12 col-xs-12">
+
+													<p>
+													<h4>SATICI:</h4>
+													<p><strong>ÜNVANI:</strong> BadiWorks Reklam ve Pazarlama Tic. Ltd.
+														Şti. </p>
+
+													<p><strong>ADRESİ:</strong> GÜMÜŞSUYU MAH. HARİCİYE KONAĞI SK. OZAN
+														HAN 9 1 BEYOĞLU/ İSTANBUL</p>
+
+													<p><strong>TELEFON:</strong> 0850 888 22 34</p>
+
+													<p><strong>İNTERNET SİTESİ:</strong> hrtalent.academy
+													</p>
+
+													<p><strong>E-POSTA:</strong> merhaba@hrtalentacademy.com</p>
+
+													<p><strong>Mersis Numarası:</strong> 0129071799800001</p>
+
+													</p>
+
+													<p>
+													<h4>ALICI</h4>
+													<p>
+													<p style="background-color: yellow;">
+														<strong>Adı/Soyadı/Ünvanı:</strong><span
+															id="privacyNameSurname"></span>
+													</p>
+													<p style="background-color: yellow;"> <strong>Alıcının mail
+															adresi:</strong><span id="privacyMail"></span></p>
+
+
+													<p style="background-color: yellow;"><strong>Telefon:</strong><span
+															id="privacyPhoneNumber"></span></p>
+													<p style="background-color: yellow;"> <strong>Adresi:</strong><span
+															id="privacyAddress"></span></p>
+													</p>
+													<p style="background-color: yellow;"><strong>Tarih : </strong><span
+															id="privacyDate"></span></p>
+
+													</p>
+
+													</p>
+
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="modal1 mfp-hide" id="myModal2">
+									<div class="block mx-auto" style="background-color: #FFF; max-width: 700px;">
+										<div class="container">
+											<div class="row">
+												<div class="col-md-12 col-sx-12" style="text-align: center;">
+													<p>
+													<h1>Mesafeli Satış Sözleşmesi</h1>
+													</p>
+
+												</div>
+												<div class="col-md-12 col-xs-12">
+													<p>
+													<h2>MADDE 1- TARAFLAR</h2>
+													</p><br>
+													<p>
+													<h4>SATICI:</h4>
+													<p><strong>ÜNVANI:</strong> BadiWorks Reklam ve Pazarlama Tic. Ltd.
+														Şti. </p>
+
+													<p><strong>ADRESİ:</strong> GÜMÜŞSUYU MAH. HARİCİYE KONAĞI SK. OZAN
+														HAN 9 1 BEYOĞLU/ İSTANBUL</p>
+
+													<p><strong>TELEFON:</strong> 0850 888 22 34</p>
+
+
+													<p><strong>İNTERNET SİTESİ:</strong> hrtalent.academy
+													</p>
+													<p><strong>E-POSTA:</strong> merhaba@hrtalentacademy.com</p>
+													<p><strong>Mersis Numarası:</strong> 0129071799800001</p>
+													</p>
+													<p>
+													<h4>1.2. ALICI("TÜKETİCİ"):</h4>
+
+													<p style="background-color: yellow;">
+														<strong>Adı/Soyadı/Ünvanı:</strong><span
+															id="privacyNameSurname"></span>
+													</p>
+													<p style="background-color: yellow;"> <strong>Alıcının mail
+															adresi:</strong><span id="privacyMail"></span></p>
+													<p style="background-color: yellow;"><strong>Telefon:</strong><span
+															id="privacyPhoneNumber"></span></p>
+													<p style="background-color: yellow;"> <strong>Adresi:</strong><span
+															id="privacyAddress"></span></p>
+													</p>
+													<p style="background-color: yellow;"><strong>Tarih : </strong><span
+															id="privacyDate"></span></p>
+													</p>
+
+													<br><br>
+												</div>
+											</div>
+
+											<div class="row">
+												<div class="col-md-12 col-xs-12">
+													<p>
+													<h2>MADDE 2- KONU</h2>
+													</p>
+													<p>İşbu sözleşmenin konusu, TÜKETİCİ'nin
+														www.hrtalent.academy internet sitesinden elektronik
+														ortamda siparişini yaptığı aşağıda nitelikleri ve satış fiyatı
+														belirtilen ürünün satışı ve teslimi ile
+														ilgili olarak 6502 sayılı Tüketicinin Korunması Hakkındaki Kanun
+														hükümleri gereğince tarafların hak ve
+														yükümlülüklerinin saptanmasıdır.</p>
+
+
+												</div>
+											</div>
+											<div class="row">
+												<div class="col-md-12 col-xs-12">
+													<p>
+													<h2>MADDE 3- SÖZLEŞME KONUSU ÜRÜN, ÖDEME VE TESLİMATA İLİŞKİN
+														BİLGİLER</h2>
+													</p>
+													<p><strong>3.1-</strong>Sözleşme konusu mal veya hizmetin adı,
+														adeti, KDV dahil satış fiyatı, ödeme şekli ve
+														temel nitelikleri</p>
+													<table style="width: 100%;" border="1" cellpadding="8">
+														<tbody style="background-color: yellow;">
+															<tr>
+																<td>Ürün/Hizmet Adı ve Temel Nitelikleri</td>
+																<td>Adet</td>
+																<td>Satış Bedeli(KDV dahil toplam Türk Lirası)
+																</td>
+															</tr>
+															<tr>
+																<td>Toplam</td>
+																<td>1</td>
+																<td><span id="privacyRealAmount"></span>-TL</td>
+															</tr>
+															<tr>
+																<td>İndirim</td>
+																<td><span id="privacyDiscount"></span></td>
+																<td><span id="privacyDiscountTotal"></span>-TL</td>
+															</tr>
+															<tr>
+																<td>Ödenecek Tutar</td>
+																<td>&nbsp;</td>
+																<td><span id="privacyTotalAmount"></span>-TL</td>
+															</tr>
+														</tbody>
+													</table>
+													<p>
+													<p>
+													<ul><strong>3.2-</strong> Ödeme Şekli: Kredi Kartı ile İşlem
+
+														<li>Sipariş özeti sayfasında sipariş toplamının kaç taksitle
+															ödeneceği bilgisi bulunmaktadır.</li>
+
+														<li>Bankanız kampanyalar düzenleyerek sizin seçtiğiniz taksit
+															adedinin daha üstünde bir taksit adedi
+															uygulayabilir, taksit öteleme gibi hizmetler sunulabilir. Bu
+															tür kampanyalar bankanızın
+															inisiyatifindedir ve şirketimizin bilgisi dâhilinde olması
+															durumunda sayfalarımızda kampanyalar
+															hakkında bilgi verilmektedir</li>
+
+														<li>Kredi kartınızın hesap kesim tarihinden itibaren sipariş
+															toplamı taksit adedine bölünerek kredi
+															kartı özetinize bankanız tarafından yansıtılacaktır. Banka
+															taksit tutarlarını küsurat farklarını
+															dikkate alarak aylara eşit olarak dağıtmayabilir. Detaylı
+															ödeme planınızın oluşturulması bankanız
+															inisiyatifindedir.</li>
+
+													</ul>
+													</p>
+													<p><strong>3.3-</strong>Diğer yandan vadeli satışların sadece
+														Bankalara ait kredi kartları ile yapılması
+														nedeniyle, TÜKETİCİ, ilgili faiz oranlarını ve temerrüt faizi
+														ile ilgili bilgileri bankasından ayrıca
+														teyit edeceğini, yürürlükte bulunan mevzuat hükümleri gereğince
+														faiz ve temerrüt faizi ile ilgili
+														hükümlerin Banka ve TÜKETİCİ arasındaki kredi kartı sözleşmesi
+														kapsamında uygulanacağını kabul, beyan ve
+														taahhüt eder.</p>
+
+													<p><strong>3.4-</strong>İade Prosedürü:
+													<p>TÜKETİCİ'nin cayma hakkını kullandığı durumlarda ya da siparişe
+														konu olan ürünün çeşitli sebeplerle
+														tedarik edilememesi veya hakem heyeti kararları ile TÜKETİCİ'ye
+														bedel iadesine karar verilen durumlarda,
+														ödeme seçeneklerine ilişkin iade prosedürü aşağıda
+														belirtilmiştir:</p>
+													</p>
+
+
+
+													<p><strong>a) </strong>Kredi Kartı ile Ödeme Seçeneklerinde İade
+														Prosedürü
+													<p>
+														Alışveriş kredi kartı ile ve taksitli olarak yapılmışsa,
+														TÜKETİCİ ürünü kaç taksit ile aldıysa Banka
+														TÜKETİCİ'ye geri ödemesini taksitle yapmaktadır. SATICI bankaya
+														ürün bedelinin tamamını tek seferde
+														ödedikten sonra, Banka poslarından yapılan taksitli harcamaların
+														TÜKETİCİ'nin kredi kartına iadesi
+														durumunda, konuya müdahil tarafların mağdur duruma düşmemesi
+														için talep edilen iade tutarları, yine
+														taksitli olarak hamil taraf hesaplarına Banka tarafından
+														aktarılır. TÜKETİCİ'nin satış iptaline kadar
+														ödemiş olduğu taksit tutarları, eğer iade tarihi ile kartın
+														hesap kesim tarihleri çakışmazsa her ay
+														karta 1 (bir) iade yansıyacak ve TÜKETİCİ iade öncesinde ödemiş
+														olduğu taksitleri satışın taksitleri
+														bittikten sonra, iade öncesinde ödemiş olduğu taksitleri sayısı
+														kadar ay daha alacak ve mevcut
+														borçlarından düşmüş olacaktır.
+														Kart ile alınmış mal ve hizmetin iadesi durumunda SATICI, Banka
+														ile yapmış olduğu sözleşme gereği
+														TÜKETİCİ'ye nakit para ile ödeme yapamaz. SATICI, bir iade
+														işlemi söz konusu olduğunda ilgili yazılım
+														aracılığı ile iadesini yapacak olup, SATICI ilgili tutarı
+														Banka'ya nakden veya mahsuben ödemekle yükümlü
+														olduğundan yukarıda anlatmış olduğumuz prosedür gereğince
+														TÜKETİCİ'ye nakit olarak ödeme
+														yapılamamaktadır. Kredi kartına iade, SATICI'nın Banka'ya bedeli
+														tek seferde ödemesinden sonra, Banka
+														tarafından yukarıdaki prosedür gereğince yapılacaktır.
+														TÜKETİCİ, bu prosedürü okuduğunu ve kabul ettiğini kabul ve
+														taahhüt eder.
+													</p>
+													</p>
+													<p><strong>b) </strong>Havale/EFT Ödeme Seçeneklerinde İade
+														Prosedürü
+													<p>İade, TÜKETİCİ'den banka hesap bilgileri istenerek, TÜKETİCİ'nin
+														belirttiği hesaba (hesabın fatura
+														adresindeki kişinin adına veya kullanıcı üyenin adına olması
+														şarttır) havale ve EFT şeklinde
+														yapılacaktır.
+														SATICI bankaya ürün bedelinin tamamını tek seferde geri öder.
+														Havale/EFT yoluyla alınmış mal ve hizmetin iadesi durumunda
+														SATICI, Banka ile yapmış olduğu sözleşme
+														gereği TÜKETİCİ'ye nakit para ile ödeme yapamaz. SATICI, bir
+														iade işlemi söz konusu olduğunda ilgili
+														yazılım aracılığı ile iadesini yapacak olup, SATICI ilgili
+														tutarı Banka'ya nakden veya mahsuben ödemekle
+														yükümlü olduğundan yukarıda anlatmış olduğumuz prosedür
+														gereğince TÜKETİCİ'ye nakit olarak ödeme
+														yapılamamaktadır.
+														TÜKETİCİ, bu prosedürü okuduğunu ve kabul ettiğini kabul ve
+														taahhüt eder.
+
+													</p>
+													</p>
+													<p><strong>3.5- </strong>Teslimat Şekli ve Adresi :
+													<p>Sözleşmeye konu hizmet dijital içerik hizmeti olduğu için,
+														TÜKETİCİ satın alım işlemini yaptığı an
+														hizmetten faydalanmaya başlayabilir. Dijital Eğitim İçeriğini
+														başarıyla tamamladığı takdirde sertifikası
+														mail adresine iletilecek olup basılı sertifika talebi durumunda
+														TÜKETİCİNİN sistem üzerinden girdiği
+														adrese kargo gönderimi yapılacak ve aşağıdaki ilgili adres
+														alanları güncellenerek sözleşmenin yeni bir
+														versiyonu oluşturulacaktır.
+													<ul>
+														<li style="background-color: yellow;"><strong>Teslimat Adresi
+																:</strong><span id="privacyAddress"></span></li>
+														<li style="background-color: yellow;"><strong>Teslim Edilecek
+																Kişi:</strong><span id="privacyNameSurname"></span></li>
+														<li style="background-color: yellow;"><strong>Fatura Adresi
+																:</strong><span id="privacyAddress"></span></li>
+													</ul>
+													Paketleme, kargo ve teslim masrafları TÜKETİCİ tarafından
+													karşılanmaktadır. Kargo ücreti 0 -TL olup, kargo
+													fiyatı sipariş toplam tutarına eklenmektedir. Ürün bedeline dahil
+													değildir. Teslimat, anlaşmalı kargo
+													şirketi aracılığı ile, TÜKETİCİ'nin yukarıda belirtilen adresinde
+													elden teslim edilecektir. Teslim anında
+													TÜKETİCİ'nin adresinde bulunmaması durumunda dahi Firmamız edimini
+													tam ve eksiksiz olarak yerine getirmiş
+													olarak kabul edilecektir. Bu nedenle, TÜKETİCİ'nin ürünü geç teslim
+													almasından ve/veya hiç teslim
+													almamasından kaynaklanan zararlardan ve giderlerden SATICI sorumlu
+													değildir. SATICI, sözleşme konusu ürünün
+													sağlam, eksiksiz, siparişte belirtilen niteliklere uygun ve varsa
+													garanti belgeleri ve kullanım kılavuzları
+													ile teslim edilmesinden sorumludur.
+
+													</p>
+													</p>
+													<p><strong>3.6-</strong>Sözleşmeye konu ürün, alınan dijital eğitim
+														içerik hizmeti sonunda, hak edilmesi
+														durumunda kargolanacak sertifikayı/belgeyi kapsamaktadır. ALICI
+														90 gün boyunca dijital içeriklere
+														erişebilecek ve sınavlı eğitimler için 3 kez sınava girme
+														hakkına sahip olacaktır. Dijital içerik
+														hizmeti yukarıdaki tabloda belirtildiği üzere 90 gün boyunca
+														ALICI'nın erişimine açık kalacaktır.
+														Yapılan ödeme, 90 günlük erişimi ve eğitimin başarıyla
+														tamamlanması durumunda hak edilecek
+														sertifika/belgeyi kapsar. </p>
+
+
+												</div>
+											</div>
+											<div class="row">
+												<div class="col-md-12 col-xs-12">
+													<p>
+													<h2>MADDE 4- CAYMA HAKKI</h2>
+													</p>
+													<p>TÜKETİCİ , SATICI ile imzaladığı işbu Mesafeli Satış
+														Sözleşmesi'nden 14 (ondört) gün içinde herhangi bir
+														gerekçe göstermeksizin ve cezai şart ödemeksizin cayma hakkına
+														sahiptir. Cayma hakkı süresi, hizmet
+														ifasına ilişkin sözleşmelerde sözleşmenin kurulduğu gün; mal
+														teslimine ilişkin sözleşmelerde ise
+														TÜKETİCİ'nin veya TÜKETİCİ tarafından belirlenen üçüncü kişinin
+														malı teslim aldığı gün başlar. Ancak
+														TÜKETİCİ, sözleşmenin kurulmasından malın teslimine kadar olan
+														süre içinde de cayma hakkını
+														kullanabilir. Cayma hakkı süresinin belirlenmesinde;</p>
+
+													<p><strong>a)</strong>Tek sipariş konusu olup ayrı ayrı teslim
+														edilen mallarda, TÜKETİCİ'nin veya TÜKETİCİ
+														tarafından belirlenen üçüncü kişinin son malı teslim aldığı gün,
+													</p>
+													<p><strong>b)</strong>Birden fazla parçadan oluşan mallarda,
+														TÜKETİCİ'nin veya TÜKETİCİ tarafından
+														belirlenen üçüncü kişinin son parçayı teslim aldığı gün,</p>
+													<p><strong>c)</strong>Belirli bir süre boyunca malın düzenli
+														tesliminin yapıldığı sözleşmelerde,
+														TÜKETİCİ'nin veya TÜKETİCİ tarafından belirlenen üçüncü kişinin
+														ilk malı teslim aldığı gün esas alınır.
+														Cayma bildiriminizi cayma hakkı süresi dolmadan
+														www.hrtalent.academy 'da yer alan kişisel
+														üyelik sayfanızdaki kolay iade seçeneği üzerinden
+														gerçekleştirebilirsiniz. Cayma hakkınız kapsamında
+														öngörülen taşıyıcı sipariş edilen ürünün tarafınıza teslim
+														edildiği kargo firması olup,
+														www.hrtalent.academy 'da yer alan kişisel üyelik
+														sayfanızdaki kolay iade seçeneğinde geri
+														gönderime ilişkin detaylar açıklanmıştır.</p>
+
+													<p><strong>Tüketici aşağıdaki sözleşmelerde cayma hakkını
+															kullanamaz:</strong></p>
+
+													<p><strong>a)</strong>Fiyatı finansal piyasalardaki dalgalanmalara
+														bağlı olarak değişen ve SATICI veya
+														sağlayıcının kontrolünde olmayan mal veya hizmetlere ilişkin
+														sözleşmeler.</p>
+
+													<p><strong>b)</strong>Tüketicinin istekleri veya kişisel ihtiyaçları
+														doğrultusunda hazırlanan mallara
+														ilişkin sözleşmeler.</p>
+
+													<p><strong>c)</strong>Tüketicinin istekleri veya kişisel ihtiyaçları
+														doğrultusunda hazırlanan mallara
+														ilişkin sözleşmeler.</p>
+
+													<p><strong>ç)</strong>Tesliminden sonra ambalaj, bant, mühür, paket
+														gibi koruyucu unsurları açılmış olan
+														mallardan; iadesi sağlık ve hijyen açısından uygun olmayanların
+														teslimine ilişkin sözleşmeler.</p>
+
+													<p><strong>d)</strong>Tesliminden sonra ambalaj, bant, mühür, paket
+														gibi koruyucu unsurları açılmış olan
+														mallardan; iadesi sağlık ve hijyen açısından uygun olmayanların
+														teslimine ilişkin sözleşmeler.</p>
+
+													<p><strong>e)</strong>Tesliminden sonra ambalaj, bant, mühür, paket
+														gibi koruyucu unsurları açılmış olan
+														mallardan; iadesi sağlık ve hijyen açısından uygun olmayanların
+														teslimine ilişkin sözleşmeler.</p>
+
+													<p><strong>f)</strong>Abonelik sözleşmesi kapsamında sağlananlar
+														dışında, gazete ve dergi gibi süreli
+														yayınların teslimine ilişkin sözleşmeler.</p>
+
+													<p><strong>g)</strong>Belirli bir tarihte veya dönemde yapılması
+														gereken, konaklama, eşya taşıma, araba
+														kiralama, yiyecek-içecek tedariki ve eğlence veya dinlenme
+														amacıyla yapılan boş zamanın
+														değerlendirilmesine ilişkin sözleşmeler.</p>
+
+													<p><strong>ğ)</strong>Elektronik ortamda anında ifa edilen hizmetler
+														veya TÜKETİCİ'ye anında teslim edilen
+														gayrimaddi mallara ilişkin sözleşmeler.</p>
+
+													<p><strong>h)</strong>Elektronik ortamda anında ifa edilen hizmetler
+														veya TÜKETİCİ'ye anında teslim edilen
+														gayrimaddi mallara ilişkin sözleşmeler.</p>
+
+
+												</div>
+											</div>
+											<div class="row">
+												<div class="col-md-12 col-xs-12">
+													<p>
+													<h2>MADDE 5- GENEL HÜKÜMLER</h2>
+													</p>
+
+													<p><strong>5.1- </strong>TÜKETİCİ, www.hrtalent.academy
+														internet sitesinde sözleşme konusu ürüne
+														ilişkin ön bilgileri okuyup bilgi sahibi olduğunu ve elektronik
+														ortamda gerekli teyidi verdiğini beyan
+														eder.</p>
+
+													<p><strong>5.2- </strong>Ürün sözleşme tarihinden itibaren en geç 30
+														gün içerisinde teslim edilecektir.
+														Ürününün teslim edilmesi anına kadar tüm sorumluluk SATICI'ya
+														aittir.</p>
+
+													<p><strong>5.3- </strong>Sözleşme konusu ürün, TÜKETİCİ'dan başka
+														bir kişi/kuruluşa teslim edilecek ise,
+														teslim edilecek kişi/kuruluşun teslimatı kabul etmemesinden
+														SATICI sorumlu tutulamaz.</p>
+
+													<p><strong>5.4- </strong>SATICI, sözleşme konusu ürünün sağlam,
+														eksiksiz, siparişte belirtilen niteliklere
+														uygun ve varsa garanti belgeleri ve kullanım kılavuzları ile
+														teslim edilmesinden sorumludur.</p>
+
+													<p><strong>5.5- </strong>Sözleşme konusu ürünün teslimatı için işbu
+														sözleşmenin bedelinin TÜKETİCİ'nin
+														tercih ettiği ödeme şekli ile ödenmiş olması şarttır. Herhangi
+														bir nedenle ürün bedeli ödenmez veya
+														banka kayıtlarında iptal edilir ise, SATICI ürünün teslimi
+														yükümlülüğünden kurtulmuş kabul edilir.</p>
+													<p><strong>5.6- </strong>Ürünün tesliminden sonra TÜKETİCİ'ya ait
+														kredi kartının TÜKETİCİ'nin kusurundan
+														kaynaklanmayan bir şekilde yetkisiz kişilerce haksız veya hukuka
+														aykırı olarak kullanılması nedeni ile
+														ilgili banka veya finans kuruluşun ürün bedelini SATICI'ya
+														ödememesi halinde, TÜKETİCİ'nin kendisine
+														teslim edilmiş olması kaydıyla ürünün SATICI'ya gönderilmesi
+														zorunludur.</p>
+
+
+													<p><strong>5.7- </strong>- Garanti belgesi ile satılan ürünlerden
+														olan veya olmayan ürünlerin ayıplı
+														(arızalı, bozuk vb.) halinde veya garanti kapsamında ve şartları
+														dahilinde arızalanması veya bozulması
+														halinde gerekli onarımın yetkili servise yaptırılması için söz
+														konusu ürünler SATICI'ya gönderilebilir,
+														bu takdirde kargo giderleri SATICI tarafından karşılanacaktır.
+													</p>
+
+													<p><strong>5.8- </strong>385 sayılı vergi usul kanunu genel tebliği
+														uyarınca iade işlemlerinin yapılabilmesi
+														için tarafınıza göndermiş olduğumuz iade bölümü bulunan faturada
+														ilgili bölümlerin eksiksiz olarak
+														doldurulması ve imzalandıktan sonra tarafımıza ürün ile birlikte
+														geri gönderilmesi gerekmektedir.</p>
+
+
+												</div>
+											</div>
+
+											<div class="row">
+												<div class="col-md-12 col-xs-12">
+													<p>
+													<h2>6- UYUŞMAZLIK VE YETKİLİ MAHKEME</h2>
+													</p>
+													<p>İşbu sözleşme ile ilgili çıkacak ihtilaflarda; Türk Mahkemeleri
+														yetkili olup; uygulanacak hukuk Türk
+														Hukuku'dur.
+														Türkiye Cumhuriyeti sınırları içerisinde geçerli olmak üzere her
+														yıl Gümrük ve ticaret Bakanlığı
+														tarafından ilan edilen değere kadar olan ihtilaflar için
+														TÜKETİCİ işleminin yapıldığı veya TÜKETİCİ
+														ikametgahının bulunduğu yerdeki İl veya İlçe Tüketici Hakem
+														Heyetleri söz konusu değerin üzerindeki
+														ihtilaflarda ise TÜKETİCİ işleminin yapıldığı veya TÜKETİCİ
+														ikametgahının bulunduğu yerdeki Tüketici
+														Mahkemeleri Yetkili olacaktır. </p>
+
+
+
+												</div>
+											</div>
+											<div class="row">
+												<div class="col-md-12 col-xs-12">
+													<p>
+													<h2>MADDE 7- BİLDİRİMLER ve DELİL SÖZLEŞMESİ</h2>
+													</p>
+													<p>İşbu Sözleşme tahtında Taraflar arasında yapılacak her türlü
+														yazışma, mevzuatta sayılan zorunlu haller
+														dışında, e-mail aracılığıyla yapılacaktır. Alıcı, işbu
+														Sözleşme'den doğabilecek ihtilaflarda Satıcı'nın
+														resmi defter ve ticari kayıtlarıyla, kendi veritabanında,
+														sunucularında tuttuğu elektronik bilgilerin ve
+														bilgisayar kayıtlarının, bağlayıcı, kesin ve münhasır delil
+														teşkil edeceğini, bu maddenin Hukuk
+														Muhakemeleri Kanunu'nun 193. maddesi anlamında delil sözleşmesi
+														niteliğinde olduğunu kabul, beyan ve
+														taahhüt eder.
+														Siparişin gerçekleşmesi durumunda TÜKETİCİ işbu sözleşmenin tüm
+														koşullarını kabul etmiş sayılır. </p>
+
+													<p><strong>SATICI : </strong>BadiWorks Reklam ve Pazarlama Tic. Ltd.
+														Şti. </p>
+
+													<p style="background-color: yellow;"><strong>ALICI("TÜKETİCİ") :
+														</strong><span id="privacyNameSurname"></span></p>
+
+													<p style="background-color: yellow;"><strong>Tarih : </strong><span
+															id="privacyDate"></span></p>
+
+												</div>
+											</div>
+										</div>
+										<button class="modal-close-button" type="button" data-dismiss="modal">×</button>
+									</div>
+
+								</div>
+
+								<div class="modal1 mfp-hide" id="myModal3">
+									<div class="block mx-auto" style="background-color: #FFF; max-width: 700px;">
+										<div class="container">
+											<div class="row">
+												<div class="col-md-12 col-xs-12">
+													<p>
+													<h2>1. Aydınlatma Metni’nin Amacı ve Şirketimizin Veri Sorumlusu
+														Konumu:</h2>
+													</p>
+													<p>Şirketimiz BadiWorks Reklam ve Pazarlama Ticaret Limited Şirketi
+														(“BadiWorks” ve/veya “Şirket”),
+														müşterilere ilişkin kişisel veriler bakımından 6698 sayılı
+														Kişisel Verilerin Korunması Kanunu (“Kanun”)
+														kapsamında “veri sorumlusu” sıfatına sahip olup işbu Aydınlatma
+														Metni ile söz konusu Kanun uyarınca
+														müşterilerin BadiWorks tarafından gerçekleştirilen kişisel veri
+														işleme faaliyetleri hakkında
+														aydınlatılması hedeflenmektedir.</p>
+												</div>
+											</div>
+
+											<div class="row">
+												<div class="col-md-12 col-xs-12">
+													<p>
+													<h2>2. Müşterilere Ait Kişisel Verilerin İşlenme Amacı:</h2>
+													</p>
+													<p>Müşterilere ait kişisel veriler, BadiWorks tarafından sunulan
+														ürün ve hizmetlerden ilgili kişileri
+														faydalandırmak için gerekli çalışmaların iş birimleri tarafından
+														yapılması ve ilgili iş süreçlerinin
+														yürütülmesi, BadiWorks tarafından yürütülen ticari faaliyetlerin
+														gerçekleştirilmesi için ilgili iş
+														birimleri tarafından gerekli çalışmaların yapılması ve buna
+														bağlı iş süreçlerinin yürütülmesi,
+														BadiWorks’ün ticari ve/veya iş stratejilerinin planlanması ve
+														icrası, BadiWorks’nın ve BadiWorks ile iş
+														ilişkisi içerisinde olan ilgili kişilerin hukuki, teknik ve
+														ticari iş güvenliğinin temini de dahil olmak
+														üzere Kanun’un 5. ve 6. maddelerinde belirtilen kişisel veri
+														işleme şartları ve amaçları çerçevesinde
+														işlenmektedir.</p>
+												</div>
+											</div>
+											<div class="row">
+												<div class="col-md-12 col-xs-12">
+													<p>
+													<h2>3. Müşterilerin Açık Rızası Doğrultusunda İşlenecek Kişisel
+														Veriler ve İşleme Amaçları:</h2>
+													</p>
+													<p>Açık rıza doğrultusunda işlenecek kişisel veriler ve işleme
+														amaçları Rıza Metni’nde belirtilmiştir.</p>
+												</div>
+											</div>
+
+											<div class="row">
+												<div class="col-md-12 col-xs-12">
+													<p>
+													<h2>4. Müşterilere Ait Kişisel Verilerin Aktarımı:</h2>
+													</p>
+													<p>Müşterilere ait kişisel veriler, BadiWorks tarafından sunulan
+														ürün ve hizmetlerden ilgili kişileri
+														faydalandırmak için gerekli çalışmaların iş birimleri tarafından
+														yapılması ve ilgili iş süreçlerinin
+														yürütülmesi, BadiWorks tarafından yürütülen ticari faaliyetlerin
+														gerçekleştirilmesi için ilgili iş
+														birimleri tarafından gerekli çalışmaların yapılması ve buna
+														bağlı iş süreçlerinin yürütülmesi,
+														BadiWorks’ün ticari ve/veya iş stratejilerinin planlanması ve
+														icrası, BadiWorks’ün ve BadiWorks ile iş
+														ilişkisi içerisinde olan ilgili kişilerin hukuki, teknik ve
+														ticari iş güvenliğinin temini için gerekli
+														olan aktivitelerin planlanması ve icrası da dahil olmak üzere
+														Kanun’un 8. ve 9. maddelerinde belirtilen
+														kişisel veri işleme şartları ve amaçları çerçevesinde BadiWorks
+														Reklam ve Pazarlama Ticaret Limited
+														Şirketi, Şirket yetkilileri, iştiraklerimiz, iş ortaklarımız,
+														tedarikçilerimiz, hissedarlarımız, kanunen
+														yetkili kamu kurum ve kuruluşları ile özel kurumlar ile
+														paylaşılabilecektir.</p>
+												</div>
+											</div>
+
+											<div class="row">
+												<div class="col-md-12 col-xs-12">
+													<p>
+													<h2>5. Kişisel Verilerin Toplanma Yöntemi ve Hukuki Sebebi:</h2>
+													</p>
+													<p>Kişisel veriler, müşterilerden elektronik ortamda toplanmaktadır.
+														Yukarıda belirtilen hukuki sebeplerle
+														toplanan kişisel veriler Kanun’un 5. ve 6. maddelerinde ve bu
+														Aydınlatma Metni ve açık rıza gerekli
+														olduğu hallerde Rıza Metni’nde belirtilen amaçlarla
+														işlenebilmekte ve aktarılabilmektedir.</p>
+												</div>
+											</div>
+
+											<div class="row">
+												<div class="col-md-12 col-xs-12">
+													<p>
+													<h2>6. Kişisel Veri Sahibi Olarak Müşterilerin Hakları:</h2>
+													</p>
+													<p>Kanun’un 11. maddesi uyarınca veri sahipleri; (i) kendileri ile
+														ilgili kişisel veri işlenip işlenmediğini
+														öğrenme, (ii) kişisel verileri işlenmişse buna ilişkin bilgi
+														talep etme, (iii) kişisel verilerin işlenme
+														amacını ve bunların amacına uygun kullanılıp kullanılmadığını
+														öğrenme, (iv) yurt içinde veya yurt
+														dışında kişisel verilerin aktarıldığı üçüncü kişileri bilme, (v)
+														kişisel verilerin eksik veya yanlış
+														işlenmiş olması hâlinde bunların düzeltilmesini isteme ve bu
+														kapsamda yapılan işlemin kişisel verilerin
+														aktarıldığı üçüncü kişilere bildirilmesini isteme, (vi) Kanun ve
+														ilgili diğer kanun hükümlerine uygun
+														olarak işlenmiş olmasına rağmen, işlenmesini gerektiren
+														sebeplerin ortadan kalkması hâlinde kişisel
+														verilerin silinmesini veya yok edilmesini isteme ve bu kapsamda
+														yapılan işlemin kişisel verilerin
+														aktarıldığı üçüncü kişilere bildirilmesini isteme, (vii) işlenen
+														verilerin münhasıran otomatik sistemler
+														vasıtasıyla analiz edilmesi suretiyle kişinin kendisi aleyhine
+														bir sonucun ortaya çıkmasına itiraz etme
+														ve (viii) kişisel verilerin kanuna aykırı olarak işlenmesi
+														sebebiyle zarara uğraması hâlinde zararın
+														giderilmesini talep etme haklarına sahiptir.
+														Söz konusu hakların kullanımına ilişkin talepler, kişisel veri
+														sahipleri tarafından usule uygun
+														yöntemlerle iletilebilecektir. BadiWorks, söz konusu talepleri
+														değerlendirerek 30 gün içerisinde
+														sonuçlandıracaktır. BadiWorks’ün taleplere ilişkin olarak
+														Kişisel Verileri Koruma Kurulu tarafından
+														belirlenen (varsa) ücret tarifesi üzerinden ücret talep etme
+														hakkı saklıdır.
+													</p>
+												</div>
+											</div>
+
+											<div class="row">
+												<div class="col-md-12 col-xs-12">
+													<p>
+													<h2>KİŞİSEL VERİLERİN İŞLENMESİNE İLİŞKİN RIZA METNİ</h2>
+													</p>
+													<p>Şirketimiz BadiWorks Reklam ve Pazarlama Ticaret Limited Şirketi
+														(“BadiWorks” ve/veya “Şirket”),
+														müşterilere ilişkin kişisel veriler bakımından 6698 sayılı
+														Kişisel Verilerin Korunması Kanunu (“Kanun”)
+														kapsamında “veri sorumlusu” sıfatına sahip olup işbu Rıza Metni
+														ile söz konusu Kanun uyarınca
+														müşterilerin BadiWorks tarafından gerçekleştirilen ve aşağıda
+														belirtilen kişisel veri işleme
+														faaliyetlerine ilişkin açık rızalarının temini hedeflenmektedir.
+														Kanun’un 5/2 ile 6/3 maddesinde yer alan kişisel veri işleme
+														şartlarının karşılanamadığı aşağıdaki
+														durumlar için BadiWorks tarafından kişisel verilerin
+														işlenebilmesi için müşterilerin açık rızasının
+														alınması gerekmektedir. Açık rıza gerektirmeyen süreçlere
+														ilişkin olarak Aydınlatma Metni kapsamında
+														veri işleme faaliyetleri sürdürülmekte olup açık rıza gerektiren
+														süreçlerde de Aydınlatma Metni’nde
+														belirtilen temel prensiplere uygun veri işlenmektedir.
+														Bu kapsamda müşterilerin kişisel verileri usule uygun olarak
+														işlenmektedir. Buna göre kişisel veriler;
+														müşterilere yönelik kampanyaların oluşturulması, BadiWorks iş
+														ortakları tarafından BadiWorks
+														müşterilerine BadiWorks’da kullanabilecekleri özel fırsatların
+														sunulması, çapraz satış yapılması, hedef
+														kitle belirlenmesi, Müşteri hareketlerinin takip edilerek
+														kullanıcı deneyimini arttırıcı faaliyetlerin
+														yürütülmesi, BadiWorks’ya ait internet sitesi ile mobil
+														uygulamanın işleyişinin geliştirilmesi ve
+														Müşteri ihtiyaçlarına göre kişiselleştirilmesi, doğrudan ve
+														doğrudan olmayan pazarlama, kişiye özel
+														pazarlama ve yeniden pazarlama faaliyetlerinin yürütülmesi,
+														kişiye özel segmentasyon, hedefleme, analiz
+														ve şirket içi raporlama faaliyetlerinin yürütülmesi, pazar
+														araştırmaları, müşteri memnuniyeti
+														aktivitelerinin planlanması ve icrası, BadiWorks’ün sunduğu ürün
+														ve hizmetlerin ilgili kişilerin beğeni,
+														kullanım alışkanlıkları ve ihtiyaçlarına göre özelleştirilerek
+														ilgili kişilere önerilmesi ve tanıtılması
+														ile müşteri ilişkileri yönetimi süreçlerinin planlanması ve
+														icrası amaçları da dahil olmak üzere genel
+														anlamda BadiWorks’ün ürün ve/veya hizmetlerinin satış ve
+														pazarlama süreçlerinin planlanması ve icrası,
+														BadiWorks’ün sunduğu ürün ve/veya hizmetlere bağlılık
+														oluşturulması ve/veya arttırılması süreçlerinin
+														planlanması ve icrası kapsamında Müşteri’nin vereceği onayı
+														doğrultusunda işlenebilecek ve bu amaçlara
+														yönelik olarak Aydınlatma Metni’nde belirtilen taraflarla
+														paylaşılabilecektir.
+
+													</p>
+												</div>
+											</div>
+
+										</div>
+									</div>
+								</div>
+							</div>
+							<a href="#" class="button button-3d m-0 float-right tab-linker" rel="4">Sonraki Adım
+								&rArr;</a>
+
+						</div>
+						<div id="ptab4">
+							<div id="ptab4Content">
+								<div id="havale-option-form" class="form-group"
+									style="border-radius: 30px; max-width: 50rem;margin-left: auto;margin-right: auto;margin-top: 20px;display: none;background-color:#fafafa;padding-top: 15px;">
+
+									<div class="row"
+										style="margin-bottom: 40px;justify-content: center;margin: 20px;">
+										<div class="col-md-6" style="float: left;text-align: center;">
+											<img style="max-width: 40% !important;"
+												src="/online-odeme/img/ziraat-logo.png" />
+										</div>
+									</div>
+									<div class="line line-sm mb-4"></div>
+									<div id="havaleKurumRow" class="row"
+										style="padding: 35px;margin:20px;">
+										<div class="col-md-12">
+											<div class="row">
+												<span
+													style="font-family: 'Poppins';color: #e83e31;"><strong>KURUM</strong></span>
+												<span>
+											</div>
+											<div class="row">
+												<span style="font-family: 'Poppins';color: #0a0a0a;">
+													BADİWORKS REKLAM VE
+													PAZARLAMA TİCARET LİMİTED ŞİRKETİ</span>
+												<span style="margin-left: auto;">
+													</br>
+													<button class="copy-button-havale"
+														data-value="BADİWORKS REKLAM VE PAZARLAMA TİCARET LİMİTED ŞİRKETİ">Kopyala</button>
+											</div>
+											<hr>
+											<div class="row">
+												<span
+													style="font-family: 'Poppins';color: #e83e31;"><strong>IBAN</strong></span>
+												<span>
+											</div>
+											<div class="row">
+												<span style="font-family: 'Poppins';color: #0a0a0a;">
+													TR 9300 0100 2056 8900 5844 5002</span>
+												<span style="margin-left: auto;">
+													</br>
+													<button class="copy-button-havale"
+														data-value="TR 9300 0100 2056 8900 5844 5002">Kopyala</button>
+											</div>
+										</div>
+									</div>
+									<div id="havaleAciklamaRow" class="row" style="padding: 50px;margin-top: 20px;text-align: center;">
+										<div class="col-md-12">
+											<p>Toplam ödenecek tutar :
+												<strong><span id="havaleToplamTutarText"
+														style="font-family: 'Poppins';color: #e83e31;font-size: 22px;"></span></strong>
+											</p>
+											<p>
+												Havale ödemesini belirtilen IBAN numarasına yaptıktan sonra
+											</p>
+											<p>
+												<strong>merhaba@hrtalentacademy.com</strong> adresine;
+											</p>
+											<ul style="list-style: none;">
+												<li style="text-decoration: underline;">
+													Ödeme dekontunuzu,
+												</li>
+												<li style="text-decoration: underline;">
+													Seçtiğiniz paketi ve paket içeriğini
+												</li>
+											</ul>
+											<p>
+												göndermeniz gerekmektedir.
+											</p>
+										</div>
+									</div>
+									<div class="row" style="padding: 30px;justify-content: center;">
+										<a id="havaleSubmit" style="color: white;"
+											class="button button-3d m-0 float-right tab-linker" rel="5">Havale/EFT
+											Talebi Oluştur
+											&rArr;</a>
+									</div>
+								</div>
+								<div style="display: none;max-width: 45rem;margin-left: auto;margin-right: auto;margin-top: 20px;display: none;background-color: #f7f7f7;padding-top: 15px;"
+									id="havale-success-form" class="form-group">
+
+									<div class="row" style="margin-bottom: 40px;justify-content: center;margin: 20px;">
+										<div class="col-md-12" style="float: left;text-align: center;">
+											<img src="/online-odeme/img/success-payment.png" style="max-width: 40%;" />
+										</div>
+									</div>
+									<div class="row" style="padding: 50px;margin:20px;">
+										<div class="col-md-12" style="text-align: center;">
+											<span style="font-family: 'Poppins';color: #e83e31;font-size: 30px;">
+												<strong>Siparişiniz Oluşturuldu. </strong></span><br />
+											<span style="font-family: 'Poppins';color: black;">Ödeme
+												dekontunuzu </br><strong
+													style="font-size: 11px;">merhaba@hrtalentacademy.com
+												</strong></br>
+												adresine gönderdikten sonra satın alma gerçekleşecektir.</span>
+										</div>
+									</div>
+								</div>
+
+							</div>
+						</div>
+
+					</div>
 				</div>
+
 			</div>
-		</section><!-- #content end -->
-
-		<!-- Footer
-					============================================= -->
-		<footer id="footer" class="dark">
-			<!-- Copyrights
-						============================================= -->
-			<div id="copyrights">
-				<div class="container">
-
-					<div class="row justify-content-between col-mb-30">
-
-						<div class="col-12 col-lg-auto text-center text-lg-left order-last order-lg-first">
-							<a target="_blank" href="https://ogrencikariyeri.com"><img width="50%"
-									src="images/bg-header.png" alt="Öğrenci Kariyeri" class="mb-4"></a><br>
-							Copyrights &copy; 2021 All Rights Reserved by <a href="https://ogrencikariyeri.com"
-								target="_blank">Öğrenci Kariyeri.</a>
-						</div>
-
-						<div class="col-12 col-lg-auto text-center text-lg-left order-last order-lg-first">
-							<a href="https://badiworks.com" target="_blank">
-								<img width="40%" src="images/bg-header-3.png" alt="Badiworks" class="mb-4">
-							</a>
-						</div>
-
-						<div class="col-12 col-lg-auto text-center text-lg-right">
-
-							<a target="_blank" href="https://www.instagram.com/ogrencikariyeri/"
-								class="social-icon inline-block si-small si-borderless mb-0 si-yahoo">
-								<i class="icon-instagram"></i>
-								<i class="icon-instagram"></i>
-							</a>
-
-							<a target="_blank" href="https://www.linkedin.com/company/ogrencikariyeri/mycompany/"
-								class="social-icon inline-block si-small si-borderless mb-0 si-linkedin">
-								<i class="icon-linkedin"></i>
-								<i class="icon-linkedin"></i>
-							</a>
-
-							<a target="_blank" href="https://www.facebook.com/ogrencikariyeri"
-								class="social-icon inline-block si-small si-borderless mb-0 si-facebook">
-								<i class="icon-facebook"></i>
-								<i class="icon-facebook"></i>
-							</a>
-
-							<a target="_blank" href="https://twitter.com/ogrencikariyeri/"
-								class="social-icon inline-block si-small si-borderless mb-0 si-twitter">
-								<i class="icon-twitter"></i>
-								<i class="icon-twitter"></i>
-							</a>
-
-						</div>
-					</div>
-
-				</div>
-			</div><!-- #copyrights end -->
-		</footer><!-- #footer end -->
-
+		</div>
+	</section><!-- #content end -->
 
 	</div><!-- #wrapper end -->
 
@@ -1441,13 +1342,15 @@
 
 	<!-- JavaScripts
 	============================================= -->
-	<script src="js/jquery.js"></script>
-	<script src="js/plugins.min.js"></script>
-	<script src="js/plugins.jpaginate.js"></script>
-	<script src="js/md5.min.js"></script>
-	<script src="js/functions.js"></script>
-	<script src="js/sweetalert.min.js"></script>
-	<script src="js/payment.js?ver=2.8"></script>
+	<script src="/online-odeme/js/jquery.js"></script>
+	<script src="/online-odeme/js/toastr.min.js"></script>
+	<script src="/online-odeme/js/md5.min.js"></script>
+	<!-- Footer Scripts
+	============================================= -->
+	<script src="/online-odeme/js/functions.js?v=1.5"></script>
+	<script src="/online-odeme/js/sweetalert.min.js"></script>
+	<!-- <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script> -->
+	<script src="/online-odeme/js/payment.js?v=2.6"></script>
 
 </body>
 

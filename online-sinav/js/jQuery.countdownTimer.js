@@ -699,7 +699,7 @@
         startDate: new Date(),
         currentTime: true,
         size: "sm",
-        borderColor: "#bf2231",
+        borderColor: "#f82249",
         fontColor: "#FFFFFF",
         backgroundColor: "#212121",
         timeSeparator: ":",

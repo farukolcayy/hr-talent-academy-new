@@ -19,7 +19,7 @@
 .colorDefinition {
     background: #000000;
     color: #FFFFFF;
-    border-color: #bf2231;
+    border-color: #f82249;
 }
 
 .size_xl {
@@ -61,7 +61,7 @@
     float: left;
     font-size: 75%;
     text-align: center;
-    border-right: 5px solid #bf2231;
+    border-right: 5px solid #f82249;
 }
 
 .timerDisplay>span.displaySection:last-child {

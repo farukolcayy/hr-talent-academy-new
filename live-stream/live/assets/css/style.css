@@ -11201,11 +11201,11 @@ ul.mainmenu li.has-dropdown ul.axil-submenu li a {
 }
 
 ul.mainmenu li.has-dropdown ul.axil-submenu li a:hover {
-    color: #bf2231;
+    color: #f82249;
 }
 
 ul.mainmenu li.has-dropdown:hover>a {
-    color: #bf2231;
+    color: #f82249;
 }
 
 ul.mainmenu li.has-dropdown:hover ul.axil-submenu {
