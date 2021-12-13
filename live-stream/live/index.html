@@ -16,12 +16,12 @@
     <!-- CSS
 	============================================ -->
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="assets/css/main.css?ver=2.6">
+    <link rel="stylesheet" href="assets/css/main.css?ver=2.8">
     <link rel="stylesheet" href="assets/css/vendor/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/plugins/slick.css">
     <link rel="stylesheet" href="assets/css/plugins/font-awesome.css">
     <link rel="stylesheet" href="assets/css/plugins/plugins.css">
-    <link rel="stylesheet" href="assets/css/style.css?ver=2.7">
+    <link rel="stylesheet" href="assets/css/style.css?ver=2.8">
     <link rel="stylesheet" href="../css/sweetalert2.min.css">
     <!-- <script src="assets/js/contactform.js"></script> -->
 
@@ -40,7 +40,7 @@
     }
 
     ul.mainmenu li a {
-        color: #f82249;
+        color: #bf2231;
     }
 
     ul.mainmenu li a:hover {
@@ -289,7 +289,7 @@
             <div class="row">
                 <div class="col-md-12 col-program-subject"
                     style="text-align: center;background-color: #222222;padding:20px">
-                    <!-- <h3 class="title" style="color:#f82249;">İnsan Kaynakları</h3> -->
+                    <!-- <h3 class="title" style="color:#bf2231;">İnsan Kaynakları</h3> -->
                     <h3 id="programSubject" class="title" style="color:#f2f2f2;">HR Talent Academy</h3>
                 </div>
                 <div class="col-md-12" style="text-align: center;justify-content: center;">
@@ -339,7 +339,7 @@
                                     <span id="result"></span>
                                 </div>
                                 <div class="bounceInDown animated" data-animate="bounceInDown" id="msg"
-                                    style="font-weight: 700 !important;color:#f82249;text-align: center;font-size: medium;">
+                                    style="font-weight: 700 !important;color:#bf2231;text-align: center;font-size: medium;">
 
                                 </div>
                             </form>
@@ -442,7 +442,7 @@
     <script src="assets/js/plugins/plugins.min.js"></script>
     <!-- Main JS -->
     <script src="assets/js/scrollup.js"></script>
-    <script src="assets/js/main.js?ver=2.4"></script>
+    <script src="assets/js/main.js?ver=2.6"></script>
     <script src="../js/sweetalert2.min.js"></script>
 </body>
 
@@ -507,14 +507,13 @@
                 type: 'POST',
                 dataType: "json",
                 url: 'checkToken.php',
-                async: false,
                 data: {
                     emailAddress: streamEmail,
-                    token: token
+                    tokenVal: token
                 }
             })
                 .done(function (data) {
-                    if (data.result != '') {
+                    if (data.result != '' && data.result!=null) {
                         if (data.result.token === token) {
 
                         } else {
@@ -641,7 +640,6 @@
         $.ajax({
             type: 'POST',
             dataType: "json",
-            async: false,
             url: 'getStreamInfo.php',
             data: {
                 liveId: 1

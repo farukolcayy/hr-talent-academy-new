@@ -1,26 +1,26 @@
 ﻿<?php
 
-$link = mysqli_connect("localhost", "hrtalent_live", "!hrt!2021!", "hrtalent_live");
+$emailAddress = $_POST['emailAddress'];
+$token = $_POST['token'];
+$isLogin = $_POST['isLogin'];
 
-// Check connection
-if ($link === false) {
-    die("ERROR: Could not connect. " . mysqli_connect_error());
-}
+$data = array();
 
-// Escape user inputs for security
+$conn = new PDO('mysql:host=localhost;dbname=hrtalent_live;charset=utf8;port=3306', 'hrtalent_basvuru', '!hrt!2021!');
+$query = $conn->prepare("UPDATE canli_yayin_kullanicilar SET token=?, isLogin=?, loginDate=? WHERE emailAddress=? ");
 
-$emailAddress = mysqli_real_escape_string($link, $_POST['emailAddress']);
-$token = mysqli_real_escape_string($link, $_POST['token']);
-$isLogin = mysqli_real_escape_string($link, $_POST['isLogin']);
+$insert = $query->execute(array($token, $isLogin, date("Y-m-d H:i:s"), $emailAddress));
 
-$sql = "UPDATE canli_yayin_kullanicilar  SET token='$token',isLogin=$isLogin,loginDate=now() where emailAddress='$emailAddress'";
+if ($insert) {
 
-mysqli_set_charset($link, "utf8");
-if (mysqli_query($link, $sql)) {
-    echo "Sonuçlar Kaydedildi";
+    $last_id = $conn->lastInsertId();
+    $data['status'] = 'ok';
+    $data['result'] = 'Güncelleme Başarılı';
+    echo json_encode($data);
+
 } else {
-    echo 'MySQL Hatası: ' . mysql_error();
-}
 
-// Close connection
-mysqli_close($link);
+    $data['status'] = 'err';
+    $data['result'] = $exe->getMessage();
+    echo json_encode($data);
+}

@@ -1,24 +1,19 @@
 <?php
 
-$link = mysqli_connect("localhost", "hrtalent_live", "!hrt!2021!", "hrtalent_live");
+$question = $_POST['_question'];
+$questionOptions = $_POST['_questionOptions'];
+$questionAnswer = $_POST['_questionAnswer'];
 
+$conn = new PDO('mysql:host=localhost;dbname=hrtalent_live;charset=utf8;port=3306', 'hrtalent_basvuru', '!hrt!2021!');
 
-if ($link === false) {
-    die("ERROR: Could not connect. " . mysqli_connect_error());
-}
-$question = mysqli_real_escape_string($link, $_REQUEST['_question']);
-$questionOptions = mysqli_real_escape_string($link, $_REQUEST['_questionOptions']);
-$questionAnswer = mysqli_real_escape_string($link, $_REQUEST['_questionAnswer']);
+$query = $conn->prepare("INSERT INTO oturum_sinav_soru SET question= ?,questionOption= ?,answer= ?");
 
+$insert = $query->execute(array($question, $questionOptions,$questionAnswer));
 
-$sql = "INSERT INTO oturum_sinav_soru (question,questionOption,answer) VALUES ('$question','$questionOptions','$questionAnswer')";
-
-mysqli_set_charset($link, "utf8");
-if (mysqli_query($link, $sql)) {
-    echo "Bilgiler Güncellendi";
+if ($insert) {
+    echo "Sorunuz iletildi";
 } else {
-    echo "Bilgiler güncellenemedi!";
+    echo "Hata: Sorunuz iletilemedi!";
 }
 
-// Close connection
-mysqli_close($link);
+

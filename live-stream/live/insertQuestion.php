@@ -1,35 +1,22 @@
 
 <?php
 
-$link = mysqli_connect("localhost", "hrtalent_live", "!hrt!2021!", "hrtalent_live");
+$nameSurname = $_POST['nameSurname'];
+$question = $_POST['question'];
+$streamId = $_POST['streamId'];
 
-// Check connection
-if ($link === false) {
-    die("ERROR: Could not connect. " . mysqli_connect_error());
-}
 
-// Escape user inputs for security
+$conn = new PDO('mysql:host=localhost;dbname=hrtalent_live;charset=utf8;port=3306', 'hrtalent_basvuru', '!hrt!2021!');
 
-$nameSurname = mysqli_real_escape_string($link, $_REQUEST['nameSurname']);
-$question = mysqli_real_escape_string($link, $_REQUEST['question']);
-$streamId = mysqli_real_escape_string($link, $_REQUEST['streamId']);
+$query = $conn->prepare("INSERT INTO $streamId SET nameSurname= ?,question= ?");
 
-if (!empty($nameSurname) && !empty($question)) {
+$insert = $query->execute(array($nameSurname, $question));
 
-    $sql = "INSERT INTO $streamId (nameSurname, question) VALUES ('$nameSurname', '$question')";
-
-    mysqli_set_charset($link, "utf8");
-    if (mysqli_query($link, $sql)) {
-        echo "Sorunuz iletildi";
-    } else {
-        echo "Hata: Sorunuz iletilemedi!";
-    }
+if ($insert) {
+    echo "Sorunuz iletildi";
 } else {
-    echo "Tüm alanlar doldurulmalı!";
+    echo "Hata: Sorunuz iletilemedi!";
 }
-
-// Close connection
-mysqli_close($link);
 
 
 ?>

@@ -22,6 +22,14 @@
     return false;
   });
 
+  $('.back-to-top-2').click(function() {
+    $('html,body').animate({
+			scrollTop: $("#contact").offset().top - 200
+		}, 'slow');
+    return false;
+  });
+
+
   // Header fixed on scroll
   $(window).scroll(function() {
     if ($(this).scrollTop() > 100) {

@@ -3,35 +3,29 @@
 
 $liveId = $_POST['liveId'];
 $data = array();
+$dataUser= array();
 
-//database details
-$dbHost     = 'localhost';
-$dbUsername = 'hrtalent_live';
-$dbPassword = '!hrt!2021!';
-$dbName     = 'hrtalent_live';
+try {
 
-//create connection and select DB
-$db = new mysqli($dbHost, $dbUsername, $dbPassword, $dbName);
-$db->set_charset("utf8");
-if ($db->connect_error) {
-    die("Bağlantı hatası: " . $db->connect_error);
-}
+    $conn = new PDO('mysql:host=localhost;dbname=hrtalent_live;charset=utf8;port=3306', 'hrtalent_basvuru', '!hrt!2021!');
 
-//get user data from the database
-$query = $db->query("SELECT * FROM canli_yayin c left join canli_yayin_program p on c.instructorId=p.Id where c.Id=$liveId");
+    $query = $conn->prepare("SELECT * FROM canli_yayin c left join canli_yayin_program p on c.instructorId=p.Id where c.Id=?");
+    $query->execute(array($liveId));
 
-if ($query->num_rows > 0) {
-    $userData = $query->fetch_assoc();
+    if ($query->rowCount()) {
+        foreach ($query as $row) {
+            array_push($dataUser, $row);
+        }
+    }
+
     $data['status'] = 'ok';
-    $data['result'] = $userData;
-} else {
+    $data['result'] = $dataUser[0];
+    echo json_encode($data);
+
+} catch (PDOexception $exe) {
+
     $data['status'] = 'err';
     $data['result'] = '';
+    echo json_encode($data);
+
 }
-
-//returns data as JSON format
-echo json_encode($data);
-
-?>
-
-    

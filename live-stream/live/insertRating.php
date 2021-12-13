@@ -1,37 +1,31 @@
 
 <?php
 
-$link = mysqli_connect("localhost", "hrtalent_live", "!hrt!2021!", "hrtalent_live");
+$liveName = $_POST['liveName'];
+$emailAddress = $_POST['emailAddress'];
+$programSubject = $_POST['programSubjectRating'];
+$instructor = $_POST['instructorRating'];
+$ratingScore = $_POST['ratingScore'];
+$ratingComment = $_POST['ratingComment'];
 
-// Check connection
-if ($link === false) {
-    die("ERROR: Could not connect. " . mysqli_connect_error());
-}
 
-// Escape user inputs for security
-$liveName = mysqli_real_escape_string($link, $_REQUEST['liveName']);
-$emailAddress = mysqli_real_escape_string($link, $_REQUEST['emailAddress']);
-$programSubject = mysqli_real_escape_string($link, $_REQUEST['programSubjectRating']);
-$instructor = mysqli_real_escape_string($link, $_REQUEST['instructorRating']);
-$ratingScore = mysqli_real_escape_string($link, $_REQUEST['ratingScore']);
-$ratingComment = mysqli_real_escape_string($link, $_REQUEST['ratingComment']);
+$conn = new PDO('mysql:host=localhost;dbname=hrtalent_live;charset=utf8;port=3306', 'hrtalent_basvuru', '!hrt!2021!');
 
-if (!empty($emailAddress) && !empty($programSubject) && !empty($instructor) && !empty($ratingScore)) {
+$query = $conn->prepare("INSERT INTO live_rating SET 
+liveName= ?,
+emailAddress= ?,
+programSubject=?,
+instructor=?,
+ratingScore=?,
+ratingComment=?");
 
-    $sql = "INSERT INTO live_rating (liveName, emailAddress,programSubject,instructor,ratingScore,ratingComment) VALUES ('$liveName', '$emailAddress', '$programSubject', '$instructor', '$ratingScore','$ratingComment')";
+$insert = $query->execute(array($liveName,$emailAddress,$programSubject,$instructor,$ratingScore,$ratingComment));
 
-    mysqli_set_charset($link, "utf8");
-    if (mysqli_query($link, $sql)) {
-        echo "Geri Bildiriminiz Kaydedildi";
-    } else {
-        echo "Hata: Geri Bildiriminiz İletilemedi!";
-    }
+if ($insert) {
+    echo "Geri Bildiriminiz Kaydedildi";
 } else {
-    echo "Tüm alanlar doldurulmalı!";
+    echo "Hata: Geri Bildiriminiz İletilemedi!";
 }
-
-// Close connection
-mysqli_close($link);
 
 
 ?>

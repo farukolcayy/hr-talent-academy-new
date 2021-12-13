@@ -87,6 +87,32 @@ h6 {
     padding-top: 6px;
 }
 
+.back-to-top-2{
+    cursor: pointer;
+    padding: 10px 30px;
+    display: inline;
+    position: fixed;
+    background: #f82249;
+    color: #fff;
+    /* width: 40px; */
+    /* height: 40px; */
+    text-align: center;
+    border-radius: 50px;
+    right: 130px;
+    bottom: 15px;
+    transition: background 0.5s ease-in-out;
+}
+
+.back-to-top-2 i {
+    font-size: 24px;
+    padding-top: 6px;
+}
+
+.back-to-top-2:hover {
+    background: #90021c;
+    color: #fff !important;
+}
+
 @media (max-width: 768px) {
     .back-to-top {
         bottom: 15px;
