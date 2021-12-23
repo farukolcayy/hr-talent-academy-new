@@ -307,6 +307,7 @@ jQuery(window).on('pluginTabsReady', function () {
                     case "5d9e648842496e05982128a75a8dbb72":
                     case "b244f2f1248d3d29953ac27786e688a1":
                     case "8e0fa8773e7d5977dd19afe7737d0d40":
+                    case "b1a8d66e0a8775ee763e7afe1879ae02":
                         discountCode = 70;
                         break;
                     case "39f3ea0e2ab06a70a9fd93c7421df8eb":
