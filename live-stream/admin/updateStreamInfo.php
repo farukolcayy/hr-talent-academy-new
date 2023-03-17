@@ -6,7 +6,7 @@ $streamLink2=str_replace("'",'"',$streamLink);
 
 $data = array();
 
-$conn = new PDO('mysql:host=localhost;dbname=hrtalent_live;charset=utf8;port=3306', 'hrtalent_basvuru', '!hrt!2021!');
+$conn = new PDO(-');
 $query = $conn->prepare("UPDATE canli_yayin SET streamLink=?, instructorId=? WHERE Id=1");
 
 $insert = $query->execute(array($streamLink2, $instructorSelect));
