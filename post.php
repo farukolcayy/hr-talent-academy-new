@@ -1,7 +1,7 @@
 
  <?php
  /* Bağlantıyı Başlat */
- $mysqli = new mysqli("localhost","hrtalent_basvuru","!hrt!2021!","hrtalent_basvuru_2021");/* Bağlantıyı Kontrol Et */
+ $mysqli = new mysqli(-);/* Bağlantıyı Kontrol Et */
  if ($mysqli->connect_error){
      /* Bağlantı Başarısız İse */
      echo "Bağlantı Başarısız. Hata: " . $mysqli->connect_error;
