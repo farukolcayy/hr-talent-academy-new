@@ -6,7 +6,7 @@ $isLogin = $_POST['isLogin'];
 
 $data = array();
 
-$conn = new PDO('mysql:host=localhost;dbname=hrtalent_live;charset=utf8;port=3306', 'hrtalent_basvuru', '!hrt!2021!');
+$conn = new PDO(-);
 $query = $conn->prepare("UPDATE canli_yayin_kullanicilar SET token=?, isLogin=?, loginDate=? WHERE emailAddress=? ");
 
 $insert = $query->execute(array($token, $isLogin, date("Y-m-d H:i:s"), $emailAddress));
